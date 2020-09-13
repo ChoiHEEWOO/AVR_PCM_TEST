@@ -1,0 +1,3539 @@
+
+PCM_output_test.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  00005134  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000050c0  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000018e  00800100  00800100  00005134  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00005134  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00005164  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000100  00000000  00000000  000051a8  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00001425  00000000  00000000  000052a8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000ae2  00000000  00000000  000066cd  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000009fa  00000000  00000000  000071af  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000002cc  00000000  00000000  00007bac  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000006b0  00000000  00000000  00007e78  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000894  00000000  00000000  00008528  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000b8  00000000  00000000  00008dbc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 65 25 	jmp	0x4aca	; 0x4aca <__ctors_end>
+       4:	0c 94 68 26 	jmp	0x4cd0	; 0x4cd0 <__vector_1>
+       8:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+       c:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      10:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      14:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      18:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      1c:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      20:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      24:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      28:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      2c:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      30:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      34:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      38:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      3c:	0c 94 93 25 	jmp	0x4b26	; 0x4b26 <__vector_15>
+      40:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      44:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      48:	0c 94 9c 26 	jmp	0x4d38	; 0x4d38 <__vector_18>
+      4c:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      50:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      54:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      58:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      5c:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      60:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      64:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      68:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      6c:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      70:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      74:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      78:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      7c:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      80:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      84:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+      88:	0c 94 82 25 	jmp	0x4b04	; 0x4b04 <__bad_interrupt>
+
+0000008c <__trampolines_end>:
+      8c:	80 80       	ld	r8, Z
+      8e:	80 80       	ld	r8, Z
+      90:	80 80       	ld	r8, Z
+      92:	80 80       	ld	r8, Z
+      94:	80 80       	ld	r8, Z
+      96:	82 84       	ldd	r8, Z+10	; 0x0a
+      98:	84 80       	ldd	r8, Z+4	; 0x04
+      9a:	7f 7d       	andi	r23, 0xDF	; 223
+      9c:	7c 7c       	andi	r23, 0xCC	; 204
+      9e:	7c 79       	andi	r23, 0x9C	; 156
+      a0:	78 7d       	andi	r23, 0xD8	; 216
+      a2:	83 85       	ldd	r24, Z+11	; 0x0b
+      a4:	7e 7f       	andi	r23, 0xFE	; 254
+      a6:	87 8b       	std	Z+23, r24	; 0x17
+      a8:	8e 8a       	std	Y+22, r8	; 0x16
+      aa:	82 7e       	andi	r24, 0xE2	; 226
+      ac:	80 7e       	andi	r24, 0xE0	; 224
+      ae:	75 71       	andi	r23, 0x15	; 21
+      b0:	73 7a       	andi	r23, 0xA3	; 163
+      b2:	83 85       	ldd	r24, Z+11	; 0x0b
+      b4:	7f 80       	ldd	r7, Y+7	; 0x07
+      b6:	89 91       	ld	r24, Y+
+      b8:	92 8a       	std	Z+18, r9	; 0x12
+      ba:	82 80       	ldd	r8, Z+2	; 0x02
+      bc:	81 7d       	andi	r24, 0xD1	; 209
+      be:	6e 62       	ori	r22, 0x2E	; 46
+      c0:	65 6f       	ori	r22, 0xF5	; 245
+      c2:	81 8d       	ldd	r24, Z+25	; 0x19
+      c4:	8a 89       	ldd	r24, Y+18	; 0x12
+      c6:	8f 96       	adiw	r24, 0x2f	; 47
+      c8:	96 8a       	std	Z+22, r9	; 0x16
+      ca:	7c 75       	andi	r23, 0x5C	; 92
+      cc:	7b 7e       	andi	r23, 0xEB	; 235
+      ce:	72 67       	ori	r23, 0x72	; 114
+      d0:	66 6c       	ori	r22, 0xC6	; 198
+      d2:	7e 8c       	ldd	r7, Y+30	; 0x1e
+      d4:	8b 8b       	std	Y+19, r24	; 0x13
+      d6:	92 9b       	sbis	0x12, 2	; 18
+      d8:	98 88       	ldd	r9, Y+16	; 0x10
+      da:	7a 73       	andi	r23, 0x3A	; 58
+      dc:	7a 7f       	andi	r23, 0xFA	; 250
+      de:	76 6e       	ori	r23, 0xE6	; 230
+      e0:	6c 70       	andi	r22, 0x0C	; 12
+      e2:	80 89       	ldd	r24, Z+16	; 0x10
+      e4:	85 83       	std	Z+5, r24	; 0x05
+      e6:	8a 96       	adiw	r24, 0x2a	; 42
+      e8:	97 8d       	ldd	r25, Z+31	; 0x1f
+      ea:	80 79       	andi	r24, 0x90	; 144
+      ec:	7e 82       	std	Y+6, r7	; 0x06
+      ee:	7b 73       	andi	r23, 0x3B	; 59
+      f0:	6d 6d       	ori	r22, 0xDD	; 221
+      f2:	7d 86       	std	Y+13, r7	; 0x0d
+      f4:	80 7b       	andi	r24, 0xB0	; 176
+      f6:	81 8e       	std	Z+25, r8	; 0x19
+      f8:	93 8e       	std	Z+27, r9	; 0x1b
+      fa:	82 7b       	andi	r24, 0xB2	; 178
+      fc:	80 84       	ldd	r8, Z+8	; 0x08
+      fe:	7c 73       	andi	r23, 0x3C	; 60
+     100:	6b 6c       	ori	r22, 0xCB	; 203
+     102:	79 83       	std	Y+1, r23	; 0x01
+     104:	81 7c       	andi	r24, 0xC1	; 193
+     106:	81 90       	ld	r8, Z+
+     108:	97 94       	ror	r9
+     10a:	88 80       	ld	r8, Y
+     10c:	82 85       	ldd	r24, Z+10	; 0x0a
+     10e:	7b 72       	andi	r23, 0x2B	; 43
+     110:	69 67       	ori	r22, 0x79	; 121
+     112:	75 82       	std	Z+5, r7	; 0x05
+     114:	84 7e       	andi	r24, 0xE4	; 228
+     116:	80 8d       	ldd	r24, Z+24	; 0x18
+     118:	95 94       	asr	r9
+     11a:	8b 81       	ldd	r24, Y+3	; 0x03
+     11c:	81 84       	ldd	r8, Z+9	; 0x09
+     11e:	7d 75       	andi	r23, 0x5D	; 93
+     120:	6a 67       	ori	r22, 0x7A	; 122
+     122:	74 81       	ldd	r23, Z+4	; 0x04
+     124:	86 80       	ldd	r8, Z+6	; 0x06
+     126:	80 8a       	std	Z+16, r8	; 0x10
+     128:	93 94       	inc	r9
+     12a:	8a 80       	ldd	r8, Y+2	; 0x02
+     12c:	81 86       	std	Z+9, r8	; 0x09
+     12e:	7f 77       	andi	r23, 0x7F	; 127
+     130:	6a 64       	ori	r22, 0x4A	; 74
+     132:	70 7f       	andi	r23, 0xF0	; 240
+     134:	84 80       	ldd	r8, Z+4	; 0x04
+     136:	80 88       	ldd	r8, Z+16	; 0x10
+     138:	90 92 8a 7e 	sts	0x7E8A, r9	; 0x807e8a <__bss_end+0x7bfc>
+     13c:	80 85       	ldd	r24, Z+8	; 0x08
+     13e:	80 7a       	andi	r24, 0xA0	; 160
+     140:	6d 66       	ori	r22, 0x6D	; 109
+     142:	70 7f       	andi	r23, 0xF0	; 240
+     144:	86 80       	ldd	r8, Z+6	; 0x06
+     146:	7f 86       	std	Y+15, r7	; 0x0f
+     148:	90 95       	com	r25
+     14a:	8d 80       	ldd	r8, Y+5	; 0x05
+     14c:	82 88       	ldd	r8, Z+18	; 0x12
+     14e:	83 7d       	andi	r24, 0xD3	; 211
+     150:	6f 66       	ori	r22, 0x6F	; 111
+     152:	6c 7c       	andi	r22, 0xCC	; 204
+     154:	85 82       	std	Z+5, r8	; 0x05
+     156:	80 86       	std	Z+8, r8	; 0x08
+     158:	90 96       	adiw	r26, 0x20	; 32
+     15a:	90 81       	ld	r25, Z
+     15c:	81 85       	ldd	r24, Z+9	; 0x09
+     15e:	82 7e       	andi	r24, 0xE2	; 226
+     160:	6f 65       	ori	r22, 0x5F	; 95
+     162:	6a 7a       	andi	r22, 0xAA	; 170
+     164:	85 82       	std	Z+5, r8	; 0x05
+     166:	7f 83       	std	Y+7, r23	; 0x07
+     168:	8d 95 90 82 	jmp	0x630520	; 0x630520 <__TEXT_REGION_LENGTH__+0x610520>
+     16c:	81 84       	ldd	r8, Z+9	; 0x09
+     16e:	81 7d       	andi	r24, 0xD1	; 209
+     170:	70 66       	ori	r23, 0x60	; 96
+     172:	68 77       	andi	r22, 0x78	; 120
+     174:	83 83       	std	Z+3, r24	; 0x03
+     176:	7f 81       	ldd	r23, Y+7	; 0x07
+     178:	8a 95       	dec	r24
+     17a:	92 84       	ldd	r9, Z+10	; 0x0a
+     17c:	82 83       	std	Z+2, r24	; 0x02
+     17e:	82 7e       	andi	r24, 0xE2	; 226
+     180:	72 67       	ori	r23, 0x72	; 114
+     182:	66 74       	andi	r22, 0x46	; 70
+     184:	81 82       	std	Z+1, r8	; 0x01
+     186:	80 81       	ld	r24, Z
+     188:	89 96       	adiw	r24, 0x29	; 41
+     18a:	96 89       	ldd	r25, Z+22	; 0x16
+     18c:	85 84       	ldd	r8, Z+13	; 0x0d
+     18e:	83 80       	ldd	r8, Z+3	; 0x03
+     190:	74 69       	ori	r23, 0x94	; 148
+     192:	66 73       	andi	r22, 0x36	; 54
+     194:	82 85       	ldd	r24, Z+10	; 0x0a
+     196:	82 83       	std	Z+2, r24	; 0x02
+     198:	89 97       	sbiw	r24, 0x29	; 41
+     19a:	98 8b       	std	Y+16, r25	; 0x10
+     19c:	86 84       	ldd	r8, Z+14	; 0x0e
+     19e:	84 81       	ldd	r24, Z+4	; 0x04
+     1a0:	76 68       	ori	r23, 0x86	; 134
+     1a2:	62 6e       	ori	r22, 0xE2	; 226
+     1a4:	7e 81       	ldd	r23, Y+6	; 0x06
+     1a6:	80 80       	ld	r8, Z
+     1a8:	85 95       	asr	r24
+     1aa:	97 8c       	ldd	r9, Z+31	; 0x1f
+     1ac:	86 84       	ldd	r8, Z+14	; 0x0e
+     1ae:	84 81       	ldd	r24, Z+4	; 0x04
+     1b0:	78 69       	ori	r23, 0x98	; 152
+     1b2:	60 69       	ori	r22, 0x90	; 144
+     1b4:	7a 80       	ldd	r7, Y+2	; 0x02
+     1b6:	80 80       	ld	r8, Z
+     1b8:	83 94       	inc	r8
+     1ba:	98 8d       	ldd	r25, Y+24	; 0x18
+     1bc:	86 83       	std	Z+6, r24	; 0x06
+     1be:	85 83       	std	Z+5, r24	; 0x05
+     1c0:	7b 6c       	ori	r23, 0xCB	; 203
+     1c2:	62 69       	ori	r22, 0x92	; 146
+     1c4:	79 80       	ldd	r7, Y+1	; 0x01
+     1c6:	80 7f       	andi	r24, 0xF0	; 240
+     1c8:	81 93       	st	Z+, r24
+     1ca:	99 90       	ld	r9, Y+
+     1cc:	88 84       	ldd	r8, Y+8	; 0x08
+     1ce:	86 85       	ldd	r24, Z+14	; 0x0e
+     1d0:	7e 6f       	ori	r23, 0xFE	; 254
+     1d2:	64 69       	ori	r22, 0x94	; 148
+     1d4:	79 80       	ldd	r7, Y+1	; 0x01
+     1d6:	80 7e       	andi	r24, 0xE0	; 224
+     1d8:	80 91 98 91 	lds	r24, 0x9198	; 0x809198 <__bss_end+0x8f0a>
+     1dc:	89 85       	ldd	r24, Y+9	; 0x09
+     1de:	87 87       	std	Z+15, r24	; 0x0f
+     1e0:	81 74       	andi	r24, 0x41	; 65
+     1e2:	67 69       	ori	r22, 0x97	; 151
+     1e4:	78 80       	ld	r7, Y
+     1e6:	82 7e       	andi	r24, 0xE2	; 226
+     1e8:	7e 8e       	std	Y+30, r7	; 0x1e
+     1ea:	97 93       	lat	Z, r25
+     1ec:	8a 84       	ldd	r8, Y+10	; 0x0a
+     1ee:	84 86       	std	Z+12, r8	; 0x0c
+     1f0:	80 74       	andi	r24, 0x40	; 64
+     1f2:	65 66       	ori	r22, 0x65	; 101
+     1f4:	74 7e       	andi	r23, 0xE4	; 228
+     1f6:	81 7d       	andi	r24, 0xD1	; 209
+     1f8:	7b 8b       	std	Y+19, r23	; 0x13
+     1fa:	95 93       	las	Z, r25
+     1fc:	8b 84       	ldd	r8, Y+11	; 0x0b
+     1fe:	85 86       	std	Z+13, r8	; 0x0d
+     200:	82 76       	andi	r24, 0x62	; 98
+     202:	65 64       	ori	r22, 0x45	; 69
+     204:	71 7b       	andi	r23, 0xB1	; 177
+     206:	80 7c       	andi	r24, 0xC0	; 192
+     208:	79 88       	ldd	r7, Y+17	; 0x11
+     20a:	94 93       	xch	Z, r25
+     20c:	8b 85       	ldd	r24, Y+11	; 0x0b
+     20e:	85 86       	std	Z+13, r8	; 0x0d
+     210:	84 7a       	andi	r24, 0xA4	; 164
+     212:	68 66       	ori	r22, 0x68	; 104
+     214:	72 7c       	andi	r23, 0xC2	; 194
+     216:	84 7f       	andi	r24, 0xF4	; 244
+     218:	7b 88       	ldd	r7, Y+19	; 0x13
+     21a:	94 95       	.word	0x9594	; ????
+     21c:	8e 87       	std	Y+14, r24	; 0x0e
+     21e:	86 87       	std	Z+14, r24	; 0x0e
+     220:	85 7c       	andi	r24, 0xC5	; 197
+     222:	69 65       	ori	r22, 0x59	; 89
+     224:	6e 7a       	andi	r22, 0xAE	; 174
+     226:	84 7f       	andi	r24, 0xF4	; 244
+     228:	7b 87       	std	Y+11, r23	; 0x0b
+     22a:	94 96       	adiw	r26, 0x24	; 36
+     22c:	8f 87       	std	Y+15, r24	; 0x0f
+     22e:	86 86       	std	Z+14, r8	; 0x0e
+     230:	85 7d       	andi	r24, 0xD5	; 213
+     232:	6b 65       	ori	r22, 0x5B	; 91
+     234:	6c 78       	andi	r22, 0x8C	; 140
+     236:	83 80       	ldd	r8, Z+3	; 0x03
+     238:	7b 84       	ldd	r7, Y+11	; 0x0b
+     23a:	92 95       	swap	r25
+     23c:	8f 87       	std	Y+15, r24	; 0x0f
+     23e:	85 85       	ldd	r24, Z+13	; 0x0d
+     240:	86 7f       	andi	r24, 0xF6	; 246
+     242:	6c 64       	ori	r22, 0x4C	; 76
+     244:	68 75       	andi	r22, 0x58	; 88
+     246:	82 80       	ldd	r8, Z+2	; 0x02
+     248:	7a 81       	ldd	r23, Y+2	; 0x02
+     24a:	8f 95 90 88 	call	0x631120	; 0x631120 <__TEXT_REGION_LENGTH__+0x611120>
+     24e:	85 85       	ldd	r24, Z+13	; 0x0d
+     250:	87 81       	ldd	r24, Z+7	; 0x07
+     252:	6f 66       	ori	r22, 0x6F	; 111
+     254:	67 73       	andi	r22, 0x37	; 55
+     256:	80 80       	ld	r8, Z
+     258:	7a 80       	ldd	r7, Y+2	; 0x02
+     25a:	8e 95 91 8a 	call	0x611522	; 0x611522 <__TEXT_REGION_LENGTH__+0x5f1522>
+     25e:	86 86       	std	Z+14, r8	; 0x0e
+     260:	8a 85       	ldd	r24, Y+10	; 0x0a
+     262:	73 68       	ori	r23, 0x83	; 131
+     264:	66 71       	andi	r22, 0x16	; 22
+     266:	80 80       	ld	r8, Z
+     268:	7a 7f       	andi	r23, 0xFA	; 250
+     26a:	8c 95 92 8b 	jmp	0x611724	; 0x611724 <__TEXT_REGION_LENGTH__+0x5f1724>
+     26e:	86 85       	ldd	r24, Z+14	; 0x0e
+     270:	8a 86       	std	Y+10, r8	; 0x0a
+     272:	76 6a       	ori	r23, 0xA6	; 166
+     274:	66 6f       	ori	r22, 0xF6	; 246
+     276:	7e 80       	ldd	r7, Y+6	; 0x06
+     278:	7a 7d       	andi	r23, 0xDA	; 218
+     27a:	8a 94       	dec	r8
+     27c:	93 8d       	ldd	r25, Z+27	; 0x1b
+     27e:	87 85       	ldd	r24, Z+15	; 0x0f
+     280:	8a 87       	std	Y+10, r24	; 0x0a
+     282:	79 6c       	ori	r23, 0xC9	; 201
+     284:	65 6d       	ori	r22, 0xD5	; 213
+     286:	7c 7e       	andi	r23, 0xEC	; 236
+     288:	78 7a       	andi	r23, 0xA8	; 168
+     28a:	86 92       	lac	Z, r8
+     28c:	92 8d       	ldd	r25, Z+26	; 0x1a
+     28e:	87 83       	std	Z+7, r24	; 0x07
+     290:	8a 88       	ldd	r8, Y+18	; 0x12
+     292:	7c 6f       	ori	r23, 0xFC	; 252
+     294:	66 6c       	ori	r22, 0xC6	; 198
+     296:	7c 80       	ldd	r7, Y+4	; 0x04
+     298:	7a 7a       	andi	r23, 0xAA	; 170
+     29a:	84 90       	lpm	r8, Z
+     29c:	92 8e       	std	Z+26, r9	; 0x1a
+     29e:	88 83       	st	Y, r24
+     2a0:	89 88       	ldd	r8, Y+17	; 0x11
+     2a2:	7e 71       	andi	r23, 0x1E	; 30
+     2a4:	66 6a       	ori	r22, 0xA6	; 166
+     2a6:	7a 80       	ldd	r7, Y+2	; 0x02
+     2a8:	7b 7a       	andi	r23, 0xAB	; 171
+     2aa:	83 90       	.word	0x9083	; ????
+     2ac:	92 90       	ld	r9, -Z
+     2ae:	8a 83       	std	Y+2, r24	; 0x02
+     2b0:	89 89       	ldd	r24, Y+17	; 0x11
+     2b2:	80 73       	andi	r24, 0x30	; 48
+     2b4:	67 69       	ori	r22, 0x97	; 151
+     2b6:	78 80       	ld	r7, Y
+     2b8:	7b 79       	andi	r23, 0x9B	; 155
+     2ba:	81 8d       	ldd	r24, Z+25	; 0x19
+     2bc:	90 91 8b 84 	lds	r25, 0x848B	; 0x80848b <__bss_end+0x81fd>
+     2c0:	89 89       	ldd	r24, Y+17	; 0x11
+     2c2:	82 76       	andi	r24, 0x62	; 98
+     2c4:	68 68       	ori	r22, 0x88	; 136
+     2c6:	77 7f       	andi	r23, 0xF7	; 247
+     2c8:	7c 7a       	andi	r23, 0xAC	; 172
+     2ca:	80 8c       	ldd	r8, Z+24	; 0x18
+     2cc:	90 92 8c 84 	sts	0x848C, r9	; 0x80848c <__bss_end+0x81fe>
+     2d0:	89 89       	ldd	r24, Y+17	; 0x11
+     2d2:	83 78       	andi	r24, 0x83	; 131
+     2d4:	69 67       	ori	r22, 0x79	; 121
+     2d6:	74 7e       	andi	r23, 0xE4	; 228
+     2d8:	7c 78       	andi	r23, 0x8C	; 140
+     2da:	7e 89       	ldd	r23, Y+22	; 0x16
+     2dc:	8e 92       	st	-X, r8
+     2de:	8c 85       	ldd	r24, Y+12	; 0x0c
+     2e0:	89 89       	ldd	r24, Y+17	; 0x11
+     2e2:	84 7a       	andi	r24, 0xA4	; 164
+     2e4:	6a 65       	ori	r22, 0x5A	; 90
+     2e6:	71 7c       	andi	r23, 0xC1	; 193
+     2e8:	7d 78       	andi	r23, 0x8D	; 141
+     2ea:	7d 87       	std	Y+13, r23	; 0x0d
+     2ec:	8d 92       	st	X+, r8
+     2ee:	8c 85       	ldd	r24, Y+12	; 0x0c
+     2f0:	88 89       	ldd	r24, Y+16	; 0x10
+     2f2:	86 7d       	andi	r24, 0xD6	; 214
+     2f4:	6c 65       	ori	r22, 0x5C	; 92
+     2f6:	70 7c       	andi	r23, 0xC0	; 192
+     2f8:	7e 79       	andi	r23, 0x9E	; 158
+     2fa:	7d 86       	std	Y+13, r7	; 0x0d
+     2fc:	8c 93       	st	X, r24
+     2fe:	8e 86       	std	Y+14, r8	; 0x0e
+     300:	88 8a       	std	Y+16, r8	; 0x10
+     302:	88 80       	ld	r8, Y
+     304:	6f 66       	ori	r22, 0x6F	; 111
+     306:	6f 7b       	andi	r22, 0xBF	; 191
+     308:	7f 79       	andi	r23, 0x9F	; 159
+     30a:	7c 85       	ldd	r23, Y+12	; 0x0c
+     30c:	8c 93       	st	X, r24
+     30e:	8f 87       	std	Y+15, r24	; 0x0f
+     310:	88 8a       	std	Y+16, r8	; 0x10
+     312:	89 82       	std	Y+1, r8	; 0x01
+     314:	72 67       	ori	r23, 0x72	; 114
+     316:	6e 7a       	andi	r22, 0xAE	; 174
+     318:	7f 79       	andi	r23, 0x9F	; 159
+     31a:	7b 82       	std	Y+3, r7	; 0x03
+     31c:	89 92       	st	Y+, r8
+     31e:	8e 87       	std	Y+14, r24	; 0x0e
+     320:	87 89       	ldd	r24, Z+23	; 0x17
+     322:	89 83       	std	Y+1, r24	; 0x01
+     324:	73 66       	ori	r23, 0x63	; 99
+     326:	6b 78       	andi	r22, 0x8B	; 139
+     328:	7d 78       	andi	r23, 0x8D	; 141
+     32a:	7a 80       	ldd	r7, Y+2	; 0x02
+     32c:	88 91       	.word	0x9188	; ????
+     32e:	8e 87       	std	Y+14, r24	; 0x0e
+     330:	86 88       	ldd	r8, Z+22	; 0x16
+     332:	89 85       	ldd	r24, Y+9	; 0x09
+     334:	76 67       	ori	r23, 0x76	; 118
+     336:	69 76       	andi	r22, 0x69	; 105
+     338:	7d 78       	andi	r23, 0x8D	; 141
+     33a:	7a 7f       	andi	r23, 0xFA	; 250
+     33c:	87 91       	elpm	r24, Z+
+     33e:	8f 89       	ldd	r24, Y+23	; 0x17
+     340:	87 88       	ldd	r8, Z+23	; 0x17
+     342:	8b 88       	ldd	r8, Y+19	; 0x13
+     344:	7a 6b       	ori	r23, 0xBA	; 186
+     346:	69 76       	andi	r22, 0x69	; 105
+     348:	7d 79       	andi	r23, 0x9D	; 157
+     34a:	7a 7e       	andi	r23, 0xEA	; 234
+     34c:	85 91       	lpm	r24, Z+
+     34e:	90 8b       	std	Z+16, r25	; 0x10
+     350:	88 88       	ldd	r8, Y+16	; 0x10
+     352:	8b 8a       	std	Y+19, r8	; 0x13
+     354:	7d 6d       	ori	r23, 0xDD	; 221
+     356:	69 74       	andi	r22, 0x49	; 73
+     358:	7c 79       	andi	r23, 0x9C	; 156
+     35a:	79 7c       	andi	r23, 0xC9	; 201
+     35c:	83 8f       	std	Z+27, r24	; 0x1b
+     35e:	91 8c       	ldd	r9, Z+25	; 0x19
+     360:	88 87       	std	Y+8, r24	; 0x08
+     362:	8a 8b       	std	Y+18, r24	; 0x12
+     364:	7f 6e       	ori	r23, 0xEF	; 239
+     366:	67 72       	andi	r22, 0x27	; 39
+     368:	7a 78       	andi	r23, 0x8A	; 138
+     36a:	79 7a       	andi	r23, 0xA9	; 169
+     36c:	81 8d       	ldd	r24, Z+25	; 0x19
+     36e:	90 8c       	ldd	r9, Z+24	; 0x18
+     370:	89 87       	std	Y+9, r24	; 0x09
+     372:	8a 8b       	std	Y+18, r24	; 0x12
+     374:	80 70       	andi	r24, 0x00	; 0
+     376:	67 70       	andi	r22, 0x07	; 7
+     378:	79 78       	andi	r23, 0x89	; 137
+     37a:	79 79       	andi	r23, 0x99	; 153
+     37c:	80 8c       	ldd	r8, Z+24	; 0x18
+     37e:	90 8d       	ldd	r25, Z+24	; 0x18
+     380:	89 87       	std	Y+9, r24	; 0x09
+     382:	8a 8c       	ldd	r8, Y+26	; 0x1a
+     384:	83 73       	andi	r24, 0x33	; 51
+     386:	68 70       	andi	r22, 0x08	; 8
+     388:	79 79       	andi	r23, 0x99	; 153
+     38a:	7a 78       	andi	r23, 0x8A	; 138
+     38c:	7f 8b       	std	Y+23, r23	; 0x17
+     38e:	90 8e       	std	Z+24, r9	; 0x18
+     390:	8b 87       	std	Y+11, r24	; 0x0b
+     392:	8b 8d       	ldd	r24, Y+27	; 0x1b
+     394:	86 75       	andi	r24, 0x56	; 86
+     396:	69 70       	andi	r22, 0x09	; 9
+     398:	78 79       	andi	r23, 0x98	; 152
+     39a:	7a 77       	andi	r23, 0x7A	; 122
+     39c:	7d 88       	ldd	r7, Y+21	; 0x15
+     39e:	8e 8e       	std	Y+30, r8	; 0x1e
+     3a0:	8b 87       	std	Y+11, r24	; 0x0b
+     3a2:	8a 8d       	ldd	r24, Y+26	; 0x1a
+     3a4:	88 78       	andi	r24, 0x88	; 136
+     3a6:	6a 6f       	ori	r22, 0xFA	; 250
+     3a8:	77 79       	andi	r23, 0x97	; 151
+     3aa:	7a 77       	andi	r23, 0x7A	; 122
+     3ac:	7c 86       	std	Y+12, r7	; 0x0c
+     3ae:	8d 8e       	std	Y+29, r8	; 0x1d
+     3b0:	8b 87       	std	Y+11, r24	; 0x0b
+     3b2:	89 8d       	ldd	r24, Y+25	; 0x19
+     3b4:	8a 7a       	andi	r24, 0xAA	; 170
+     3b6:	6a 6e       	ori	r22, 0xEA	; 234
+     3b8:	75 78       	andi	r23, 0x85	; 133
+     3ba:	7a 77       	andi	r23, 0x7A	; 122
+     3bc:	7a 84       	ldd	r7, Y+10	; 0x0a
+     3be:	8a 8d       	ldd	r24, Y+26	; 0x1a
+     3c0:	8a 86       	std	Y+10, r8	; 0x0a
+     3c2:	88 8c       	ldd	r8, Y+24	; 0x18
+     3c4:	8b 7d       	andi	r24, 0xDB	; 219
+     3c6:	6c 6e       	ori	r22, 0xEC	; 236
+     3c8:	74 79       	andi	r23, 0x94	; 148
+     3ca:	7a 77       	andi	r23, 0x7A	; 122
+     3cc:	7a 83       	std	Y+2, r23	; 0x02
+     3ce:	8a 8d       	ldd	r24, Y+26	; 0x1a
+     3d0:	8b 87       	std	Y+11, r24	; 0x0b
+     3d2:	88 8c       	ldd	r8, Y+24	; 0x18
+     3d4:	8e 80       	ldd	r8, Y+6	; 0x06
+     3d6:	6f 6f       	ori	r22, 0xFF	; 255
+     3d8:	74 79       	andi	r23, 0x94	; 148
+     3da:	7b 78       	andi	r23, 0x8B	; 139
+     3dc:	79 82       	std	Y+1, r7	; 0x01
+     3de:	89 8d       	ldd	r24, Y+25	; 0x19
+     3e0:	8c 87       	std	Y+12, r24	; 0x0c
+     3e2:	87 8b       	std	Z+23, r24	; 0x17
+     3e4:	8f 81       	ldd	r24, Y+7	; 0x07
+     3e6:	71 6f       	ori	r23, 0xF1	; 241
+     3e8:	73 78       	andi	r23, 0x83	; 131
+     3ea:	7b 78       	andi	r23, 0x8B	; 139
+     3ec:	78 80       	ld	r7, Y
+     3ee:	87 8c       	ldd	r8, Z+31	; 0x1f
+     3f0:	8c 88       	ldd	r8, Y+20	; 0x14
+     3f2:	87 8b       	std	Z+23, r24	; 0x17
+     3f4:	8f 83       	std	Y+7, r24	; 0x07
+     3f6:	74 70       	andi	r23, 0x04	; 4
+     3f8:	72 78       	andi	r23, 0x82	; 130
+     3fa:	7b 78       	andi	r23, 0x8B	; 139
+     3fc:	78 7f       	andi	r23, 0xF8	; 248
+     3fe:	85 8b       	std	Z+21, r24	; 0x15
+     400:	8b 88       	ldd	r8, Y+19	; 0x13
+     402:	86 89       	ldd	r24, Z+22	; 0x16
+     404:	8f 84       	ldd	r8, Y+15	; 0x0f
+     406:	75 6f       	ori	r23, 0xF5	; 245
+     408:	71 76       	andi	r23, 0x61	; 97
+     40a:	7a 78       	andi	r23, 0x8A	; 138
+     40c:	77 7d       	andi	r23, 0xD7	; 215
+     40e:	83 8b       	std	Z+19, r24	; 0x13
+     410:	8b 89       	ldd	r24, Y+19	; 0x13
+     412:	86 89       	ldd	r24, Z+22	; 0x16
+     414:	90 87       	std	Z+8, r25	; 0x08
+     416:	78 71       	andi	r23, 0x18	; 24
+     418:	71 77       	andi	r23, 0x71	; 113
+     41a:	7b 79       	andi	r23, 0x9B	; 155
+     41c:	78 7d       	andi	r23, 0xD8	; 216
+     41e:	83 8a       	std	Z+19, r8	; 0x13
+     420:	8c 8a       	std	Y+20, r8	; 0x14
+     422:	86 88       	ldd	r8, Z+22	; 0x16
+     424:	90 89       	ldd	r25, Z+16	; 0x10
+     426:	7a 72       	andi	r23, 0x2A	; 42
+     428:	71 76       	andi	r23, 0x61	; 97
+     42a:	7b 79       	andi	r23, 0x9B	; 155
+     42c:	78 7c       	andi	r23, 0xC8	; 200
+     42e:	82 8a       	std	Z+18, r8	; 0x12
+     430:	8c 8c       	ldd	r8, Y+28	; 0x1c
+     432:	87 89       	ldd	r24, Z+23	; 0x17
+     434:	91 8b       	std	Z+17, r25	; 0x11
+     436:	7e 74       	andi	r23, 0x4E	; 78
+     438:	71 76       	andi	r23, 0x61	; 97
+     43a:	7b 79       	andi	r23, 0x9B	; 155
+     43c:	78 7a       	andi	r23, 0xA8	; 168
+     43e:	80 88       	ldd	r8, Z+16	; 0x10
+     440:	8b 8c       	ldd	r8, Y+27	; 0x1b
+     442:	86 88       	ldd	r8, Z+22	; 0x16
+     444:	91 8c       	ldd	r9, Z+25	; 0x19
+     446:	80 75       	andi	r24, 0x50	; 80
+     448:	70 74       	andi	r23, 0x40	; 64
+     44a:	79 77       	andi	r23, 0x79	; 121
+     44c:	76 77       	andi	r23, 0x76	; 118
+     44e:	7e 85       	ldd	r23, Y+14	; 0x0e
+     450:	8a 8c       	ldd	r8, Y+26	; 0x1a
+     452:	86 87       	std	Z+14, r24	; 0x0e
+     454:	91 8e       	std	Z+25, r9	; 0x19
+     456:	81 77       	andi	r24, 0x71	; 113
+     458:	70 73       	andi	r23, 0x30	; 48
+     45a:	78 77       	andi	r23, 0x78	; 120
+     45c:	76 76       	andi	r23, 0x66	; 102
+     45e:	7d 84       	ldd	r7, Y+13	; 0x0d
+     460:	8a 8d       	ldd	r24, Y+26	; 0x1a
+     462:	87 87       	std	Z+15, r24	; 0x0f
+     464:	91 90       	ld	r9, Z+
+     466:	84 79       	andi	r24, 0x94	; 148
+     468:	71 73       	andi	r23, 0x31	; 49
+     46a:	78 77       	andi	r23, 0x78	; 120
+     46c:	76 76       	andi	r23, 0x66	; 102
+     46e:	7c 83       	std	Y+4, r23	; 0x04
+     470:	89 8d       	ldd	r24, Y+25	; 0x19
+     472:	87 87       	std	Z+15, r24	; 0x0f
+     474:	90 90 86 7b 	lds	r9, 0x7B86	; 0x807b86 <__bss_end+0x78f8>
+     478:	72 73       	andi	r23, 0x32	; 50
+     47a:	77 78       	andi	r23, 0x87	; 135
+     47c:	77 75       	andi	r23, 0x57	; 87
+     47e:	7b 81       	ldd	r23, Y+3	; 0x03
+     480:	88 8d       	ldd	r24, Y+24	; 0x18
+     482:	86 85       	ldd	r24, Z+14	; 0x0e
+     484:	8f 91       	pop	r24
+     486:	88 7e       	andi	r24, 0xE8	; 232
+     488:	73 73       	andi	r23, 0x33	; 51
+     48a:	77 78       	andi	r23, 0x87	; 135
+     48c:	77 75       	andi	r23, 0x57	; 87
+     48e:	7a 80       	ldd	r7, Y+2	; 0x02
+     490:	87 8d       	ldd	r24, Z+31	; 0x1f
+     492:	87 85       	ldd	r24, Z+15	; 0x0f
+     494:	8d 91       	ld	r24, X+
+     496:	8a 80       	ldd	r8, Y+2	; 0x02
+     498:	74 73       	andi	r23, 0x34	; 52
+     49a:	76 78       	andi	r23, 0x86	; 134
+     49c:	76 74       	andi	r23, 0x46	; 70
+     49e:	79 7d       	andi	r23, 0xD9	; 217
+     4a0:	85 8c       	ldd	r8, Z+29	; 0x1d
+     4a2:	87 84       	ldd	r8, Z+15	; 0x0f
+     4a4:	8b 8f       	std	Y+27, r24	; 0x1b
+     4a6:	8b 80       	ldd	r8, Y+3	; 0x03
+     4a8:	75 73       	andi	r23, 0x35	; 53
+     4aa:	75 77       	andi	r23, 0x75	; 117
+     4ac:	76 75       	andi	r23, 0x56	; 86
+     4ae:	79 7c       	andi	r23, 0xC9	; 201
+     4b0:	84 8c       	ldd	r8, Z+28	; 0x1c
+     4b2:	88 85       	ldd	r24, Y+8	; 0x08
+     4b4:	8b 8f       	std	Y+27, r24	; 0x1b
+     4b6:	8c 82       	std	Y+4, r8	; 0x04
+     4b8:	77 73       	andi	r23, 0x37	; 55
+     4ba:	75 78       	andi	r23, 0x85	; 133
+     4bc:	77 76       	andi	r23, 0x67	; 103
+     4be:	79 7c       	andi	r23, 0xC9	; 201
+     4c0:	83 8c       	ldd	r8, Z+27	; 0x1b
+     4c2:	89 85       	ldd	r24, Y+9	; 0x09
+     4c4:	8a 8f       	std	Y+26, r24	; 0x1a
+     4c6:	8e 84       	ldd	r8, Y+14	; 0x0e
+     4c8:	79 74       	andi	r23, 0x49	; 73
+     4ca:	75 78       	andi	r23, 0x85	; 133
+     4cc:	77 76       	andi	r23, 0x67	; 103
+     4ce:	79 7a       	andi	r23, 0xA9	; 169
+     4d0:	81 8b       	std	Z+17, r24	; 0x11
+     4d2:	88 84       	ldd	r8, Y+8	; 0x08
+     4d4:	89 8e       	std	Y+25, r8	; 0x19
+     4d6:	8f 85       	ldd	r24, Y+15	; 0x0f
+     4d8:	7a 74       	andi	r23, 0x4A	; 74
+     4da:	73 77       	andi	r23, 0x73	; 115
+     4dc:	77 76       	andi	r23, 0x67	; 103
+     4de:	78 79       	andi	r23, 0x98	; 152
+     4e0:	80 8a       	std	Z+16, r8	; 0x10
+     4e2:	89 85       	ldd	r24, Y+9	; 0x09
+     4e4:	88 8d       	ldd	r24, Y+24	; 0x18
+     4e6:	90 88       	ldd	r9, Z+16	; 0x10
+     4e8:	7c 75       	andi	r23, 0x5C	; 92
+     4ea:	74 77       	andi	r23, 0x74	; 116
+     4ec:	76 77       	andi	r23, 0x76	; 118
+     4ee:	78 78       	andi	r23, 0x88	; 136
+     4f0:	80 8a       	std	Z+16, r8	; 0x10
+     4f2:	89 85       	ldd	r24, Y+9	; 0x09
+     4f4:	87 8c       	ldd	r8, Z+31	; 0x1f
+     4f6:	90 89       	ldd	r25, Z+16	; 0x10
+     4f8:	7e 75       	andi	r23, 0x5E	; 94
+     4fa:	73 77       	andi	r23, 0x73	; 115
+     4fc:	77 77       	andi	r23, 0x77	; 119
+     4fe:	78 78       	andi	r23, 0x88	; 136
+     500:	7f 8a       	std	Y+23, r7	; 0x17
+     502:	8a 86       	std	Y+10, r8	; 0x0a
+     504:	87 8c       	ldd	r8, Z+31	; 0x1f
+     506:	91 8b       	std	Z+17, r25	; 0x11
+     508:	80 77       	andi	r24, 0x70	; 112
+     50a:	74 78       	andi	r23, 0x84	; 132
+     50c:	77 78       	andi	r23, 0x87	; 135
+     50e:	79 77       	andi	r23, 0x79	; 121
+     510:	7e 89       	ldd	r23, Y+22	; 0x16
+     512:	8a 86       	std	Y+10, r8	; 0x0a
+     514:	85 8a       	std	Z+21, r8	; 0x15
+     516:	90 8b       	std	Z+16, r25	; 0x10
+     518:	82 78       	andi	r24, 0x82	; 130
+     51a:	75 77       	andi	r23, 0x75	; 117
+     51c:	77 78       	andi	r23, 0x87	; 135
+     51e:	79 76       	andi	r23, 0x69	; 105
+     520:	7b 87       	std	Y+11, r23	; 0x0b
+     522:	89 86       	std	Y+9, r8	; 0x09
+     524:	85 8a       	std	Z+21, r8	; 0x15
+     526:	90 8d       	ldd	r25, Z+24	; 0x18
+     528:	84 7a       	andi	r24, 0xA4	; 164
+     52a:	76 78       	andi	r23, 0x86	; 134
+     52c:	78 79       	andi	r23, 0x98	; 152
+     52e:	79 75       	andi	r23, 0x59	; 89
+     530:	7a 85       	ldd	r23, Y+10	; 0x0a
+     532:	88 86       	std	Y+8, r8	; 0x08
+     534:	84 89       	ldd	r24, Z+20	; 0x14
+     536:	8f 8d       	ldd	r24, Y+31	; 0x1f
+     538:	86 7b       	andi	r24, 0xB6	; 182
+     53a:	76 77       	andi	r23, 0x76	; 118
+     53c:	77 79       	andi	r23, 0x97	; 151
+     53e:	7a 75       	andi	r23, 0x5A	; 90
+     540:	79 83       	std	Y+1, r23	; 0x01
+     542:	88 87       	std	Y+8, r24	; 0x08
+     544:	84 88       	ldd	r8, Z+20	; 0x14
+     546:	8f 8f       	std	Y+31, r24	; 0x1f
+     548:	88 7d       	andi	r24, 0xD8	; 216
+     54a:	77 78       	andi	r23, 0x87	; 135
+     54c:	77 7a       	andi	r23, 0xA7	; 167
+     54e:	7b 75       	andi	r23, 0x5B	; 91
+     550:	78 82       	st	Y, r7
+     552:	88 87       	std	Y+8, r24	; 0x08
+     554:	83 87       	std	Z+11, r24	; 0x0b
+     556:	8e 8f       	std	Y+30, r24	; 0x1e
+     558:	8a 7e       	andi	r24, 0xEA	; 234
+     55a:	78 77       	andi	r23, 0x78	; 120
+     55c:	76 79       	andi	r23, 0x96	; 150
+     55e:	7b 75       	andi	r23, 0x5B	; 91
+     560:	77 80       	ldd	r7, Z+7	; 0x07
+     562:	87 87       	std	Z+15, r24	; 0x0f
+     564:	82 86       	std	Z+10, r8	; 0x0a
+     566:	8c 8f       	std	Y+28, r24	; 0x1c
+     568:	8b 80       	ldd	r8, Y+3	; 0x03
+     56a:	79 77       	andi	r23, 0x79	; 121
+     56c:	76 79       	andi	r23, 0x96	; 150
+     56e:	7b 74       	andi	r23, 0x4B	; 75
+     570:	76 7f       	andi	r23, 0xF6	; 246
+     572:	86 87       	std	Z+14, r24	; 0x0e
+     574:	82 85       	ldd	r24, Z+10	; 0x0a
+     576:	8b 8f       	std	Y+27, r24	; 0x1b
+     578:	8c 81       	ldd	r24, Y+4	; 0x04
+     57a:	7a 78       	andi	r23, 0x8A	; 138
+     57c:	76 7a       	andi	r23, 0xA6	; 166
+     57e:	7b 74       	andi	r23, 0x4B	; 75
+     580:	75 7d       	andi	r23, 0xD5	; 213
+     582:	85 86       	std	Z+13, r8	; 0x0d
+     584:	82 84       	ldd	r8, Z+10	; 0x0a
+     586:	8a 8f       	std	Y+26, r24	; 0x1a
+     588:	8d 83       	std	Y+5, r24	; 0x05
+     58a:	7c 79       	andi	r23, 0x9C	; 156
+     58c:	77 7a       	andi	r23, 0xA7	; 167
+     58e:	7c 75       	andi	r23, 0x5C	; 92
+     590:	74 7b       	andi	r23, 0xB4	; 180
+     592:	83 86       	std	Z+11, r8	; 0x0b
+     594:	83 84       	ldd	r8, Z+11	; 0x0b
+     596:	88 8e       	std	Y+24, r8	; 0x18
+     598:	8d 83       	std	Y+5, r24	; 0x05
+     59a:	7d 79       	andi	r23, 0x9D	; 157
+     59c:	76 7a       	andi	r23, 0xA6	; 166
+     59e:	7c 76       	andi	r23, 0x6C	; 108
+     5a0:	74 79       	andi	r23, 0x94	; 148
+     5a2:	81 84       	ldd	r8, Z+9	; 0x09
+     5a4:	82 82       	std	Z+2, r8	; 0x02
+     5a6:	87 8d       	ldd	r24, Z+31	; 0x1f
+     5a8:	8e 85       	ldd	r24, Y+14	; 0x0e
+     5aa:	7e 7a       	andi	r23, 0xAE	; 174
+     5ac:	76 79       	andi	r23, 0x96	; 150
+     5ae:	7c 77       	andi	r23, 0x7C	; 124
+     5b0:	74 78       	andi	r23, 0x84	; 132
+     5b2:	81 84       	ldd	r8, Z+9	; 0x09
+     5b4:	82 82       	std	Z+2, r8	; 0x02
+     5b6:	85 8c       	ldd	r8, Z+29	; 0x1d
+     5b8:	8e 86       	std	Y+14, r8	; 0x0e
+     5ba:	7f 7a       	andi	r23, 0xAF	; 175
+     5bc:	75 79       	andi	r23, 0x95	; 149
+     5be:	7c 78       	andi	r23, 0x8C	; 140
+     5c0:	74 77       	andi	r23, 0x74	; 116
+     5c2:	80 84       	ldd	r8, Z+8	; 0x08
+     5c4:	83 82       	std	Z+3, r8	; 0x03
+     5c6:	84 8b       	std	Z+20, r24	; 0x14
+     5c8:	8f 87       	std	Y+15, r24	; 0x0f
+     5ca:	80 7c       	andi	r24, 0xC0	; 192
+     5cc:	76 7a       	andi	r23, 0xA6	; 166
+     5ce:	7d 79       	andi	r23, 0x9D	; 157
+     5d0:	75 77       	andi	r23, 0x75	; 117
+     5d2:	80 84       	ldd	r8, Z+8	; 0x08
+     5d4:	83 82       	std	Z+3, r8	; 0x03
+     5d6:	83 8a       	std	Z+19, r8	; 0x13
+     5d8:	8e 88       	ldd	r8, Y+22	; 0x16
+     5da:	81 7c       	andi	r24, 0xC1	; 193
+     5dc:	76 79       	andi	r23, 0x96	; 150
+     5de:	7d 7a       	andi	r23, 0xAD	; 173
+     5e0:	75 75       	andi	r23, 0x55	; 85
+     5e2:	7f 83       	std	Y+7, r23	; 0x07
+     5e4:	83 82       	std	Z+3, r8	; 0x03
+     5e6:	82 89       	ldd	r24, Z+18	; 0x12
+     5e8:	8e 89       	ldd	r24, Y+22	; 0x16
+     5ea:	82 7d       	andi	r24, 0xD2	; 210
+     5ec:	77 79       	andi	r23, 0x97	; 151
+     5ee:	7d 7b       	andi	r23, 0xBD	; 189
+     5f0:	75 75       	andi	r23, 0x55	; 85
+     5f2:	7e 82       	std	Y+6, r7	; 0x06
+     5f4:	83 81       	ldd	r24, Z+3	; 0x03
+     5f6:	81 88       	ldd	r8, Z+17	; 0x11
+     5f8:	8e 89       	ldd	r24, Y+22	; 0x16
+     5fa:	84 7e       	andi	r24, 0xE4	; 228
+     5fc:	77 79       	andi	r23, 0x97	; 151
+     5fe:	7d 7c       	andi	r23, 0xCD	; 205
+     600:	75 74       	andi	r23, 0x45	; 69
+     602:	7c 81       	ldd	r23, Y+4	; 0x04
+     604:	83 81       	ldd	r24, Z+3	; 0x03
+     606:	80 87       	std	Z+8, r24	; 0x08
+     608:	8c 8a       	std	Y+20, r8	; 0x14
+     60a:	85 7f       	andi	r24, 0xF5	; 245
+     60c:	78 79       	andi	r23, 0x98	; 152
+     60e:	7d 7d       	andi	r23, 0xDD	; 221
+     610:	76 74       	andi	r23, 0x46	; 70
+     612:	7b 81       	ldd	r23, Y+3	; 0x03
+     614:	83 82       	std	Z+3, r8	; 0x03
+     616:	80 86       	std	Z+8, r8	; 0x08
+     618:	8c 8a       	std	Y+20, r8	; 0x14
+     61a:	87 80       	ldd	r8, Z+7	; 0x07
+     61c:	79 79       	andi	r23, 0x99	; 153
+     61e:	7d 7e       	andi	r23, 0xED	; 237
+     620:	77 75       	andi	r23, 0x57	; 87
+     622:	7a 80       	ldd	r7, Y+2	; 0x02
+     624:	84 82       	std	Z+4, r8	; 0x04
+     626:	80 85       	ldd	r24, Z+8	; 0x08
+     628:	8b 8a       	std	Y+19, r8	; 0x13
+     62a:	88 80       	ld	r8, Y
+     62c:	7a 78       	andi	r23, 0x8A	; 138
+     62e:	7d 7e       	andi	r23, 0xED	; 237
+     630:	78 75       	andi	r23, 0x58	; 88
+     632:	79 80       	ldd	r7, Y+1	; 0x01
+     634:	83 82       	std	Z+3, r8	; 0x03
+     636:	80 84       	ldd	r8, Z+8	; 0x08
+     638:	8a 8a       	std	Y+18, r8	; 0x12
+     63a:	88 81       	ld	r24, Y
+     63c:	7a 78       	andi	r23, 0x8A	; 138
+     63e:	7b 7e       	andi	r23, 0xEB	; 235
+     640:	78 75       	andi	r23, 0x58	; 88
+     642:	78 7e       	andi	r23, 0xE8	; 232
+     644:	82 82       	std	Z+2, r8	; 0x02
+     646:	80 83       	st	Z, r24
+     648:	89 8a       	std	Y+17, r8	; 0x11
+     64a:	89 82       	std	Y+1, r8	; 0x01
+     64c:	7c 78       	andi	r23, 0x8C	; 140
+     64e:	7b 7e       	andi	r23, 0xEB	; 235
+     650:	79 75       	andi	r23, 0x59	; 89
+     652:	78 7d       	andi	r23, 0xD8	; 216
+     654:	81 82       	std	Z+1, r8	; 0x01
+     656:	7f 82       	std	Y+7, r7	; 0x07
+     658:	88 89       	ldd	r24, Y+16	; 0x10
+     65a:	89 84       	ldd	r8, Y+9	; 0x09
+     65c:	7e 79       	andi	r23, 0x9E	; 158
+     65e:	7b 7f       	andi	r23, 0xFB	; 251
+     660:	7a 76       	andi	r23, 0x6A	; 106
+     662:	78 7c       	andi	r23, 0xC8	; 200
+     664:	81 81       	ldd	r24, Z+1	; 0x01
+     666:	7f 81       	ldd	r23, Y+7	; 0x07
+     668:	86 89       	ldd	r24, Z+22	; 0x16
+     66a:	8a 86       	std	Y+10, r8	; 0x0a
+     66c:	7f 7a       	andi	r23, 0xAF	; 175
+     66e:	7b 7f       	andi	r23, 0xFB	; 251
+     670:	7b 76       	andi	r23, 0x6B	; 107
+     672:	77 7b       	andi	r23, 0xB7	; 183
+     674:	80 81       	ld	r24, Z
+     676:	7f 81       	ldd	r23, Y+7	; 0x07
+     678:	86 89       	ldd	r24, Z+22	; 0x16
+     67a:	8a 86       	std	Y+10, r8	; 0x0a
+     67c:	80 7a       	andi	r24, 0xA0	; 160
+     67e:	7c 7f       	andi	r23, 0xFC	; 252
+     680:	7c 77       	andi	r23, 0x7C	; 124
+     682:	77 7a       	andi	r23, 0xA7	; 167
+     684:	80 81       	ld	r24, Z
+     686:	80 81       	ld	r24, Z
+     688:	85 89       	ldd	r24, Z+21	; 0x15
+     68a:	8a 87       	std	Y+10, r24	; 0x0a
+     68c:	80 7b       	andi	r24, 0xB0	; 176
+     68e:	7b 7f       	andi	r23, 0xFB	; 251
+     690:	7c 77       	andi	r23, 0x7C	; 124
+     692:	76 79       	andi	r23, 0x96	; 150
+     694:	80 80       	ld	r8, Z
+     696:	80 80       	ld	r8, Z
+     698:	84 88       	ldd	r8, Z+20	; 0x14
+     69a:	89 88       	ldd	r8, Y+17	; 0x11
+     69c:	82 7c       	andi	r24, 0xC2	; 194
+     69e:	7c 80       	ldd	r7, Y+4	; 0x04
+     6a0:	7d 79       	andi	r23, 0x9D	; 157
+     6a2:	77 78       	andi	r23, 0x87	; 135
+     6a4:	7f 80       	ldd	r7, Y+7	; 0x07
+     6a6:	80 80       	ld	r8, Z
+     6a8:	84 87       	std	Z+12, r24	; 0x0c
+     6aa:	89 88       	ldd	r8, Y+17	; 0x11
+     6ac:	84 7d       	andi	r24, 0xD4	; 212
+     6ae:	7c 80       	ldd	r7, Y+4	; 0x04
+     6b0:	7e 7a       	andi	r23, 0xAE	; 174
+     6b2:	77 78       	andi	r23, 0x87	; 135
+     6b4:	7e 80       	ldd	r7, Y+6	; 0x06
+     6b6:	80 80       	ld	r8, Z
+     6b8:	83 87       	std	Z+11, r24	; 0x0b
+     6ba:	89 89       	ldd	r24, Y+17	; 0x11
+     6bc:	84 7e       	andi	r24, 0xE4	; 228
+     6be:	7c 80       	ldd	r7, Y+4	; 0x04
+     6c0:	7f 7b       	andi	r23, 0xBF	; 191
+     6c2:	78 78       	andi	r23, 0x88	; 136
+     6c4:	7e 80       	ldd	r7, Y+6	; 0x06
+     6c6:	80 80       	ld	r8, Z
+     6c8:	82 86       	std	Z+10, r8	; 0x0a
+     6ca:	88 89       	ldd	r24, Y+16	; 0x10
+     6cc:	85 7f       	andi	r24, 0xF5	; 245
+     6ce:	7c 80       	ldd	r7, Y+4	; 0x04
+     6d0:	7f 7c       	andi	r23, 0xCF	; 207
+     6d2:	78 78       	andi	r23, 0x88	; 136
+     6d4:	7d 80       	ldd	r7, Y+5	; 0x05
+     6d6:	80 80       	ld	r8, Z
+     6d8:	81 85       	ldd	r24, Z+9	; 0x09
+     6da:	88 8a       	std	Y+16, r8	; 0x10
+     6dc:	87 80       	ldd	r8, Z+7	; 0x07
+     6de:	7c 7f       	andi	r23, 0xFC	; 252
+     6e0:	7f 7c       	andi	r23, 0xCF	; 207
+     6e2:	79 78       	andi	r23, 0x89	; 137
+     6e4:	7d 80       	ldd	r7, Y+5	; 0x05
+     6e6:	80 80       	ld	r8, Z
+     6e8:	81 84       	ldd	r8, Z+9	; 0x09
+     6ea:	87 89       	ldd	r24, Z+23	; 0x17
+     6ec:	86 80       	ldd	r8, Z+6	; 0x06
+     6ee:	7c 7f       	andi	r23, 0xFC	; 252
+     6f0:	7f 7d       	andi	r23, 0xDF	; 223
+     6f2:	79 78       	andi	r23, 0x89	; 137
+     6f4:	7c 80       	ldd	r7, Y+4	; 0x04
+     6f6:	80 80       	ld	r8, Z
+     6f8:	80 83       	st	Z, r24
+     6fa:	86 88       	ldd	r8, Z+22	; 0x16
+     6fc:	87 80       	ldd	r8, Z+7	; 0x07
+     6fe:	7c 7e       	andi	r23, 0xEC	; 236
+     700:	7f 7e       	andi	r23, 0xEF	; 239
+     702:	79 78       	andi	r23, 0x89	; 137
+     704:	7b 7f       	andi	r23, 0xFB	; 251
+     706:	80 80       	ld	r8, Z
+     708:	80 83       	st	Z, r24
+     70a:	85 88       	ldd	r8, Z+21	; 0x15
+     70c:	88 81       	ld	r24, Y
+     70e:	7d 7e       	andi	r23, 0xED	; 237
+     710:	7f 7f       	andi	r23, 0xFF	; 255
+     712:	7b 78       	andi	r23, 0x8B	; 139
+     714:	7b 7e       	andi	r23, 0xEB	; 235
+     716:	80 80       	ld	r8, Z
+     718:	80 82       	st	Z, r8
+     71a:	84 88       	ldd	r8, Z+20	; 0x14
+     71c:	88 81       	ld	r24, Y
+     71e:	7e 7d       	andi	r23, 0xDE	; 222
+     720:	7e 7f       	andi	r23, 0xFE	; 254
+     722:	7b 78       	andi	r23, 0x8B	; 139
+     724:	7a 7e       	andi	r23, 0xEA	; 234
+     726:	80 80       	ld	r8, Z
+     728:	80 82       	st	Z, r8
+     72a:	83 87       	std	Z+11, r24	; 0x0b
+     72c:	88 82       	st	Y, r8
+     72e:	7e 7d       	andi	r23, 0xDE	; 222
+     730:	7e 7f       	andi	r23, 0xFE	; 254
+     732:	7b 78       	andi	r23, 0x8B	; 139
+     734:	7a 7d       	andi	r23, 0xDA	; 218
+     736:	80 80       	ld	r8, Z
+     738:	80 81       	ld	r24, Z
+     73a:	82 86       	std	Z+10, r8	; 0x0a
+     73c:	87 82       	std	Z+7, r8	; 0x07
+     73e:	7f 7d       	andi	r23, 0xDF	; 223
+     740:	7e 7f       	andi	r23, 0xFE	; 254
+     742:	7c 79       	andi	r23, 0x9C	; 156
+     744:	7a 7d       	andi	r23, 0xDA	; 218
+     746:	7f 7f       	andi	r23, 0xFF	; 255
+     748:	80 81       	ld	r24, Z
+     74a:	82 86       	std	Z+10, r8	; 0x0a
+     74c:	87 83       	std	Z+7, r24	; 0x07
+     74e:	80 7d       	andi	r24, 0xD0	; 208
+     750:	7e 80       	ldd	r7, Y+6	; 0x06
+     752:	7d 7a       	andi	r23, 0xAD	; 173
+     754:	7a 7d       	andi	r23, 0xDA	; 218
+     756:	7f 7f       	andi	r23, 0xFF	; 255
+     758:	80 80       	ld	r8, Z
+     75a:	81 85       	ldd	r24, Z+9	; 0x09
+     75c:	87 84       	ldd	r8, Z+15	; 0x0f
+     75e:	80 7d       	andi	r24, 0xD0	; 208
+     760:	7e 80       	ldd	r7, Y+6	; 0x06
+     762:	7d 7a       	andi	r23, 0xAD	; 173
+     764:	7a 7d       	andi	r23, 0xDA	; 218
+     766:	7f 7f       	andi	r23, 0xFF	; 255
+     768:	80 80       	ld	r8, Z
+     76a:	80 84       	ldd	r8, Z+8	; 0x08
+     76c:	87 84       	ldd	r8, Z+15	; 0x0f
+     76e:	80 7d       	andi	r24, 0xD0	; 208
+     770:	7e 80       	ldd	r7, Y+6	; 0x06
+     772:	7e 7b       	andi	r23, 0xBE	; 190
+     774:	7a 7c       	andi	r23, 0xCA	; 202
+     776:	7f 7f       	andi	r23, 0xFF	; 255
+     778:	80 80       	ld	r8, Z
+     77a:	80 84       	ldd	r8, Z+8	; 0x08
+     77c:	87 85       	ldd	r24, Z+15	; 0x0f
+     77e:	81 7e       	andi	r24, 0xE1	; 225
+     780:	7e 80       	ldd	r7, Y+6	; 0x06
+     782:	7f 7b       	andi	r23, 0xBF	; 191
+     784:	7a 7c       	andi	r23, 0xCA	; 202
+     786:	7e 7f       	andi	r23, 0xFE	; 254
+     788:	80 80       	ld	r8, Z
+     78a:	80 84       	ldd	r8, Z+8	; 0x08
+     78c:	86 85       	ldd	r24, Z+14	; 0x0e
+     78e:	82 7e       	andi	r24, 0xE2	; 226
+     790:	7e 80       	ldd	r7, Y+6	; 0x06
+     792:	7f 7c       	andi	r23, 0xCF	; 207
+     794:	7a 7c       	andi	r23, 0xCA	; 202
+     796:	7e 7e       	andi	r23, 0xEE	; 238
+     798:	80 80       	ld	r8, Z
+     79a:	80 83       	st	Z, r24
+     79c:	85 85       	ldd	r24, Z+13	; 0x0d
+     79e:	82 7f       	andi	r24, 0xF2	; 242
+     7a0:	7e 80       	ldd	r7, Y+6	; 0x06
+     7a2:	80 7c       	andi	r24, 0xC0	; 192
+     7a4:	7a 7b       	andi	r23, 0xBA	; 186
+     7a6:	7d 7e       	andi	r23, 0xED	; 237
+     7a8:	80 80       	ld	r8, Z
+     7aa:	80 82       	st	Z, r8
+     7ac:	85 85       	ldd	r24, Z+13	; 0x0d
+     7ae:	83 80       	ldd	r8, Z+3	; 0x03
+     7b0:	7e 80       	ldd	r7, Y+6	; 0x06
+     7b2:	80 7d       	andi	r24, 0xD0	; 208
+     7b4:	7a 7b       	andi	r23, 0xBA	; 186
+     7b6:	7d 7e       	andi	r23, 0xED	; 237
+     7b8:	80 80       	ld	r8, Z
+     7ba:	80 81       	ld	r24, Z
+     7bc:	85 86       	std	Z+13, r8	; 0x0d
+     7be:	83 80       	ldd	r8, Z+3	; 0x03
+     7c0:	7e 80       	ldd	r7, Y+6	; 0x06
+     7c2:	80 7e       	andi	r24, 0xE0	; 224
+     7c4:	7b 7b       	andi	r23, 0xBB	; 187
+     7c6:	7d 7e       	andi	r23, 0xED	; 237
+     7c8:	80 80       	ld	r8, Z
+     7ca:	80 81       	ld	r24, Z
+     7cc:	85 86       	std	Z+13, r8	; 0x0d
+     7ce:	84 80       	ldd	r8, Z+4	; 0x04
+     7d0:	7f 80       	ldd	r7, Y+7	; 0x07
+     7d2:	80 7e       	andi	r24, 0xE0	; 224
+     7d4:	7b 7c       	andi	r23, 0xCB	; 203
+     7d6:	7d 7d       	andi	r23, 0xDD	; 221
+     7d8:	80 80       	ld	r8, Z
+     7da:	80 81       	ld	r24, Z
+     7dc:	83 85       	ldd	r24, Z+11	; 0x0b
+     7de:	84 80       	ldd	r8, Z+4	; 0x04
+     7e0:	7e 7f       	andi	r23, 0xFE	; 254
+     7e2:	80 7e       	andi	r24, 0xE0	; 224
+     7e4:	7b 7c       	andi	r23, 0xCB	; 203
+     7e6:	7c 7d       	andi	r23, 0xDC	; 220
+     7e8:	7f 80       	ldd	r7, Y+7	; 0x07
+     7ea:	80 80       	ld	r8, Z
+     7ec:	83 85       	ldd	r24, Z+11	; 0x0b
+     7ee:	84 81       	ldd	r24, Z+4	; 0x04
+     7f0:	7f 7f       	andi	r23, 0xFF	; 255
+     7f2:	80 7f       	andi	r24, 0xF0	; 240
+     7f4:	7c 7c       	andi	r23, 0xCC	; 204
+     7f6:	7d 7d       	andi	r23, 0xDD	; 221
+     7f8:	80 80       	ld	r8, Z
+     7fa:	80 80       	ld	r8, Z
+     7fc:	82 85       	ldd	r24, Z+10	; 0x0a
+     7fe:	85 81       	ldd	r24, Z+5	; 0x05
+     800:	7f 7f       	andi	r23, 0xFF	; 255
+     802:	80 7f       	andi	r24, 0xF0	; 240
+     804:	7c 7c       	andi	r23, 0xCC	; 204
+     806:	7d 7d       	andi	r23, 0xDD	; 221
+     808:	80 80       	ld	r8, Z
+     80a:	80 80       	ld	r8, Z
+     80c:	82 84       	ldd	r8, Z+10	; 0x0a
+     80e:	84 81       	ldd	r24, Z+4	; 0x04
+     810:	7f 7e       	andi	r23, 0xEF	; 239
+     812:	80 80       	ld	r8, Z
+     814:	7d 7c       	andi	r23, 0xCD	; 205
+     816:	7d 7d       	andi	r23, 0xDD	; 221
+     818:	80 80       	ld	r8, Z
+     81a:	80 80       	ld	r8, Z
+     81c:	81 84       	ldd	r8, Z+9	; 0x09
+     81e:	84 81       	ldd	r24, Z+4	; 0x04
+     820:	7f 7e       	andi	r23, 0xEF	; 239
+     822:	80 80       	ld	r8, Z
+     824:	7d 7d       	andi	r23, 0xDD	; 221
+     826:	7d 7d       	andi	r23, 0xDD	; 221
+     828:	7f 80       	ldd	r7, Y+7	; 0x07
+     82a:	80 80       	ld	r8, Z
+     82c:	81 83       	std	Z+1, r24	; 0x01
+     82e:	84 82       	std	Z+4, r8	; 0x04
+     830:	7f 7e       	andi	r23, 0xEF	; 239
+     832:	80 80       	ld	r8, Z
+     834:	7d 7d       	andi	r23, 0xDD	; 221
+     836:	7d 7d       	andi	r23, 0xDD	; 221
+     838:	7f 80       	ldd	r7, Y+7	; 0x07
+     83a:	80 80       	ld	r8, Z
+     83c:	81 83       	std	Z+1, r24	; 0x01
+     83e:	84 82       	std	Z+4, r8	; 0x04
+     840:	80 7e       	andi	r24, 0xE0	; 224
+     842:	80 80       	ld	r8, Z
+     844:	7d 7d       	andi	r23, 0xDD	; 221
+     846:	7d 7d       	andi	r23, 0xDD	; 221
+     848:	7f 80       	ldd	r7, Y+7	; 0x07
+     84a:	80 80       	ld	r8, Z
+     84c:	81 83       	std	Z+1, r24	; 0x01
+     84e:	84 82       	std	Z+4, r8	; 0x04
+     850:	80 7e       	andi	r24, 0xE0	; 224
+     852:	80 80       	ld	r8, Z
+     854:	7d 7d       	andi	r23, 0xDD	; 221
+     856:	7d 7d       	andi	r23, 0xDD	; 221
+     858:	7e 80       	ldd	r7, Y+6	; 0x06
+     85a:	80 80       	ld	r8, Z
+     85c:	80 83       	st	Z, r24
+     85e:	84 83       	std	Z+4, r24	; 0x04
+     860:	80 7f       	andi	r24, 0xF0	; 240
+     862:	80 80       	ld	r8, Z
+     864:	7e 7d       	andi	r23, 0xDE	; 222
+     866:	7d 7d       	andi	r23, 0xDD	; 221
+     868:	7e 80       	ldd	r7, Y+6	; 0x06
+     86a:	80 80       	ld	r8, Z
+     86c:	80 83       	st	Z, r24
+     86e:	84 83       	std	Z+4, r24	; 0x04
+     870:	81 7f       	andi	r24, 0xF1	; 241
+     872:	80 80       	ld	r8, Z
+     874:	7e 7d       	andi	r23, 0xDE	; 222
+     876:	7d 7c       	andi	r23, 0xCD	; 205
+     878:	7e 80       	ldd	r7, Y+6	; 0x06
+     87a:	80 7f       	andi	r24, 0xF0	; 240
+     87c:	80 82       	st	Z, r8
+     87e:	84 84       	ldd	r8, Z+12	; 0x0c
+     880:	81 7f       	andi	r24, 0xF1	; 241
+     882:	80 80       	ld	r8, Z
+     884:	7f 7e       	andi	r23, 0xEF	; 239
+     886:	7d 7d       	andi	r23, 0xDD	; 221
+     888:	7e 7f       	andi	r23, 0xFE	; 254
+     88a:	80 7f       	andi	r24, 0xF0	; 240
+     88c:	80 81       	ld	r24, Z
+     88e:	83 83       	std	Z+3, r24	; 0x03
+     890:	81 7f       	andi	r24, 0xF1	; 241
+     892:	80 80       	ld	r8, Z
+     894:	7f 7e       	andi	r23, 0xEF	; 239
+     896:	7d 7d       	andi	r23, 0xDD	; 221
+     898:	7e 7f       	andi	r23, 0xFE	; 254
+     89a:	80 7f       	andi	r24, 0xF0	; 240
+     89c:	7f 81       	ldd	r23, Y+7	; 0x07
+     89e:	83 84       	ldd	r8, Z+11	; 0x0b
+     8a0:	81 80       	ldd	r8, Z+1	; 0x01
+     8a2:	80 80       	ld	r8, Z
+     8a4:	80 7f       	andi	r24, 0xF0	; 240
+     8a6:	7e 7d       	andi	r23, 0xDE	; 222
+     8a8:	7e 7f       	andi	r23, 0xFE	; 254
+     8aa:	80 80       	ld	r8, Z
+     8ac:	7f 80       	ldd	r7, Y+7	; 0x07
+     8ae:	83 84       	ldd	r8, Z+11	; 0x0b
+     8b0:	82 80       	ldd	r8, Z+2	; 0x02
+     8b2:	80 80       	ld	r8, Z
+     8b4:	80 7f       	andi	r24, 0xF0	; 240
+     8b6:	7e 7d       	andi	r23, 0xDE	; 222
+     8b8:	7d 7f       	andi	r23, 0xFD	; 253
+     8ba:	80 7f       	andi	r24, 0xF0	; 240
+     8bc:	7f 80       	ldd	r7, Y+7	; 0x07
+     8be:	82 84       	ldd	r8, Z+10	; 0x0a
+     8c0:	82 80       	ldd	r8, Z+2	; 0x02
+     8c2:	80 80       	ld	r8, Z
+     8c4:	80 7f       	andi	r24, 0xF0	; 240
+     8c6:	7e 7d       	andi	r23, 0xDE	; 222
+     8c8:	7d 7f       	andi	r23, 0xFD	; 253
+     8ca:	80 7f       	andi	r24, 0xF0	; 240
+     8cc:	7f 80       	ldd	r7, Y+7	; 0x07
+     8ce:	82 84       	ldd	r8, Z+10	; 0x0a
+     8d0:	82 80       	ldd	r8, Z+2	; 0x02
+     8d2:	80 80       	ld	r8, Z
+     8d4:	80 7f       	andi	r24, 0xF0	; 240
+     8d6:	7e 7d       	andi	r23, 0xDE	; 222
+     8d8:	7d 7e       	andi	r23, 0xED	; 237
+     8da:	80 7f       	andi	r24, 0xF0	; 240
+     8dc:	7f 80       	ldd	r7, Y+7	; 0x07
+     8de:	81 83       	std	Z+1, r24	; 0x01
+     8e0:	82 80       	ldd	r8, Z+2	; 0x02
+     8e2:	80 80       	ld	r8, Z
+     8e4:	80 7f       	andi	r24, 0xF0	; 240
+     8e6:	7e 7d       	andi	r23, 0xDE	; 222
+     8e8:	7d 7e       	andi	r23, 0xED	; 237
+     8ea:	80 80       	ld	r8, Z
+     8ec:	7f 80       	ldd	r7, Y+7	; 0x07
+     8ee:	81 83       	std	Z+1, r24	; 0x01
+     8f0:	82 80       	ldd	r8, Z+2	; 0x02
+     8f2:	80 80       	ld	r8, Z
+     8f4:	80 80       	ld	r8, Z
+     8f6:	7e 7d       	andi	r23, 0xDE	; 222
+     8f8:	7d 7e       	andi	r23, 0xED	; 237
+     8fa:	80 80       	ld	r8, Z
+     8fc:	80 80       	ld	r8, Z
+     8fe:	81 83       	std	Z+1, r24	; 0x01
+     900:	82 80       	ldd	r8, Z+2	; 0x02
+     902:	80 80       	ld	r8, Z
+     904:	80 80       	ld	r8, Z
+     906:	7f 7e       	andi	r23, 0xEF	; 239
+     908:	7d 7e       	andi	r23, 0xED	; 237
+     90a:	80 80       	ld	r8, Z
+     90c:	80 80       	ld	r8, Z
+     90e:	80 83       	st	Z, r24
+     910:	82 80       	ldd	r8, Z+2	; 0x02
+     912:	80 80       	ld	r8, Z
+     914:	80 80       	ld	r8, Z
+     916:	7f 7d       	andi	r23, 0xDF	; 223
+     918:	7d 7e       	andi	r23, 0xED	; 237
+     91a:	80 80       	ld	r8, Z
+     91c:	80 7f       	andi	r24, 0xF0	; 240
+     91e:	80 82       	st	Z, r8
+     920:	82 80       	ldd	r8, Z+2	; 0x02
+     922:	80 80       	ld	r8, Z
+     924:	80 80       	ld	r8, Z
+     926:	7f 7e       	andi	r23, 0xEF	; 239
+     928:	7d 7e       	andi	r23, 0xED	; 237
+     92a:	7f 80       	ldd	r7, Y+7	; 0x07
+     92c:	80 7f       	andi	r24, 0xF0	; 240
+     92e:	80 82       	st	Z, r8
+     930:	82 81       	ldd	r24, Z+2	; 0x02
+     932:	80 80       	ld	r8, Z
+     934:	80 80       	ld	r8, Z
+     936:	7f 7e       	andi	r23, 0xEF	; 239
+     938:	7d 7e       	andi	r23, 0xED	; 237
+     93a:	7f 80       	ldd	r7, Y+7	; 0x07
+     93c:	80 7f       	andi	r24, 0xF0	; 240
+     93e:	80 82       	st	Z, r8
+     940:	82 81       	ldd	r24, Z+2	; 0x02
+     942:	80 80       	ld	r8, Z
+     944:	80 7f       	andi	r24, 0xF0	; 240
+     946:	7f 7e       	andi	r23, 0xEF	; 239
+     948:	7d 7e       	andi	r23, 0xED	; 237
+     94a:	7f 80       	ldd	r7, Y+7	; 0x07
+     94c:	80 7f       	andi	r24, 0xF0	; 240
+     94e:	80 82       	st	Z, r8
+     950:	82 81       	ldd	r24, Z+2	; 0x02
+     952:	80 80       	ld	r8, Z
+     954:	80 80       	ld	r8, Z
+     956:	7f 7e       	andi	r23, 0xEF	; 239
+     958:	7d 7e       	andi	r23, 0xED	; 237
+     95a:	7f 80       	ldd	r7, Y+7	; 0x07
+     95c:	80 7f       	andi	r24, 0xF0	; 240
+     95e:	80 82       	st	Z, r8
+     960:	82 81       	ldd	r24, Z+2	; 0x02
+     962:	80 80       	ld	r8, Z
+     964:	80 80       	ld	r8, Z
+     966:	80 7e       	andi	r24, 0xE0	; 224
+     968:	7d 7e       	andi	r23, 0xED	; 237
+     96a:	7e 80       	ldd	r7, Y+6	; 0x06
+     96c:	80 7f       	andi	r24, 0xF0	; 240
+     96e:	80 81       	ld	r24, Z
+     970:	82 81       	ldd	r24, Z+2	; 0x02
+     972:	80 80       	ld	r8, Z
+     974:	80 80       	ld	r8, Z
+     976:	80 7e       	andi	r24, 0xE0	; 224
+     978:	7d 7d       	andi	r23, 0xDD	; 221
+     97a:	7e 80       	ldd	r7, Y+6	; 0x06
+     97c:	80 7f       	andi	r24, 0xF0	; 240
+     97e:	7f 81       	ldd	r23, Y+7	; 0x07
+     980:	82 81       	ldd	r24, Z+2	; 0x02
+     982:	80 80       	ld	r8, Z
+     984:	80 80       	ld	r8, Z
+     986:	80 7f       	andi	r24, 0xF0	; 240
+     988:	7e 7e       	andi	r23, 0xEE	; 238
+     98a:	7e 7f       	andi	r23, 0xFE	; 254
+     98c:	80 7f       	andi	r24, 0xF0	; 240
+     98e:	7f 80       	ldd	r7, Y+7	; 0x07
+     990:	81 81       	ldd	r24, Z+1	; 0x01
+     992:	80 80       	ld	r8, Z
+     994:	80 80       	ld	r8, Z
+     996:	80 7f       	andi	r24, 0xF0	; 240
+     998:	7e 7e       	andi	r23, 0xEE	; 238
+     99a:	7e 7f       	andi	r23, 0xFE	; 254
+     99c:	80 7f       	andi	r24, 0xF0	; 240
+     99e:	7f 80       	ldd	r7, Y+7	; 0x07
+     9a0:	81 81       	ldd	r24, Z+1	; 0x01
+     9a2:	80 80       	ld	r8, Z
+     9a4:	80 80       	ld	r8, Z
+     9a6:	80 7f       	andi	r24, 0xF0	; 240
+     9a8:	7e 7e       	andi	r23, 0xEE	; 238
+     9aa:	7e 7f       	andi	r23, 0xFE	; 254
+     9ac:	80 7f       	andi	r24, 0xF0	; 240
+     9ae:	7f 80       	ldd	r7, Y+7	; 0x07
+     9b0:	81 81       	ldd	r24, Z+1	; 0x01
+     9b2:	80 80       	ld	r8, Z
+     9b4:	80 80       	ld	r8, Z
+     9b6:	80 7f       	andi	r24, 0xF0	; 240
+     9b8:	7e 7e       	andi	r23, 0xEE	; 238
+     9ba:	7e 7f       	andi	r23, 0xFE	; 254
+     9bc:	80 7f       	andi	r24, 0xF0	; 240
+     9be:	7f 80       	ldd	r7, Y+7	; 0x07
+     9c0:	81 81       	ldd	r24, Z+1	; 0x01
+     9c2:	81 80       	ldd	r8, Z+1	; 0x01
+     9c4:	80 80       	ld	r8, Z
+     9c6:	80 80       	ld	r8, Z
+     9c8:	7f 7e       	andi	r23, 0xEF	; 239
+     9ca:	7e 7f       	andi	r23, 0xFE	; 254
+     9cc:	80 7f       	andi	r24, 0xF0	; 240
+     9ce:	7f 80       	ldd	r7, Y+7	; 0x07
+     9d0:	81 81       	ldd	r24, Z+1	; 0x01
+     9d2:	81 80       	ldd	r8, Z+1	; 0x01
+     9d4:	80 80       	ld	r8, Z
+     9d6:	80 80       	ld	r8, Z
+     9d8:	7f 7e       	andi	r23, 0xEF	; 239
+     9da:	7e 7f       	andi	r23, 0xFE	; 254
+     9dc:	80 7f       	andi	r24, 0xF0	; 240
+     9de:	7f 80       	ldd	r7, Y+7	; 0x07
+     9e0:	81 81       	ldd	r24, Z+1	; 0x01
+     9e2:	81 80       	ldd	r8, Z+1	; 0x01
+     9e4:	80 80       	ld	r8, Z
+     9e6:	80 80       	ld	r8, Z
+     9e8:	7f 7e       	andi	r23, 0xEF	; 239
+     9ea:	7e 7e       	andi	r23, 0xEE	; 238
+     9ec:	80 7f       	andi	r24, 0xF0	; 240
+     9ee:	7f 80       	ldd	r7, Y+7	; 0x07
+     9f0:	81 81       	ldd	r24, Z+1	; 0x01
+     9f2:	81 80       	ldd	r8, Z+1	; 0x01
+     9f4:	80 80       	ld	r8, Z
+     9f6:	80 80       	ld	r8, Z
+     9f8:	7f 7e       	andi	r23, 0xEF	; 239
+     9fa:	7e 7e       	andi	r23, 0xEE	; 238
+     9fc:	80 80       	ld	r8, Z
+     9fe:	7f 80       	ldd	r7, Y+7	; 0x07
+     a00:	81 81       	ldd	r24, Z+1	; 0x01
+     a02:	81 81       	ldd	r24, Z+1	; 0x01
+     a04:	80 80       	ld	r8, Z
+     a06:	80 80       	ld	r8, Z
+     a08:	7f 7e       	andi	r23, 0xEF	; 239
+     a0a:	7e 7e       	andi	r23, 0xEE	; 238
+     a0c:	7f 80       	ldd	r7, Y+7	; 0x07
+     a0e:	7f 80       	ldd	r7, Y+7	; 0x07
+     a10:	80 81       	ld	r24, Z
+     a12:	81 80       	ldd	r8, Z+1	; 0x01
+     a14:	80 80       	ld	r8, Z
+     a16:	80 80       	ld	r8, Z
+     a18:	7f 7f       	andi	r23, 0xFF	; 255
+     a1a:	7e 7e       	andi	r23, 0xEE	; 238
+     a1c:	7f 80       	ldd	r7, Y+7	; 0x07
+     a1e:	7f 7f       	andi	r23, 0xFF	; 255
+     a20:	80 81       	ld	r24, Z
+     a22:	81 81       	ldd	r24, Z+1	; 0x01
+     a24:	80 80       	ld	r8, Z
+     a26:	80 80       	ld	r8, Z
+     a28:	7f 7f       	andi	r23, 0xFF	; 255
+     a2a:	7e 7e       	andi	r23, 0xEE	; 238
+     a2c:	7f 7f       	andi	r23, 0xFF	; 255
+     a2e:	7f 7f       	andi	r23, 0xFF	; 255
+     a30:	80 81       	ld	r24, Z
+     a32:	81 81       	ldd	r24, Z+1	; 0x01
+     a34:	80 80       	ld	r8, Z
+     a36:	80 80       	ld	r8, Z
+     a38:	7f 7f       	andi	r23, 0xFF	; 255
+     a3a:	7e 7e       	andi	r23, 0xEE	; 238
+     a3c:	7f 7f       	andi	r23, 0xFF	; 255
+     a3e:	7f 7f       	andi	r23, 0xFF	; 255
+     a40:	80 81       	ld	r24, Z
+     a42:	81 81       	ldd	r24, Z+1	; 0x01
+     a44:	80 80       	ld	r8, Z
+     a46:	80 80       	ld	r8, Z
+     a48:	80 7f       	andi	r24, 0xF0	; 240
+     a4a:	7e 7e       	andi	r23, 0xEE	; 238
+     a4c:	7f 80       	ldd	r7, Y+7	; 0x07
+     a4e:	7f 7f       	andi	r23, 0xFF	; 255
+     a50:	80 80       	ld	r8, Z
+     a52:	80 80       	ld	r8, Z
+     a54:	80 80       	ld	r8, Z
+     a56:	80 80       	ld	r8, Z
+     a58:	80 7f       	andi	r24, 0xF0	; 240
+     a5a:	7e 7e       	andi	r23, 0xEE	; 238
+     a5c:	7f 7f       	andi	r23, 0xFF	; 255
+     a5e:	7f 7f       	andi	r23, 0xFF	; 255
+     a60:	80 80       	ld	r8, Z
+     a62:	80 80       	ld	r8, Z
+     a64:	80 80       	ld	r8, Z
+     a66:	80 80       	ld	r8, Z
+     a68:	80 7f       	andi	r24, 0xF0	; 240
+     a6a:	7f 7e       	andi	r23, 0xEF	; 239
+     a6c:	7f 80       	ldd	r7, Y+7	; 0x07
+     a6e:	7f 7f       	andi	r23, 0xFF	; 255
+     a70:	80 80       	ld	r8, Z
+     a72:	80 80       	ld	r8, Z
+     a74:	80 80       	ld	r8, Z
+     a76:	80 80       	ld	r8, Z
+     a78:	80 80       	ld	r8, Z
+     a7a:	7f 7e       	andi	r23, 0xEF	; 239
+     a7c:	7f 80       	ldd	r7, Y+7	; 0x07
+     a7e:	7f 7f       	andi	r23, 0xFF	; 255
+     a80:	80 80       	ld	r8, Z
+     a82:	80 81       	ld	r24, Z
+     a84:	80 80       	ld	r8, Z
+     a86:	80 80       	ld	r8, Z
+     a88:	80 80       	ld	r8, Z
+     a8a:	7f 7f       	andi	r23, 0xFF	; 255
+     a8c:	7f 7f       	andi	r23, 0xFF	; 255
+     a8e:	7f 7f       	andi	r23, 0xFF	; 255
+     a90:	80 80       	ld	r8, Z
+     a92:	80 80       	ld	r8, Z
+     a94:	80 80       	ld	r8, Z
+     a96:	80 80       	ld	r8, Z
+     a98:	80 80       	ld	r8, Z
+     a9a:	7f 7f       	andi	r23, 0xFF	; 255
+     a9c:	7f 7f       	andi	r23, 0xFF	; 255
+     a9e:	7f 7f       	andi	r23, 0xFF	; 255
+     aa0:	80 80       	ld	r8, Z
+     aa2:	80 80       	ld	r8, Z
+     aa4:	80 80       	ld	r8, Z
+     aa6:	80 80       	ld	r8, Z
+     aa8:	80 80       	ld	r8, Z
+     aaa:	7f 7f       	andi	r23, 0xFF	; 255
+     aac:	7f 7f       	andi	r23, 0xFF	; 255
+     aae:	7f 7f       	andi	r23, 0xFF	; 255
+     ab0:	7f 80       	ldd	r7, Y+7	; 0x07
+     ab2:	80 80       	ld	r8, Z
+     ab4:	80 80       	ld	r8, Z
+     ab6:	80 80       	ld	r8, Z
+     ab8:	80 80       	ld	r8, Z
+     aba:	7f 7f       	andi	r23, 0xFF	; 255
+     abc:	7f 7f       	andi	r23, 0xFF	; 255
+     abe:	7f 7f       	andi	r23, 0xFF	; 255
+     ac0:	7f 80       	ldd	r7, Y+7	; 0x07
+     ac2:	80 80       	ld	r8, Z
+     ac4:	80 80       	ld	r8, Z
+     ac6:	80 80       	ld	r8, Z
+     ac8:	80 80       	ld	r8, Z
+     aca:	7f 7f       	andi	r23, 0xFF	; 255
+     acc:	7f 7f       	andi	r23, 0xFF	; 255
+     ace:	7f 7f       	andi	r23, 0xFF	; 255
+     ad0:	7f 80       	ldd	r7, Y+7	; 0x07
+     ad2:	80 80       	ld	r8, Z
+     ad4:	80 80       	ld	r8, Z
+     ad6:	80 80       	ld	r8, Z
+     ad8:	80 80       	ld	r8, Z
+     ada:	7f 7f       	andi	r23, 0xFF	; 255
+     adc:	7f 7f       	andi	r23, 0xFF	; 255
+     ade:	7f 7f       	andi	r23, 0xFF	; 255
+     ae0:	7f 80       	ldd	r7, Y+7	; 0x07
+     ae2:	80 80       	ld	r8, Z
+     ae4:	80 80       	ld	r8, Z
+     ae6:	80 80       	ld	r8, Z
+     ae8:	80 80       	ld	r8, Z
+     aea:	80 7f       	andi	r24, 0xF0	; 240
+     aec:	7f 7f       	andi	r23, 0xFF	; 255
+     aee:	7f 7f       	andi	r23, 0xFF	; 255
+     af0:	7f 80       	ldd	r7, Y+7	; 0x07
+     af2:	80 80       	ld	r8, Z
+     af4:	80 80       	ld	r8, Z
+     af6:	80 80       	ld	r8, Z
+     af8:	80 80       	ld	r8, Z
+     afa:	80 7f       	andi	r24, 0xF0	; 240
+     afc:	7f 7f       	andi	r23, 0xFF	; 255
+     afe:	7f 7f       	andi	r23, 0xFF	; 255
+     b00:	7f 80       	ldd	r7, Y+7	; 0x07
+     b02:	80 80       	ld	r8, Z
+     b04:	80 80       	ld	r8, Z
+     b06:	80 80       	ld	r8, Z
+     b08:	80 80       	ld	r8, Z
+     b0a:	80 7f       	andi	r24, 0xF0	; 240
+     b0c:	7f 7f       	andi	r23, 0xFF	; 255
+     b0e:	7f 7f       	andi	r23, 0xFF	; 255
+     b10:	7f 80       	ldd	r7, Y+7	; 0x07
+     b12:	80 80       	ld	r8, Z
+     b14:	80 80       	ld	r8, Z
+     b16:	80 80       	ld	r8, Z
+     b18:	80 80       	ld	r8, Z
+     b1a:	80 7f       	andi	r24, 0xF0	; 240
+     b1c:	7f 7f       	andi	r23, 0xFF	; 255
+     b1e:	7f 7f       	andi	r23, 0xFF	; 255
+     b20:	7f 80       	ldd	r7, Y+7	; 0x07
+     b22:	80 80       	ld	r8, Z
+     b24:	80 80       	ld	r8, Z
+     b26:	80 80       	ld	r8, Z
+     b28:	80 80       	ld	r8, Z
+     b2a:	80 7f       	andi	r24, 0xF0	; 240
+     b2c:	7f 7f       	andi	r23, 0xFF	; 255
+     b2e:	7f 7f       	andi	r23, 0xFF	; 255
+     b30:	7f 80       	ldd	r7, Y+7	; 0x07
+     b32:	80 80       	ld	r8, Z
+     b34:	80 80       	ld	r8, Z
+     b36:	80 80       	ld	r8, Z
+     b38:	80 80       	ld	r8, Z
+     b3a:	80 7f       	andi	r24, 0xF0	; 240
+     b3c:	7f 7f       	andi	r23, 0xFF	; 255
+     b3e:	7f 7f       	andi	r23, 0xFF	; 255
+     b40:	7f 80       	ldd	r7, Y+7	; 0x07
+     b42:	80 80       	ld	r8, Z
+     b44:	80 80       	ld	r8, Z
+     b46:	80 80       	ld	r8, Z
+     b48:	80 80       	ld	r8, Z
+     b4a:	80 7f       	andi	r24, 0xF0	; 240
+     b4c:	7f 7f       	andi	r23, 0xFF	; 255
+     b4e:	7f 7f       	andi	r23, 0xFF	; 255
+     b50:	7f 80       	ldd	r7, Y+7	; 0x07
+     b52:	80 80       	ld	r8, Z
+     b54:	80 80       	ld	r8, Z
+     b56:	80 80       	ld	r8, Z
+     b58:	80 80       	ld	r8, Z
+     b5a:	80 80       	ld	r8, Z
+     b5c:	7f 7f       	andi	r23, 0xFF	; 255
+     b5e:	7f 7f       	andi	r23, 0xFF	; 255
+     b60:	7f 7f       	andi	r23, 0xFF	; 255
+     b62:	80 80       	ld	r8, Z
+     b64:	80 80       	ld	r8, Z
+     b66:	80 80       	ld	r8, Z
+     b68:	80 80       	ld	r8, Z
+     b6a:	80 80       	ld	r8, Z
+     b6c:	7f 7f       	andi	r23, 0xFF	; 255
+     b6e:	7f 7f       	andi	r23, 0xFF	; 255
+     b70:	7f 7f       	andi	r23, 0xFF	; 255
+     b72:	80 80       	ld	r8, Z
+     b74:	80 80       	ld	r8, Z
+     b76:	80 80       	ld	r8, Z
+     b78:	80 80       	ld	r8, Z
+     b7a:	80 80       	ld	r8, Z
+     b7c:	7f 7f       	andi	r23, 0xFF	; 255
+     b7e:	7f 80       	ldd	r7, Y+7	; 0x07
+
+00000b80 <PCM_A>:
+     b80:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+     b90:	80 80 80 82 86 87 86 82 7f 7b 7a 7b 7b 79 76 75     .........{z{{yvu
+     ba0:	7a 80 7c 79 7f 84 8e 95 93 8b 84 7e 7a 7a 7b 77     z.|y.......~zz{w
+     bb0:	73 72 7f 89 80 7c 82 86 8f 99 99 8c 7e 72 6b 6d     sr...|......~rkm
+     bc0:	71 72 72 75 86 90 82 7f 84 86 8b 94 92 87 7d 72     qrru..........}r
+     bd0:	6f 75 7a 79 77 75 83 8e 86 85 89 8a 8e 95 93 8a     ouzywu..........
+     be0:	7f 72 6c 72 75 74 71 6e 7f 8c 88 89 8b 8d 8f 93     .rlrutqn........
+     bf0:	92 89 7c 6b 63 69 6d 6f 6b 68 7b 8b 8c 8c 8f 91     ..|kcimokh{.....
+     c00:	95 99 98 92 86 75 6b 6f 73 76 6e 68 7a 89 8b 8c     .....ukosvnhz...
+     c10:	8d 8d 91 94 94 8e 83 72 67 69 6c 72 69 66 78 88     .......rgilrifx.
+     c20:	8e 8f 8f 90 94 97 96 90 86 74 68 67 6c 73 6b 68     .........thglskh
+     c30:	7a 8b 92 93 91 8f 92 94 92 8c 82 70 64 61 68 73     z..........pdahs
+     c40:	6d 6b 7a 89 92 94 92 91 94 97 95 90 85 72 65 5f     mkz..........re_
+     c50:	67 71 6b 69 77 85 8e 92 90 8f 90 92 8f 8c 82 71     gqkiw..........q
+     c60:	65 5f 67 71 6b 69 75 83 8e 92 91 90 90 93 91 90     e_gqkiu.........
+     c70:	87 77 6b 63 6b 75 71 6f 7b 89 95 99 98 94 93 94     .wkckuqo{.......
+     c80:	90 90 87 79 6c 62 6a 72 6d 6a 74 80 8c 90 90 8b     ...ylbjrmjt.....
+     c90:	8b 8d 8c 8f 87 7c 6f 64 6c 75 70 6d 75 80 8b 8f     .....|odlupmu...
+     ca0:	8f 88 89 89 89 8d 87 7f 71 66 6d 76 73 71 77 83     ........qfmvsqw.
+     cb0:	8d 93 92 8d 8e 8d 8e 91 8b 83 75 69 6e 77 74 72     ..........uinwtr
+     cc0:	78 83 8c 92 91 8c 8d 8a 8c 8e 89 83 74 67 6c 74     x...........tglt
+     cd0:	71 6e 73 7d 85 8c 8a 86 87 83 87 88 86 83 76 68     qns}..........vh
+     ce0:	6c 75 74 71 74 7d 85 8d 8d 8b 8b 89 8d 8e 8c 89     lutqt}..........
+     cf0:	7b 6c 6d 74 74 71 74 7d 86 90 8f 8e 8d 8a 8d 8d     {lmttqt}........
+     d00:	8c 89 7b 6b 6b 72 72 6f 72 7a 84 8e 8c 8c 8a 88     ..{kkrrorz......
+     d10:	8b 8b 8b 8a 7c 6c 6b 71 73 6f 72 78 82 8b 8a 8b     ....|lkqsorx....
+     d20:	87 85 89 89 8b 8c 80 70 6d 73 74 70 71 75 80 89     .......pmstpqu..
+     d30:	8b 8c 89 87 8b 8b 8e 90 83 74 70 75 75 71 71 74     .........tpuuqqt
+     d40:	7f 87 8a 8c 89 88 8b 8a 8e 91 84 75 6f 74 74 71     ...........uottq
+     d50:	70 72 7d 84 89 8b 87 87 89 88 8d 91 86 78 71 75     pr}..........xqu
+     d60:	75 73 71 72 7d 83 89 8b 87 87 89 88 8d 92 89 7a     usqr}..........z
+     d70:	72 76 75 74 70 71 7b 81 88 8a 87 87 89 88 8e 92     rvutpq{.........
+     d80:	8b 7b 73 76 76 75 70 70 79 80 87 8a 86 87 89 88     .{svvuppy.......
+     d90:	8e 93 8e 7e 76 77 77 76 70 70 77 7f 86 89 85 86     ...~vwwvppw.....
+     da0:	87 86 8c 93 8e 7e 77 77 78 77 70 70 76 7d 85 88     .....~wwxwppv}..
+     db0:	84 86 86 85 8b 92 8e 7e 77 75 76 75 6f 6e 73 79     .......~wuvuonsy
+     dc0:	82 86 83 85 85 85 8a 93 90 81 7a 77 78 77 71 6f     ..........zwxwqo
+     dd0:	73 79 83 87 85 86 85 86 8a 94 92 84 7d 79 7b 7a     sy..........}y{z
+     de0:	73 71 73 79 83 87 87 88 87 86 8a 95 92 86 7d 79     sqsy..........}y
+     df0:	7a 79 72 70 72 78 82 85 86 86 85 83 87 92 90 85     zyrprx..........
+     e00:	7c 77 7a 79 72 6f 70 76 80 84 85 85 85 83 87 92     |wzyropv........
+     e10:	91 88 7e 79 7b 7a 73 71 6f 75 80 84 86 87 87 84     ..~y{zsqou......
+     e20:	88 93 92 8a 80 7a 7c 7a 75 72 6f 75 7f 84 87 88     .....z|zurou....
+     e30:	88 83 88 92 92 8a 80 7a 7c 7a 75 71 6e 73 7d 82     .......z|zuqns}.
+     e40:	84 87 86 81 85 8e 8f 89 7f 78 7a 78 75 71 6d 72     .........xzxuqmr
+     e50:	7b 81 83 87 87 81 85 8d 8f 8b 80 7a 7c 7a 78 74     {..........z|zxt
+     e60:	70 73 7b 82 84 88 87 82 85 8d 91 8d 82 7b 7c 7a     ps{..........{|z
+     e70:	79 74 70 72 7a 80 83 89 87 82 85 8c 91 8f 83 7c     ytprz..........|
+     e80:	7c 7a 79 74 70 70 78 7e 81 87 86 80 83 8a 90 8e     |zytppx~........
+     e90:	82 7c 7a 7a 79 74 6f 6f 77 7d 80 87 86 80 82 89     .|zzytoow}......
+     ea0:	91 91 85 7f 7c 7d 7c 77 72 70 78 7e 81 88 88 83     ....|}|wrpx~....
+     eb0:	85 8b 93 93 88 80 7e 7e 7d 79 72 70 77 7c 80 87     ......~~}yrpw|..
+     ec0:	87 82 83 88 92 91 88 80 7d 7e 7d 79 72 6f 75 79     ........}~}yrouy
+     ed0:	7f 85 86 82 81 86 90 90 88 80 7c 7d 7c 79 70 6d     ..........|}|ypm
+     ee0:	73 78 7d 85 86 83 81 86 91 91 8a 81 7e 7d 7c 7a     sx}.........~}|z
+     ef0:	71 6e 73 77 7d 84 86 83 81 85 90 92 8c 83 7f 7e     qnsw}..........~
+     f00:	7d 7b 72 6e 72 75 7b 83 85 84 80 84 8f 92 8d 84     }{rnru{.........
+     f10:	80 7e 7e 7c 74 6f 72 75 7b 83 85 84 80 84 8e 92     .~~|toru{.......
+     f20:	8e 85 80 7e 7f 7d 74 6f 71 73 7a 80 84 84 80 83     ...~.}toqsz.....
+     f30:	8d 92 8e 86 81 7e 80 7f 75 70 71 72 79 80 85 85     .....~..upqry...
+     f40:	80 84 8d 94 91 89 83 80 81 80 77 72 72 73 7a 80     ..........wrrsz.
+     f50:	86 85 81 84 8c 94 91 8a 83 80 81 80 77 72 71 73     ............wrqs
+     f60:	79 7f 86 86 81 83 8b 93 91 8b 83 80 81 80 77 72     y.............wr
+     f70:	70 71 76 7d 84 84 80 80 89 91 91 8b 83 7e 80 80     pqv}.........~..
+     f80:	77 72 6f 71 75 7d 85 86 82 81 8a 92 92 8e 85 80     wroqu}..........
+     f90:	82 80 79 74 71 72 75 7c 84 85 82 81 88 90 92 8d     ..ytqru|........
+     fa0:	84 7f 80 7f 78 72 6e 6f 71 78 81 83 80 80 86 8f     ....xrnoqx......
+     fb0:	91 8e 85 7f 81 80 7a 73 6e 6f 70 78 80 83 80 80     ......zsnopx....
+     fc0:	86 8e 91 8f 86 80 81 80 7b 74 70 70 70 77 80 84     ........{tpppw..
+     fd0:	81 80 86 8e 92 91 88 81 82 80 7d 75 71 70 70 77     ..........}uqppw
+     fe0:	80 85 82 81 87 8e 93 92 89 83 82 81 7e 76 72 6f     ............~vro
+     ff0:	6f 75 7f 84 82 80 85 8c 91 92 88 83 82 81 7e 76     ou............~v
+    1000:	72 6f 6e 74 7e 83 82 80 84 8a 91 92 8a 84 82 82     ront~...........
+    1010:	7f 77 73 6f 6e 72 7c 83 81 80 84 89 91 92 8a 85     .wsonr|.........
+    1020:	83 84 80 79 74 70 6f 72 7c 83 82 81 84 88 91 93     ...ytpor|.......
+    1030:	8c 86 83 84 80 7a 74 6f 6d 70 79 81 80 80 81 85     .....ztompy.....
+    1040:	8f 91 8c 85 83 83 80 7a 75 70 6d 70 79 81 80 80     .......zupmpy...
+    1050:	80 84 8e 90 8c 86 83 84 80 7b 75 71 6d 6f 78 80     .........{uqmox.
+    1060:	80 80 80 83 8d 90 8d 87 85 85 81 7d 78 73 6f 6f     ...........}xsoo
+    1070:	78 80 80 81 80 83 8c 90 8e 87 86 85 81 7e 78 73     x............~xs
+    1080:	6e 6d 76 7e 80 80 7e 81 8a 8f 8d 87 85 85 82 7e     nmv~..~........~
+    1090:	79 74 6f 6d 76 7e 81 81 7f 81 8a 90 8e 88 86 86     ytomv~..........
+    10a0:	83 80 7b 77 70 6e 76 7d 80 81 80 80 88 8f 8e 89     ..{wpnv}........
+    10b0:	87 86 84 80 7c 78 71 6e 75 7c 80 81 80 80 87 8e     ....|xqnu|......
+    10c0:	8e 8a 87 86 84 80 7c 79 71 6d 73 7a 80 80 7f 80     ......|yqmsz....
+    10d0:	84 8c 8d 89 86 85 83 80 7d 79 71 6d 72 79 80 80     ........}yqmry..
+    10e0:	7f 7f 83 8b 8d 8a 87 86 85 80 7f 7b 72 6e 71 78     ...........{rnqx
+    10f0:	7f 80 7f 7e 81 8a 8c 8a 86 85 84 80 7f 7b 72 70     ...~.........{rp
+    1100:	71 76 7e 80 80 7e 81 89 8c 8b 88 86 86 81 80 7c     qv~..~.........|
+    1110:	74 71 71 76 7e 80 80 7e 81 89 8b 8a 87 86 85 80     tqqv~..~........
+    1120:	80 7c 75 70 70 75 7c 80 80 7e 80 88 8b 8a 88 87     .|uppu|..~......
+    1130:	85 81 80 7d 77 72 71 75 7c 80 80 7e 80 87 8b 8b     ...}wrqu|..~....
+    1140:	88 88 86 81 80 7e 78 72 70 74 7b 80 80 7f 80 87     .....~xrpt{.....
+    1150:	8b 8b 87 88 87 83 82 80 79 74 72 74 7b 80 80 7e     ........ytrt{..~
+    1160:	80 85 8a 8a 86 87 86 83 82 80 7a 74 71 73 79 80     ..........ztqsy.
+    1170:	80 7d 7f 83 88 89 86 87 85 84 83 80 7c 76 72 74     .}..........|vrt
+    1180:	7a 80 80 7e 7f 82 89 89 87 88 86 85 84 81 7e 77     z..~..........~w
+    1190:	73 73 79 7f 80 7d 7e 81 87 88 86 87 85 84 84 82     ssy..}~.........
+    11a0:	7e 77 72 72 77 7e 7e 7c 7c 80 86 87 87 88 86 84     ~wrrw~~||.......
+    11b0:	84 82 7f 79 73 72 77 7d 7e 7c 7b 80 85 86 87 88     ...ysrw}~|{.....
+    11c0:	86 84 84 82 80 7a 74 72 77 7d 7e 7d 7c 80 84 86     .....ztrw}~}|...
+    11d0:	87 87 86 84 84 83 80 7c 75 72 76 7c 7f 7e 7c 80     .......|urv|.~|.
+    11e0:	84 86 87 87 86 85 84 84 81 7c 76 73 77 7c 80 7f     .........|vsw|..
+    11f0:	7c 80 84 86 87 88 86 85 84 84 82 7d 77 73 76 7c     |..........}wsv|
+    1200:	7f 7f 7c 7f 83 85 86 87 86 85 84 83 82 7e 78 73     ..|..........~xs
+    1210:	76 7a 7f 7f 7c 7f 82 85 87 88 86 85 84 84 82 7f     vz..|...........
+    1220:	78 74 75 7a 7f 7f 7d 7f 82 85 86 87 86 85 84 83     xtuz..}.........
+    1230:	82 7f 78 74 75 79 7f 7f 7d 7e 81 84 86 86 86 85     ..xtuy..}~......
+    1240:	84 83 82 80 79 75 75 78 7e 7e 7c 7d 80 82 84 86     ....yuux~~|}....
+    1250:	85 84 84 83 82 80 7b 76 75 78 7d 7e 7c 7d 80 82     ......{vux}~|}..
+    1260:	84 86 86 84 84 83 83 80 7b 76 74 78 7d 7d 7b 7c     ........{vtx}}{|
+    1270:	7f 81 83 84 84 84 84 83 83 81 7c 77 75 78 7d 7e     ..........|wux}~
+    1280:	7c 7d 7f 82 84 85 84 84 84 83 84 82 7d 79 75 79     |}..........}yuy
+    1290:	7e 7e 7d 7d 7f 81 83 85 85 84 83 83 84 82 7f 7a     ~~}}...........z
+    12a0:	76 78 7e 7e 7c 7c 7e 80 82 84 84 84 83 83 84 83     vx~~||~.........
+    12b0:	80 7a 76 78 7d 7e 7c 7c 7e 80 82 84 84 84 84 83     .zvx}~||~.......
+    12c0:	85 83 80 7c 77 79 7c 7e 7c 7c 7d 7f 81 83 83 84     ...|wy|~||}.....
+    12d0:	83 84 85 84 81 7c 77 79 7c 7e 7c 7c 7d 7f 81 83     .....|wy|~||}...
+    12e0:	84 84 84 84 85 84 82 7d 78 79 7c 7e 7c 7c 7c 7e     .......}xy|~|||~
+    12f0:	81 83 84 84 84 84 85 85 82 7e 78 78 7b 7e 7d 7c     .........~xx{~}|
+    1300:	7d 7e 81 82 84 84 84 84 85 85 83 7e 79 78 7b 7d     }~.........~yx{}
+    1310:	7c 7b 7c 7d 80 82 83 84 83 84 85 85 84 80 7a 79     |{|}..........zy
+    1320:	7b 7d 7d 7c 7c 7d 80 82 83 84 83 84 85 85 84 80     {}}||}..........
+    1330:	7a 79 7b 7d 7c 7c 7c 7d 80 81 83 84 83 84 84 85     zy{}|||}........
+    1340:	84 80 7b 79 7b 7c 7c 7c 7c 7d 80 81 83 84 83 84     ..{y{||||}......
+    1350:	84 84 84 81 7c 79 7b 7c 7d 7c 7c 7d 80 81 83 84     ....|y{|}||}....
+    1360:	83 84 84 85 85 81 7c 79 7b 7c 7d 7c 7c 7d 7f 81     ......|y{|}||}..
+    1370:	83 84 84 84 84 85 85 81 7c 79 7a 7b 7c 7c 7b 7c     ........|yz{||{|
+    1380:	7e 80 83 83 84 84 83 84 84 82 7d 79 7a 7b 7d 7c     ~.........}yz{}|
+    1390:	7c 7c 7e 80 82 83 83 83 83 84 84 82 7e 7a 7a 7b     ||~.........~zz{
+    13a0:	7d 7d 7c 7d 7e 80 82 82 83 83 83 84 84 82 7e 7b     }}|}~.........~{
+    13b0:	7a 7c 7d 7d 7c 7d 7e 80 82 82 83 83 83 83 85 83     z|}}|}~.........
+    13c0:	7f 7b 7a 7b 7d 7d 7c 7d 7e 80 81 82 83 83 82 83     .{z{}}|}~.......
+    13d0:	84 83 7f 7b 7b 7b 7d 7d 7c 7d 7d 80 81 82 83 83     ...{{{}}|}}.....
+    13e0:	82 83 84 83 80 7c 7b 7c 7d 7d 7d 7d 7d 80 80 82     .....|{|}}}}}...
+    13f0:	82 83 82 82 84 83 80 7d 7b 7c 7d 7d 7d 7d 7d 7f     .......}{|}}}}}.
+    1400:	80 81 82 82 82 82 84 83 80 7e 7c 7c 7e 7e 7d 7d     .........~||~~}}
+    1410:	7d 80 80 81 82 82 82 82 84 84 81 7f 7d 7d 7e 7e     }...........}}~~
+    1420:	7e 7d 7d 7f 80 81 81 82 81 82 83 83 81 7f 7d 7d     ~}}...........}}
+    1430:	7e 7e 7e 7d 7d 7e 80 80 81 81 81 81 83 83 81 7f     ~~~}}~..........
+    1440:	7d 7d 7d 7e 7e 7d 7d 7e 80 80 81 81 81 81 83 83     }}}~~}}~........
+    1450:	82 7f 7d 7d 7d 7e 7e 7d 7d 7e 7f 80 81 81 81 81     ..}}}~~}}~......
+    1460:	83 83 82 80 7d 7d 7d 7e 7e 7d 7d 7e 7f 80 81 81     ....}}}~~}}~....
+    1470:	81 81 82 83 82 80 7e 7d 7d 7e 7e 7d 7d 7e 7f 80     ......~}}~~}}~..
+    1480:	81 81 81 81 82 83 83 81 7f 7e 7e 7f 7f 7e 7d 7e     .........~~..~}~
+    1490:	7f 80 80 81 80 80 82 83 83 80 7f 7e 7e 7e 7f 7e     ...........~~~.~
+    14a0:	7d 7e 7f 7f 80 81 80 81 82 83 83 81 7f 7e 7e 7f     }~...........~~.
+    14b0:	7f 7e 7d 7e 7e 7f 80 81 80 81 82 83 83 81 80 7e     .~}~~..........~
+    14c0:	7e 7f 7f 7e 7e 7e 7e 7f 80 80 80 81 81 83 83 82     ~..~~~~.........
+    14d0:	80 7f 7e 7f 7f 7e 7e 7e 7e 7f 80 80 80 80 81 82     ..~..~~~~.......
+    14e0:	83 82 80 7f 7e 7e 7f 7f 7e 7e 7e 7e 80 80 80 80     ....~~..~~~~....
+    14f0:	81 82 83 82 80 7f 7e 7f 7f 7f 7e 7e 7e 7e 80 80     ......~...~~~~..
+    1500:	80 80 81 82 82 82 81 7f 7f 7f 7f 7f 7e 7e 7e 7e     ............~~~~
+    1510:	7f 80 80 80 80 81 82 82 80 7f 7f 7f 7f 7f 7e 7e     ..............~~
+    1520:	7e 7e 7f 80 80 80 80 81 82 82 81 80 7f 7f 7f 7f     ~~..............
+    1530:	7e 7e 7e 7e 7f 80 80 80 80 81 82 82 81 80 7f 7f     ~~~~............
+    1540:	7f 7f 7f 7e 7e 7e 7f 80 80 80 80 81 82 82 81 80     ...~~~..........
+    1550:	7f 7f 7f 7f 7f 7f 7e 7e 7f 80 80 80 80 80 81 81     ......~~........
+    1560:	81 80 7f 7f 7f 7f 7f 7f 7e 7e 7f 80 80 80 80 80     ........~~......
+    1570:	81 81 81 80 7f 7f 7f 7f 7f 7f 7e 7e 7f 7f 80 80     ..........~~....
+    1580:	80 80 81 81 81 80 7f 7f 7f 7f 7f 7f 7e 7e 7f 7f     ............~~..
+    1590:	80 80 80 80 81 81 81 80 7f 7f 7f 7f 7f 7f 7e 7e     ..............~~
+    15a0:	7f 7f 80 80 80 80 81 81 81 80 80 7f 7f 7f 7f 7f     ................
+    15b0:	7f 7e 7f 7f 80 80 80 80 80 81 81 80 80 7f 7f 7f     .~..............
+    15c0:	7f 7f 7f 7f 7f 7f 80 80 7f 80 80 81 81 80 80 7f     ................
+    15d0:	7f 7f 7f 7f 7f 7f 7f 7f 80 80 7f 80 80 80 81 80     ................
+    15e0:	80 7f 7f 7f 7f 7f 7f 7f 7f 7f 80 80 7f 80 80 80     ................
+    15f0:	81 80 80 80 7f 7f 7f 7f 7f 7f 7f 7f 80 80 7f 80     ................
+    1600:	80 80 80 80 80 80 7f 7f 7f 7f 7f 7f 7f 7f 80 80     ................
+    1610:	7f 80 80 80 80 80 80 80 7f 7f 7f 7f 7f 7f 7f 7f     ................
+    1620:	80 80 7f 80 80 80 80 80 80 80 80 80 80 7f 7f 7f     ................
+    1630:	7f 7f 7f 80 7f 7f 80 80 80 80 80 80 80 7f 80 7f     ................
+    1640:	7f 7f 7f 7f 7f 7f 7f 7f 80 80 80 80 80 80 80 7f     ................
+    1650:	80 80 7f 7f 7f 7f 7f 7f 7f 7f 80 80 80 80 80 80     ................
+    1660:	80 7f 7f 80 7f 7f 7f 7f 7f 7f 7f 7f 7f 80 80 80     ................
+    1670:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+
+00001680 <recordTEST>:
+    1680:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 81 81     ................
+    1690:	80 80 80 80 80 80 80 7f 7f 7f 80 80 80 80 80 80     ................
+    16a0:	80 80 80 80 80 80 80 80 81 80 80 80 80 80 80 7f     ................
+    16b0:	7f 7f 7f 7f 80 80 80 80 80 80 80 80 80 80 80 81     ................
+    16c0:	81 81 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    16d0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    16e0:	7f 7f 7f 7f 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    16f0:	81 81 81 81 81 81 80 80 80 80 80 80 80 80 80 80     ................
+    1700:	80 81 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    1710:	80 80 7f 7f 7f 7f 7f 7f 80 80 80 80 80 80 80 80     ................
+    1720:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    1730:	80 80 80 80 81 81 82 82 82 81 80 80 80 80 81 81     ................
+    1740:	81 81 80 80 80 80 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f     ................
+    1750:	7f 7e 7e 7d 7d 7d 7d 7e 7e 7e 7f 7f 7f 80 80 80     .~~}}}}~~~......
+    1760:	80 80 81 81 81 82 83 84 85 85 85 84 84 84 85 85     ................
+    1770:	84 84 84 83 83 82 81 81 81 80 80 7f 7e 7d 7d 7c     ............~}}|
+    1780:	7b 7a 79 78 77 78 78 7a 77 79 80 7b 7a 7a 7e 83     {zyxwxxzwy.{zz~.
+    1790:	81 80 81 84 84 85 85 87 88 88 88 88 87 86 86 87     ................
+    17a0:	89 88 88 86 86 86 84 82 81 80 7f 7d 7c 7a 7a 79     ...........}|zzy
+    17b0:	79 79 78 78 77 77 77 78 78 79 79 79 79 79 7a 7b     yyxxwwwxxyyyyyz{
+    17c0:	7c 7e 7f 80 80 81 83 84 85 85 85 85 85 84 84 85     |~..............
+    17d0:	85 86 87 87 88 8a 8b 8c 8d 8c 8b 89 86 82 80 7c     ...............|
+    17e0:	79 76 75 75 75 76 78 7a 7b 7c 7c 7b 79 78 77 76     yvuuuvxz{||{yxwv
+    17f0:	76 76 77 78 7b 7e 7f 80 82 83 82 82 82 83 84 85     vvwx{~..........
+    1800:	86 86 86 85 85 84 83 83 84 86 87 89 8b 8e 90 92     ................
+    1810:	92 90 8c 88 83 7e 7a 76 73 72 72 73 75 77 78 7a     .....~zvsrrsuwxz
+    1820:	7b 7c 7c 7a 79 77 77 76 77 78 79 7a 7b 7e 80 80     {||zywwvwxyz{~..
+    1830:	82 84 84 83 83 83 84 85 85 85 85 84 83 82 82 83     ................
+    1840:	83 86 88 8a 8b 8e 90 91 92 91 8d 88 82 7c 76 72     .............|vr
+    1850:	6f 6d 6e 6f 71 75 78 7c 7f 80 7f 7d 7b 79 77 76     omnoqux|...}{ywv
+    1860:	75 76 77 79 7a 7c 7f 80 82 84 85 85 84 84 84 85     uvwyz|..........
+    1870:	87 88 87 86 84 82 81 81 82 83 85 88 8b 8d 8f 90     ................
+    1880:	91 92 91 8e 8a 84 7e 78 73 70 6e 6d 6e 70 73 78     ......~xspnmnpsx
+    1890:	7c 7f 80 81 80 7e 7b 79 77 76 75 76 76 78 7b 7e     |....~{ywvuvvx{~
+    18a0:	81 84 85 86 87 85 84 83 84 85 87 88 87 85 83 80     ................
+    18b0:	80 80 81 83 85 87 8b 8f 91 93 93 92 90 8d 89 84     ................
+    18c0:	7f 79 73 6e 6b 69 69 6b 6f 74 79 7d 80 80 81 80     .ysnkiikoty}....
+    18d0:	7e 7c 79 76 75 74 75 77 79 7c 7f 82 85 86 86 86     ~|yvutuwy|......
+    18e0:	85 84 83 83 84 86 88 88 88 86 84 82 81 82 83 85     ................
+    18f0:	86 89 8c 8e 8f 8f 8f 8d 8b 88 84 80 7a 74 6f 6b     ............ztok
+    1900:	6a 6a 6c 6f 73 78 7b 7f 80 81 80 7f 7d 7a 77 75     jjlosx{.....}zwu
+    1910:	75 76 78 7a 7d 80 82 85 87 88 89 88 86 84 82 83     uvxz}...........
+    1920:	84 86 89 8a 89 88 85 83 82 82 83 84 86 89 8b 8d     ................
+    1930:	8e 8e 8e 8d 8b 89 85 80 7b 75 6f 6b 69 6a 6c 6f     ........{uokijlo
+    1940:	74 78 7c 7e 80 80 80 7e 7c 7a 78 76 76 77 78 7a     tx|~...~|zxvvwxz
+    1950:	7d 80 81 84 86 86 86 86 85 84 83 83 84 85 87 89     }...............
+    1960:	8a 89 87 85 82 81 80 81 83 86 88 8b 8c 8c 8c 8b     ................
+    1970:	8a 89 87 83 7f 79 73 6d 6a 69 6b 6f 73 76 79 7c     .....ysmjikosvy|
+    1980:	7f 80 80 7f 7d 7b 78 76 75 76 77 7a 7c 7f 81 83     ....}{xvuvwz|...
+    1990:	86 88 88 89 88 86 84 83 83 84 87 89 8a 8b 89 86     ................
+    19a0:	83 80 80 80 81 84 87 8a 8c 8e 8e 8d 8c 8a 88 86     ................
+    19b0:	82 7e 78 71 6b 68 67 69 6e 73 77 7b 7d 7f 80 80     .~xqkhginsw{}...
+    19c0:	80 7e 7c 7a 78 76 76 77 79 7c 80 82 84 86 86 86     .~|zxvvwy|......
+    19d0:	86 86 85 84 84 84 86 88 8a 8a 89 87 84 81 7f 7f     ................
+    19e0:	80 82 86 8a 8d 8f 8f 8d 8b 89 87 85 82 80 7b 76     ..............{v
+    19f0:	70 6a 67 66 69 6e 74 79 7d 7f 80 80 80 7f 7d 7b     pjgfinty}.....}{
+    1a00:	79 78 77 77 78 7b 7e 80 82 84 86 86 87 87 86 85     yxwwx{~.........
+    1a10:	84 85 85 87 88 89 89 88 86 84 82 81 81 82 84 87     ................
+    1a20:	89 8c 8e 8f 8e 8d 8b 88 86 83 80 7c 77 70 6b 67     ...........|wpkg
+    1a30:	65 67 6d 73 79 7d 80 80 80 7f 7e 7e 7e 7d 7c 7a     egmsy}....~~~}|z
+    1a40:	79 78 79 7b 7e 80 82 84 85 87 87 87 87 86 86 87     yxy{~...........
+    1a50:	88 88 89 88 88 86 85 82 81 80 81 83 84 86 87 89     ................
+    1a60:	8b 8d 8d 8c 89 86 83 80 7c 77 72 6e 6a 68 67 69     ........|wrnjhgi
+    1a70:	6d 72 77 7b 7e 7f 7f 7f 7f 7f 7f 7e 7d 7b 7a 7a     mrw{~......~}{zz
+    1a80:	7a 7c 7e 80 84 86 88 89 89 88 87 86 86 85 86 87     z|~.............
+    1a90:	89 8a 8a 89 86 84 82 81 80 80 81 83 84 86 87 88     ................
+    1aa0:	88 88 87 85 82 80 7c 79 76 73 70 6e 6e 6e 70 73     ......|yvspnnnps
+    1ab0:	76 79 7c 7f 80 7f 7e 7d 7c 7c 7c 7c 7d 7e 7f 81     vy|...~}||||}~..
+    1ac0:	83 84 85 86 86 85 85 85 85 86 87 88 89 89 89 89     ................
+    1ad0:	88 86 84 82 81 80 80 80 80 81 81 81 82 82 83 83     ................
+    1ae0:	83 83 82 81 80 7d 7b 79 77 76 75 75 74 75 76 78     .....}{ywvuutuvx
+    1af0:	79 7a 7b 7b 7b 7b 7c 7c 7d 7e 7f 80 80 80 80 81     yz{{{{||}~......
+    1b00:	81 81 81 81 82 83 84 86 87 88 88 88 88 87 86 86     ................
+    1b10:	85 85 84 83 82 81 80 80 80 7f 7f 80 80 81 82 83     ................
+    1b20:	83 82 81 80 7f 7e 7c 7b 7b 7b 7b 7a 7a 7a 7a 7a     .....~|{{{{zzzzz
+    1b30:	7a 7a 7a 7a 7b 7d 7e 7f 80 80 80 80 80 80 80 81     zzzz{}~.........
+    1b40:	82 83 83 84 84 84 85 85 85 85 85 85 86 86 86 86     ................
+    1b50:	85 84 83 82 81 80 80 80 81 81 81 81 81 80 80 80     ................
+    1b60:	7e 7e 7d 7d 7e 7e 7e 7e 7d 7d 7c 7b 7b 7b 7c 7c     ~~}}~~~~}}|{{{||
+    1b70:	7d 7d 7d 7d 7d 7d 7d 7d 7d 7d 7e 80 80 80 81 81     }}}}}}}}}}~.....
+    1b80:	82 82 83 83 83 84 85 85 86 85 85 84 84 83 82 81     ................
+    1b90:	80 80 80 81 81 81 81 81 81 81 80 80 80 80 80 80     ................
+    1ba0:	7f 7f 7f 7e 7e 7d 7c 7c 7c 7c 7d 7d 7e 7e 7e 7e     ...~~}||||}}~~~~
+    1bb0:	7e 7e 7d 7d 7d 7e 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f     ~~}}}~..........
+    1bc0:	80 80 81 82 83 83 83 83 83 83 82 82 81 81 82 82     ................
+    1bd0:	81 81 81 80 80 80 80 7f 80 80 80 80 80 80 80 80     ................
+    1be0:	80 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7e 7e 7d 7d     ............~~}}
+    1bf0:	7e 7f 80 80 80 80 80 80 80 80 80 80 81 81 82 82     ~...............
+    1c00:	83 83 83 83 82 81 81 81 82 82 82 82 82 82 82 82     ................
+    1c10:	82 81 81 81 81 81 81 81 81 80 80 80 7f 7e 7e 7e     .............~~~
+    1c20:	7e 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 80 80 80     ~...............
+    1c30:	80 80 7f 7f 7e 7e 7e 7f 7f 7f 80 80 80 80 80 80     ....~~~.........
+    1c40:	81 81 81 81 81 82 82 82 82 82 81 81 80 80 80 80     ................
+    1c50:	81 81 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    1c60:	80 7f 7f 7f 7f 7f 80 80 7f 7e 7f 80 82 81 7e 7b     .........~....~{
+    1c70:	7b 7d 80 81 81 82 83 84 85 83 81 7f 7d 7c 7c 7c     {}..........}|||
+    1c80:	7b 7b 7b 7c 7e 80 81 82 81 82 83 84 84 82 81 80     {{{|~...........
+    1c90:	81 81 80 80 7f 7f 80 80 80 80 80 80 80 80 80 7f     ................
+    1ca0:	7e 7f 7f 80 80 7f 7f 7f 80 80 7f 7e 7f 7f 7f 7f     ~..........~....
+    1cb0:	7f 80 80 7f 7f 80 81 80 80 80 81 82 82 82 83 83     ................
+    1cc0:	82 82 83 84 83 83 83 83 84 83 82 82 82 82 82 82     ................
+    1cd0:	82 82 82 82 82 82 81 81 80 80 81 81 80 7e 7f 80     .............~..
+    1ce0:	80 7f 7b 7b 7d 7d 7c 7b 79 7a 7c 7e 7e 7d 7d 7e     ..{{}}|{yz|~~}}~
+    1cf0:	80 81 81 80 80 80 83 83 81 80 81 82 83 83 82 81     ................
+    1d00:	82 84 84 84 82 83 85 88 88 88 87 86 84 82 80 7c     ...............|
+    1d10:	79 78 77 76 76 75 76 77 78 79 79 79 79 79 7a 7c     yxwvvuvwxyyyyyz|
+    1d20:	7b 79 79 7c 7d 7e 7d 7c 7d 80 82 83 83 84 85 86     {yy|}~}|}.......
+    1d30:	86 85 82 80 81 83 84 85 89 8c 8d 8f 93 95 94 92     ................
+    1d40:	8e 89 84 80 79 72 6f 6e 6d 6e 71 73 76 78 7b 7c     ....yronmnqsvx{|
+    1d50:	7d 7c 7b 7b 7b 7a 78 76 78 7a 7b 7a 79 7b 7e 82     }|{{{zxvxz{zy{~.
+    1d60:	83 85 85 87 88 87 85 82 81 81 83 85 87 89 8f 97     ................
+    1d70:	98 95 94 98 99 95 8e 86 80 7d 78 71 6a 69 6d 70     .........}xqjimp
+    1d80:	73 75 76 7a 7e 7d 7b 7a 7b 7a 79 78 76 78 7a 7a     suvz~}{z{zyxvxzz
+    1d90:	77 76 78 7c 80 81 83 84 87 89 88 83 80 80 80 80     wvx|............
+    1da0:	82 86 8a 91 9b a0 9e 99 98 98 94 8b 80 79 75 74     .............yut
+    1db0:	70 6b 6d 72 79 7e 80 7f 7f 80 7d 77 72 6f 6f 70     pkmry~....}wroop
+    1dc0:	6f 71 76 7b 7c 7a 7b 7d 80 81 83 82 83 84 83 81     oqv{|z{}........
+    1dd0:	7f 7e 7e 80 84 89 8e 94 9a a0 a5 a1 98 91 91 8d     .~~.............
+    1de0:	84 7c 75 73 74 75 70 70 75 7c 7e 7e 7c 7a 7a 78     .|ustuppu|~~|zzx
+    1df0:	73 6e 6d 6e 71 72 75 7a 7e 7e 7c 7c 7d 80 80 81     snmnqruz~~||}...
+    1e00:	80 82 82 81 80 7d 7d 7e 81 84 89 8e 94 9a 9f a2     .....}}~........
+    1e10:	9d 95 90 8f 8a 82 7b 77 76 77 77 72 73 78 7d 7e     ......{wvwwrsx}~
+    1e20:	7c 79 78 78 75 70 6d 6d 6f 71 74 77 7a 7b 7a 7b     |yxxupmmoqtwz{z{
+    1e30:	7c 7f 80 81 82 82 84 83 81 7e 7e 7e 80 83 87 8c     |........~~~....
+    1e40:	92 98 9d a0 9d 97 93 91 8c 86 80 7b 7a 7b 79 77     ...........{z{yw
+    1e50:	78 7a 7d 7f 7d 7a 79 77 75 71 6f 6d 6f 71 75 78     xz}.}zywuqomoqux
+    1e60:	7b 7b 79 7a 7d 80 80 80 80 82 83 81 7f 7c 7d 7e     {{yz}........|}~
+    1e70:	80 84 89 8f 94 9b 9f 9e 98 95 94 91 8a 84 7f 7d     ...............}
+    1e80:	7d 7c 79 78 7a 7d 7e 7e 7b 79 77 75 72 70 6e 6f     }|yxz}~~{ywurpno
+    1e90:	70 73 77 79 78 77 79 7b 7e 7f 7f 7f 80 81 80 7e     pswyxwy{~......~
+    1ea0:	7c 7c 7e 80 83 88 8c 93 9a 9d 9a 97 96 93 8f 89     ||~.............
+    1eb0:	83 7f 7e 7e 7b 7a 7a 7c 7e 80 7e 7b 79 77 75 72     ..~~{zz|~.~{ywur
+    1ec0:	70 6f 6f 71 74 77 77 76 78 79 7d 7f 7f 7f 80 80     pooqtwwvxy}.....
+    1ed0:	80 7f 7d 7c 7d 80 84 88 8c 91 98 9b 9a 97 96 94     ..}|}...........
+    1ee0:	91 8c 86 81 80 7e 7c 7c 7d 7e 7f 80 80 7e 7b 77     .....~||}~...~{w
+    1ef0:	75 73 71 70 70 71 74 78 78 77 76 78 7b 7e 7e 7e     usqppqtxxwvx{~~~
+    1f00:	7e 7f 7f 7e 7d 7c 7d 80 84 89 8d 91 97 99 96 96     ~..~}|}.........
+    1f10:	97 94 90 8c 86 82 81 80 7c 7c 7c 7c 7e 7e 7d 7c     ........||||~~}|
+    1f20:	7a 76 74 73 71 71 71 71 74 77 77 76 77 77 79 7c     zvtsqqqqtwwvwwy|
+    1f30:	7d 7d 7e 7e 7d 7e 7e 7e 7f 81 84 88 8c 90 95 94     }}~~}~~~........
+    1f40:	93 95 96 92 8f 8b 86 84 82 7f 7c 7d 7d 7d 7f 7e     ..........|}}}.~
+    1f50:	7d 7c 79 76 75 73 72 72 72 72 76 78 77 78 78 79     }|yvusrrrrvxwxxy
+    1f60:	7c 7d 7e 7d 7e 7f 7f 7f 80 80 81 83 86 88 8b 8e     |}~}~...........
+    1f70:	90 90 90 93 93 90 8e 8c 8a 88 87 83 81 80 7f 7d     ...............}
+    1f80:	7c 7b 7b 7a 78 77 76 76 75 75 74 73 76 77 75 75     |{{zxwvvuutsvwuu
+    1f90:	77 78 79 7c 7c 7d 7f 80 80 80 81 81 81 82 83 85     wxy||}..........
+    1fa0:	88 8c 8e 8e 91 94 94 93 92 8f 8c 8a 86 82 80 7f     ................
+    1fb0:	7d 7b 7a 79 79 78 76 76 75 74 74 73 72 72 75 75     }{zyyxvvuttsrruu
+    1fc0:	74 75 77 78 7b 7d 7d 7f 80 81 81 81 81 81 81 82     tuwx{}}.........
+    1fd0:	84 86 8a 8d 8e 8f 92 94 94 92 90 8d 8b 87 83 80     ................
+    1fe0:	7f 7d 7c 7b 7b 7b 7b 79 78 76 75 75 74 73 72 73     .}|{{{{yxvuutsrs
+    1ff0:	76 75 75 77 78 7a 7d 7e 7e 80 81 81 82 82 81 81     vuuwxz}~~.......
+    2000:	82 83 85 88 8b 8d 8f 91 94 95 94 91 8f 8c 8a 86     ................
+    2010:	82 80 7e 7d 7c 7b 7b 7b 7a 78 77 76 75 74 73 71     ..~}|{{{zxwvutsq
+    2020:	71 74 75 74 75 77 79 7b 7d 7e 7f 80 81 80 81 81     qtutuwy{}~......
+    2030:	81 81 82 83 86 89 8b 8d 8e 91 94 93 91 8f 8d 8b     ................
+    2040:	88 83 80 7f 7e 7c 7b 7b 7c 7b 79 78 77 76 75 74     ....~|{{|{yxwvut
+    2050:	72 71 73 75 74 74 76 78 79 7c 7d 7e 80 81 80 80     rqsuttvxy|}~....
+    2060:	81 81 81 82 83 85 89 8b 8c 8e 91 94 93 92 90 8e     ................
+    2070:	8c 89 85 81 80 7e 7d 7c 7c 7d 7c 7a 79 77 76 76     .....~}||}|zywvv
+    2080:	74 73 72 74 75 74 74 77 78 79 7c 7d 7e 80 80 80     tsrtuttwxy|}~...
+    2090:	81 81 80 81 82 83 86 89 8b 8c 8e 91 94 93 91 90     ................
+    20a0:	8d 8b 88 83 80 80 7e 7d 7c 7c 7d 7c 7a 79 78 76     ......~}||}|zyxv
+    20b0:	75 74 72 73 75 74 74 76 77 77 7a 7c 7c 7e 80 80     utrsuttvwwz||~..
+    20c0:	80 80 80 80 81 82 84 88 89 8a 8d 90 91 92 91 8f     ................
+    20d0:	8e 8c 88 85 82 80 7f 7e 7d 7d 7e 7d 7c 7a 78 77     .......~}}~}|zxw
+    20e0:	76 74 72 73 74 74 73 76 77 77 7a 7c 7c 7d 7f 7f     vtrsttsvwwz||}..
+    20f0:	7f 80 80 80 81 81 84 87 88 8a 8d 90 91 93 91 8f     ................
+    2100:	8f 8c 88 86 82 80 80 7f 7e 7f 7e 7e 7d 7b 79 78     ........~.~~}{yx
+    2110:	77 75 74 74 74 73 74 76 77 78 7a 7c 7d 7e 80 7f     wutttstvwxz|}~..
+    2120:	80 80 80 80 80 82 84 87 88 8b 8d 8f 92 92 90 90     ................
+    2130:	8e 8b 88 85 82 80 80 7f 7f 7f 7f 7e 7d 7b 79 78     ...........~}{yx
+    2140:	76 74 73 74 74 73 74 76 77 78 7a 7b 7c 7e 7f 7f     vtsttstvwxz{|~..
+    2150:	7f 80 80 80 81 82 85 87 88 8b 8e 90 91 91 8f 8e     ................
+    2160:	8d 89 86 83 81 80 80 7f 7e 7f 7f 7e 7c 7b 79 78     ........~..~|{yx
+    2170:	76 75 74 74 73 74 76 77 77 79 7b 7c 7e 7f 7f 7f     vuttstvwwy{|~...
+    2180:	80 80 80 80 81 83 85 87 89 8c 8e 90 90 8f 8f 8d     ................
+    2190:	8a 88 85 82 80 80 7f 7f 7f 7f 7e 7d 7b 7a 79 77     ..........~}{zyw
+    21a0:	76 75 75 74 74 75 77 77 78 7a 7b 7d 7e 7f 7f 80     vuuttuwwxz{}~...
+    21b0:	80 80 80 81 83 84 86 89 8b 8c 8f 90 8e 8e 8d 8a     ................
+    21c0:	88 86 82 81 80 80 7f 7f 7f 7e 7e 7c 7b 79 78 76     .........~~|{yxv
+    21d0:	76 76 75 74 75 77 77 78 7a 7b 7c 7e 7e 7e 7f 80     vvutuwwxz{|~~~..
+    21e0:	80 80 81 82 85 86 88 8b 8c 8e 8f 8e 8e 8d 8b 88     ................
+    21f0:	86 83 81 80 80 7f 7f 7f 7e 7e 7c 7b 7a 78 77 77     ........~~|{zxww
+    2200:	76 75 75 76 78 78 79 7a 7b 7c 7e 7e 7e 7f 7f 80     vuuvxxyz{|~~~...
+    2210:	80 81 83 85 86 88 8a 8c 8e 8f 8e 8e 8d 8b 88 86     ................
+    2220:	83 82 81 80 80 80 80 7f 7e 7c 7b 7a 78 77 77 76     ........~|{zxwwv
+    2230:	75 75 77 77 78 79 7a 7b 7d 7d 7d 7d 7e 7f 7f 80     uuwwxyz{}}}}~...
+    2240:	80 83 85 86 88 8a 8c 8d 8e 8d 8c 8c 8a 87 85 83     ................
+    2250:	81 80 80 80 80 7f 7f 7e 7c 7a 79 78 77 77 76 75     .......~|zyxwwvu
+    2260:	76 77 78 79 79 7b 7c 7d 7d 7d 7e 7e 7f 80 80 82     vwxyy{|}}}~~....
+    2270:	84 85 87 89 8a 8c 8d 8d 8c 8c 8b 89 86 84 82 81     ................
+    2280:	80 80 80 80 7f 7f 7d 7c 7a 79 78 77 77 76 76 77     ......}|zyxwwvvw
+    2290:	78 79 79 7a 7c 7d 7d 7d 7e 7e 7f 7f 80 80 82 84     xyyz|}}}~~......
+    22a0:	86 87 89 8b 8c 8d 8d 8c 8b 8a 88 86 83 82 81 80     ................
+    22b0:	80 80 80 7f 7e 7d 7c 7a 79 78 78 77 76 76 77 78     ....~}|zyxxwvvwx
+    22c0:	79 7a 7a 7c 7d 7d 7d 7d 7d 7e 7f 80 80 83 85 86     yzz|}}}}}~......
+    22d0:	88 8a 8b 8c 8c 8b 8b 8a 88 86 84 82 81 81 80 80     ................
+    22e0:	80 80 7f 7e 7c 7b 7a 78 78 77 76 76 77 77 78 7a     ...~|{zxxwvvwwxz
+    22f0:	7a 7b 7d 7d 7d 7d 7d 7e 7f 80 80 82 84 85 88 89     z{}}}}}~........
+    2300:	8a 8c 8c 8c 8c 8b 89 87 86 84 83 82 80 80 80 80     ................
+    2310:	7f 7e 7d 7c 7b 79 78 78 77 77 77 78 78 79 7a 7b     .~}|{yxxwwwxxyz{
+    2320:	7c 7d 7d 7d 7e 7e 7f 80 80 81 83 85 87 88 89 8b     |}}}~~..........
+    2330:	8c 8c 8c 8b 8a 89 87 85 83 82 81 80 80 80 80 7f     ................
+    2340:	7e 7c 7b 7a 79 78 78 77 76 77 77 78 79 7a 7b 7c     ~|{zyxxwvwwxyz{|
+    2350:	7d 7d 7e 7e 7e 7f 80 80 82 84 85 87 88 89 8a 8c     }}~~~...........
+    2360:	8c 8b 8b 89 87 86 84 82 81 80 80 80 80 7e 7e 7d     .............~~}
+    2370:	7b 7a 79 78 77 77 77 77 77 77 78 7a 7a 7b 7c 7d     {zyxwwwwwwxzz{|}
+    2380:	7d 7e 7e 7f 80 80 81 82 84 85 87 88 89 8b 8b 8b     }~~.............
+    2390:	8b 8a 89 88 86 85 83 82 81 80 80 80 7f 7e 7d 7b     .............~}{
+    23a0:	7a 79 78 78 78 77 77 77 78 79 7a 7a 7b 7c 7d 7d     zyxxxwwwxyzz{|}}
+    23b0:	7e 7f 80 80 81 82 83 85 86 87 88 89 8a 8b 8b 8b     ~...............
+    23c0:	8a 89 88 87 85 84 82 81 80 80 80 7f 7e 7d 7b 7a     ............~}{z
+    23d0:	79 78 78 77 78 78 77 77 79 79 7a 7b 7c 7d 7e 7e     yxxwxxwwyyz{|}~~
+    23e0:	7d 7f 80 80 81 83 84 87 89 89 8a 8a 8a 8a 89 87     }...............
+    23f0:	87 86 84 84 83 82 81 81 80 80 7f 7e 7d 7c 7a 79     ...........~}|zy
+    2400:	79 79 79 78 78 79 79 7a 7a 7a 7c 7d 7d 7e 7f 7f     yyyxxyyzzz|}}~..
+    2410:	80 80 81 81 82 83 84 85 85 86 86 86 86 86 86 85     ................
+    2420:	84 84 83 83 83 83 83 82 81 80 80 7f 7e 7d 7c 7c     ............~}||
+    2430:	7b 7b 7a 7b 7b 7b 7b 7b 7b 7c 7c 7d 7d 7e 7f 80     {{z{{{{{{||}}~..
+    2440:	80 80 81 82 83 84 85 85 86 86 86 87 86 86 85 85     ................
+    2450:	84 84 84 83 83 83 82 81 80 80 7f 7e 7d 7c 7b 7b     ...........~}|{{
+    2460:	7b 7a 7a 7b 7b 7b 7b 7b 7c 7c 7c 7d 7d 7e 7f 80     {zz{{{{{|||}}~..
+    2470:	80 80 81 82 82 83 83 84 84 84 84 84 84 84 83 83     ................
+    2480:	83 82 82 82 82 81 81 80 80 80 7f 7e 7d 7d 7d 7d     ...........~}}}}
+    2490:	7c 7c 7c 7c 7c 7c 7c 7c 7d 7d 7d 7e 7f 7f 80 80     ||||||||}}}~....
+    24a0:	80 81 81 82 82 83 83 83 83 84 84 84 84 84 83 83     ................
+    24b0:	83 83 82 82 82 81 81 80 80 80 80 7f 7f 7f 7e 7e     ..............~~
+    24c0:	7e 7e 7d 7d 7d 7d 7e 7e 7e 7e 7e 7f 80 80 80 80     ~~}}}}~~~~~.....
+    24d0:	80 81 81 81 81 82 82 82 82 82 82 82 82 82 82 82     ................
+    24e0:	82 81 81 81 80 80 80 80 80 80 7f 7f 7f 7f 7f 7e     ...............~
+    24f0:	7e 7e 7e 7e 7e 7e 7e 7e 7f 7f 7f 7f 7f 80 80 80     ~~~~~~~~........
+    2500:	80 80 80 80 80 81 81 81 81 81 81 81 81 81 81 81     ................
+    2510:	81 80 80 80 80 80 80 80 80 80 80 7f 7f 7f 7f 7f     ................
+    2520:	7f 7e 7f 7f 7f 7f 7f 7f 7f 80 80 80 80 80 80 80     .~..............
+    2530:	80 80 80 80 81 81 81 81 81 81 81 81 81 81 81 81     ................
+    2540:	81 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2550:	80 7f 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2560:	80 80 80 80 81 81 80 80 80 80 80 80 80 80 80 80     ................
+    2570:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2580:	80 7f 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2590:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    25a0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    25b0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    25c0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    25d0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    25e0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    25f0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2600:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2610:	7f 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2620:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2630:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2640:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2650:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2660:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2670:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2680:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2690:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    26a0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    26b0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    26c0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    26d0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    26e0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    26f0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2700:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2710:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2720:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2730:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2740:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2750:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2760:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2770:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2780:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2790:	80 80 80 80 80 80 80 80 80 80 7f 81 82 7c 7f 80     .............|..
+    27a0:	81 81 80 7f 80 7f 7f 7f 7f 83 7f 7d 82 84 82 80     ...........}....
+    27b0:	80 80 80 7d 7b 80 80 7d 7e 80 84 85 81 80 82 7f     ...}{..}~.......
+    27c0:	7b 7b 7c 82 82 7f 82 83 81 81 80 80 82 7e 7c 80     {{|..........~|.
+    27d0:	80 7f 80 80 83 84 80 80 82 80 7f 7e 7d 7f 7f 7f     ...........~}...
+    27e0:	7f 80 81 80 80 81 81 81 80 80 81 80 80 80 80 81     ................
+    27f0:	81 80 80 80 80 80 80 7f 80 80 7f 80 80 80 80 80     ................
+    2800:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2810:	80 80 80 7f 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2820:	7f 80 80 80 80 80 80 81 80 80 81 81 80 80 80 80     ................
+    2830:	80 80 80 81 80 80 80 80 80 80 80 80 80 80 81 80     ................
+    2840:	80 80 80 80 80 80 80 81 80 80 80 80 80 80 80 7f     ................
+    2850:	80 80 7f 80 80 80 7f 80 80 7f 7e 7e 7f 7f 7f 80     ..........~~....
+    2860:	80 80 80 7f 80 80 7f 7f 7f 80 80 7f 7f 80 81 80     ................
+    2870:	80 80 80 81 80 80 80 80 80 7f 80 80 81 80 80 81     ................
+    2880:	82 80 7f 80 80 80 7e 7e 7f 80 80 80 80 80 80 80     ......~~........
+    2890:	7f 80 80 7f 7f 7f 80 80 7f 7f 80 81 81 82 83 84     ................
+    28a0:	84 83 83 84 82 81 82 83 85 85 84 85 85 82 81 81     ................
+    28b0:	80 7f 7d 7b 7a 7a 78 79 79 79 7d 79 75 79 7c 7d     ..}{zzxyyy}yuy|}
+    28c0:	7f 7e 80 83 7f 7d 7f 7d 80 82 81 88 90 91 92 93     .~...}.}........
+    28d0:	90 8e 88 81 80 80 7d 7c 7d 7f 80 7f 7f 80 7f 7c     ......}|}......|
+    28e0:	79 76 74 75 76 74 70 70 74 79 7a 7c 80 83 83 7f     yvtuvtpptyz|....
+    28f0:	7a 79 79 79 7c 82 87 8d 95 98 99 9a 98 95 91 89     zyyy|...........
+    2900:	84 81 7d 7b 7c 7e 80 81 82 82 83 80 7d 7a 79 75     ..}{|~......}zyu
+    2910:	73 75 77 77 72 71 76 7a 7b 7c 7e 81 80 7a 76 75     suwwrqvz{|~..zvu
+    2920:	75 75 78 80 86 8c 93 96 99 99 96 93 8f 8a 86 82     uux.............
+    2930:	7f 7d 7f 80 80 81 83 83 83 80 7e 7d 7b 77 76 78     .}........~}{wvx
+    2940:	7a 78 73 71 76 7a 7a 7b 7f 81 80 79 74 73 73 73     zxsqvzz{...ytsss
+    2950:	77 7e 84 8d 92 96 9c 9c 96 92 8e 89 84 7f 7c 7d     w~............|}
+    2960:	7e 7e 7f 82 83 84 83 81 80 7e 7a 76 77 7a 78 72     ~~.......~zvwzxr
+    2970:	70 75 7b 7b 7a 7d 80 80 7a 73 72 72 71 73 79 81     pu{{z}..zsrrqsy.
+    2980:	89 8f 94 9a 9c 98 94 90 8a 84 7f 7c 7b 7d 7f 81     ...........|{}..
+    2990:	85 86 86 85 84 80 7d 79 77 78 78 75 73 72 76 7b     ......}ywxxusrv{
+    29a0:	7c 7c 7f 80 7d 78 73 71 70 72 75 7b 83 8b 90 95     ||..}xsqpru{....
+    29b0:	99 9a 98 93 8d 89 84 7f 7b 7b 7d 80 83 85 87 87     ........{{}.....
+    29c0:	84 81 7f 7b 7a 79 77 76 74 74 77 78 7b 7d 7e 7f     ...{zywvttwx{}~.
+    29d0:	7e 79 75 72 70 71 75 79 80 88 8e 93 97 99 98 94     ~yurpquy........
+    29e0:	8f 89 83 7e 7b 7a 7c 80 83 86 87 88 86 83 80 7d     ...~{z|........}
+    29f0:	7b 7a 78 75 74 75 77 79 7c 7d 7f 7e 7a 76 73 71     {zxutuwy|}.~zvsq
+    2a00:	71 73 78 7f 86 8b 90 96 98 97 95 8f 8a 86 80 7d     qsx............}
+    2a10:	7c 7c 7d 81 85 86 87 87 84 81 7f 7c 7a 78 75 74     ||}........|zxut
+    2a20:	75 77 79 7b 7d 7e 7e 7b 77 73 73 72 74 78 7d 85     uwy{}~~{wssrtx}.
+    2a30:	8a 8d 93 97 96 94 8f 8a 86 80 7b 7b 7b 7c 80 84     ..........{{{|..
+    2a40:	85 87 87 84 82 81 7d 7a 79 75 75 77 78 7a 7e 7e     ......}zyuuwxz~~
+    2a50:	7f 7e 7a 76 74 72 71 75 79 80 86 8a 90 95 96 96     .~zvtrquy.......
+    2a60:	94 8f 8a 84 7e 7a 7a 7a 7c 80 83 85 87 87 83 82     ....~zzz|.......
+    2a70:	80 7d 7b 79 76 76 78 78 7b 7f 80 80 7f 7c 79 76     .}{yvvxx{....|yv
+    2a80:	74 73 76 7b 7f 82 89 8f 93 95 94 93 90 8b 84 7f     tsv{............
+    2a90:	7b 79 78 79 7d 81 83 84 85 83 82 80 7d 7a 79 76     {yxy}.......}zyv
+    2aa0:	75 76 77 79 7d 7d 7d 7e 7b 78 77 75 75 78 7b 80     uvwy}}}~{xwuux{.
+    2ab0:	83 88 8c 90 93 93 91 8e 8a 84 80 7c 7a 79 79 7c     ...........|zyy|
+    2ac0:	7f 80 82 83 82 82 82 7f 7d 7b 78 77 77 77 78 7b     ........}{xwwwx{
+    2ad0:	7c 7d 7d 7d 7b 7b 79 79 7a 7d 7f 80 84 89 8c 8f     |}}}{{yyz}......
+    2ae0:	90 90 90 8e 88 84 80 7d 7b 7a 7a 7d 80 80 82 83     .......}{zz}....
+    2af0:	82 82 80 7e 7d 7a 78 77 77 78 79 7a 7c 7d 7e 7e     ...~}zxwwxyz|}~~
+    2b00:	7e 7d 7d 7d 7e 80 82 83 85 88 8b 8d 8f 8e 8d 8c     ~}}}~...........
+    2b10:	89 84 80 7e 7c 7c 7d 7e 80 81 82 82 80 80 80 7e     ...~||}~.......~
+    2b20:	7d 7b 7a 7a 7a 7b 7b 7c 7d 7d 7e 7e 7f 7f 80 80     }{zzz{{|}}~~....
+    2b30:	80 80 81 83 84 85 85 87 88 89 8a 8a 89 87 86 82     ................
+    2b40:	80 7f 7e 7e 7f 7f 80 80 80 80 80 7f 7f 7e 7d 7d     ..~~.........~}}
+    2b50:	7c 7a 7a 7a 7b 7b 7c 7d 7e 7f 7f 80 80 80 80 80     |zzz{{|}~.......
+    2b60:	80 81 82 82 81 83 84 84 85 85 84 85 85 83 81 81     ................
+    2b70:	81 80 80 80 80 80 80 7f 7f 7f 7e 7e 7c 7c 7d 7b     ..........~~||}{
+    2b80:	7b 7b 7b 7c 7d 7d 7d 7e 7f 7f 7f 7f 7f 80 7f 7f     {{{|}}}~........
+    2b90:	80 80 81 81 81 82 83 82 82 82 82 81 81 81 81 82     ................
+    2ba0:	81 81 81 81 81 80 80 80 80 80 7f 7e 7e 7d 7d 7d     ...........~~}}}
+    2bb0:	7e 7e 7e 7e 7e 7e 7f 7f 7f 7e 7f 7f 7f 7f 7f 80     ~~~~~~...~......
+    2bc0:	80 80 81 81 80 81 80 80 81 81 81 81 81 81 82 81     ................
+    2bd0:	82 82 81 81 81 81 80 80 80 80 80 80 80 80 80 80     ................
+    2be0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2bf0:	80 80 80 80 80 80 80 80 80 80 81 81 81 81 81 81     ................
+    2c00:	81 81 81 81 81 81 81 81 81 81 81 81 81 81 80 80     ................
+    2c10:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2c20:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2c30:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2c40:	80 80 80 80 80 80 80 7f 80 80 7f 80 80 7f 80 80     ................
+    2c50:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2c60:	80 81 81 81 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2c70:	80 80 80 80 80 80 80 7f 7f 7f 80 7f 7f 7f 7f 7f     ................
+    2c80:	7f 7f 80 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f     ................
+    2c90:	7f 80 7f 80 80 7f 80 80 7f 80 80 80 80 80 80 80     ................
+    2ca0:	80 80 7f 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2cb0:	80 80 81 80 80 81 81 81 81 81 81 82 81 81 81 81     ................
+    2cc0:	81 80 81 80 80 80 80 80 80 80 80 80 7f 7f 80 7f     ................
+    2cd0:	7f 7f 7e 7f 7f 7e 7e 7e 7e 7e 7e 7e 7e 7e 7e 7f     ..~..~~~~~~~~~~.
+    2ce0:	7e 7e 7f 7f 7e 7f 80 80 80 80 80 80 80 80 80 80     ~~..~...........
+    2cf0:	80 80 80 80 80 81 81 81 81 81 81 81 81 82 81 81     ................
+    2d00:	81 81 82 82 82 82 82 82 82 82 82 82 82 82 82 81     ................
+    2d10:	82 82 82 82 82 83 83 82 82 82 82 82 82 81 82 81     ................
+    2d20:	82 81 81 81 81 81 80 80 80 80 80 80 80 80 80 80     ................
+    2d30:	7f 7f 80 7f 7f 7f 7f 7f 7f 7f 7e 7f 7f 7e 7f 7f     ..........~..~..
+    2d40:	7e 7f 7f 7f 7e 7f 7f 7e 7f 7f 7f 7f 7f 7f 7f 7f     ~...~..~........
+    2d50:	7e 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f     ~...............
+    2d60:	7f 7f 7f 7f 7f 7f 7f 7f 7f 80 7f 7f 80 80 80 80     ................
+    2d70:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2d80:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2d90:	80 80 80 80 80 80 80 80 80 80 80 80 80 81 80 80     ................
+    2da0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2db0:	80 80 80 80 80 80 80 80 80 81 80 80 81 81 81 81     ................
+    2dc0:	81 81 81 81 81 81 82 81 82 82 82 82 82 82 82 82     ................
+    2dd0:	81 81 81 81 81 81 81 81 81 80 80 80 80 80 80 80     ................
+    2de0:	80 7f 7f 7f 7e 7f 7e 7e 7e 7e 7e 7d 7d 7e 7e 7e     ....~.~~~~~}}~~~
+    2df0:	7e 7e 7e 7e 7e 7e 7e 7e 7e 7e 7e 7f 7f 7f 7f 7f     ~~~~~~~~~~~.....
+    2e00:	7f 7f 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2e10:	80 80 81 81 81 81 81 81 81 82 82 82 82 82 83 83     ................
+    2e20:	83 83 84 84 84 84 84 84 84 84 84 84 84 83 83 83     ................
+    2e30:	83 83 82 82 82 82 81 81 81 80 80 80 80 80 80 80     ................
+    2e40:	80 7f 7f 7f 7f 7f 7f 7e 7e 7e 7e 7e 7e 7e 7e 7e     .......~~~~~~~~~
+    2e50:	7e 7e 7e 7e 7e 7e 7f 7f 7f 7f 7f 7f 7f 7f 80 80     ~~~~~~..........
+    2e60:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2e70:	80 80 81 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2e80:	80 80 7f 7f 7f 7f 7f 7f 7e 7e 7e 7e 7e 7e 7e 7e     ........~~~~~~~~
+    2e90:	7e 7e 7e 7e 7e 7e 7e 7e 7e 7e 7e 7e 7e 7e 7f 7f     ~~~~~~~~~~~~~~..
+    2ea0:	7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f     ................
+    2eb0:	7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 80 80 80 80     ................
+    2ec0:	80 80 80 80 81 81 81 81 82 82 82 82 82 83 83 83     ................
+    2ed0:	83 83 83 83 83 83 82 82 82 82 82 81 81 81 81 80     ................
+    2ee0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2ef0:	80 80 80 80 80 80 81 81 81 81 81 81 81 81 82 82     ................
+    2f00:	82 82 82 82 83 83 83 83 83 83 83 83 83 83 83 83     ................
+    2f10:	83 83 83 83 83 83 82 82 82 82 82 81 81 81 81 81     ................
+    2f20:	81 81 81 81 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2f30:	80 80 7f 7f 7f 7f 7e 7e 7e 7e 7e 7e 7e 7e 7e 7e     ......~~~~~~~~~~
+    2f40:	7e 7e 7e 7e 7e 7e 7e 7e 7e 7e 7e 7e 7e 7e 7e 7e     ~~~~~~~~~~~~~~~~
+    2f50:	7e 7e 7e 7e 7e 7e 7e 7e 7e 7e 7f 7f 7f 7f 7f 7f     ~~~~~~~~~~......
+    2f60:	7f 7f 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2f70:	80 80 80 80 80 80 80 80 80 80 80 80 80 81 81 81     ................
+    2f80:	81 81 80 80 80 81 80 80 80 80 80 80 80 80 80 80     ................
+    2f90:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    2fa0:	80 80 80 80 80 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f     ................
+    2fb0:	7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f     ................
+    2fc0:	7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 80 80 80     ................
+    2fd0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 81     ................
+    2fe0:	81 81 81 81 81 81 81 81 81 81 82 82 82 82 82 82     ................
+    2ff0:	82 82 82 81 81 81 81 81 81 81 81 81 81 81 81 81     ................
+    3000:	81 81 81 81 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3010:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3020:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3030:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3040:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3050:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3060:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3070:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3080:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3090:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    30a0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    30b0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    30c0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    30d0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    30e0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    30f0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3100:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3110:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3120:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3130:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3140:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3150:	80 80 80 80 82 80 7e 7f 80 81 82 80 80 80 7f 7f     ......~.........
+    3160:	7f 80 80 81 81 82 82 82 81 80 80 7f 7e 7e 7e 7f     ............~~~.
+    3170:	7f 80 80 80 81 81 81 80 80 80 81 80 80 80 80 80     ................
+    3180:	80 80 80 80 80 7e 81 82 7c 80 81 80 82 80 80 81     .....~..|.......
+    3190:	7f 80 80 7f 80 80 80 81 80 83 80 7d 7f 7f 7f 7f     ...........}....
+    31a0:	7e 7e 80 7f 7d 7e 80 82 82 84 84 85 83 80 80 7f     ~~..}~..........
+    31b0:	7e 7c 7a 7c 7e 7e 7e 7f 81 81 82 81 81 83 80 80     ~|z|~~~.........
+    31c0:	80 80 80 80 7f 80 80 80 80 80 80 81 80 80 80 80     ................
+    31d0:	81 80 7f 80 80 80 80 7f 80 81 7f 80 80 80 80 7f     ................
+    31e0:	80 80 80 80 80 80 80 80 7f 7f 81 80 7f 82 80 7f     ................
+    31f0:	80 81 7f 80 80 80 80 7f 7e 80 81 7f 80 82 82 81     ........~.......
+    3200:	80 82 81 80 7f 80 80 80 7f 7f 80 80 80 80 82 81     ................
+    3210:	80 81 80 80 80 80 7f 81 80 80 80 80 80 80 80 80     ................
+    3220:	80 80 80 7f 80 80 80 80 80 7f 80 80 80 7f 7e 80     ..............~.
+    3230:	80 7f 7e 80 80 80 80 7f 81 80 7f 7f 80 80 80 80     ..~.............
+    3240:	80 80 80 80 7f 80 80 80 7f 80 81 80 80 80 80 81     ................
+    3250:	80 80 81 81 80 7f 80 81 7f 7f 80 80 80 80 80 80     ................
+    3260:	81 80 80 80 80 80 7f 80 80 80 80 80 80 80 80 80     ................
+    3270:	80 80 80 80 80 80 80 80 80 80 80 81 81 80 81 81     ................
+    3280:	81 80 80 80 80 80 80 80 80 80 7f 7f 80 80 81 80     ................
+    3290:	82 83 83 81 82 82 81 80 7e 7e 7e 7d 7a 7b 7c 7c     ........~~~}z{||
+    32a0:	7b 7b 7d 7d 7d 7d 7d 7f 7f 80 80 7e 7e 82 84 82     {{}}}}}....~~...
+    32b0:	82 87 89 86 83 82 82 81 80 80 82 87 89 8c 8e 8f     ................
+    32c0:	8e 8e 8c 86 82 80 7c 76 73 71 70 6f 70 72 75 79     ......|vsqpopruy
+    32d0:	7c 7e 80 81 81 80 7f 7e 7c 7a 7a 79 7a 7b 7b 7f     |~.....~|zzyz{{.
+    32e0:	83 83 80 80 82 84 83 82 85 88 89 86 83 83 82 80     ................
+    32f0:	7e 7f 82 86 89 8d 92 96 97 96 93 8f 8a 84 7c 76     ~.............|v
+    3300:	73 70 6c 6b 6d 70 72 74 77 79 7b 7b 7a 7b 7b 79     splkmprtwy{{z{{y
+    3310:	78 78 79 79 7a 7b 7d 80 80 81 81 82 82 84 84 84     xxyyz{}.........
+    3320:	81 7e 7f 82 84 82 84 88 8c 89 85 83 82 80 7e 7d     .~............~}
+    3330:	80 83 87 8b 90 96 99 99 97 94 90 89 83 7b 74 70     .............{tp
+    3340:	6f 6d 6b 6d 72 75 76 78 7a 7c 7c 7b 7a 7b 7b 79     omkmruvxz||{z{{y
+    3350:	78 79 7a 7b 7b 7e 80 82 83 83 84 85 83 81 82 82     xyz{{~..........
+    3360:	83 83 7e 7c 81 87 85 83 88 8e 8a 84 80 80 7f 7a     ..~|...........z
+    3370:	78 7b 80 86 89 8d 94 99 98 94 91 8f 88 80 78 73     x{............xs
+    3380:	71 6e 6b 6a 6d 71 74 75 78 7c 7d 7d 7c 7d 7d 7c     qnkjmqtux|}}|}}|
+    3390:	7a 7a 7b 7c 7b 7b 7e 80 80 80 81 83 83 82 82 83     zz{|{{~.........
+    33a0:	86 83 84 88 85 80 81 8a 89 84 85 8c 8b 83 7f 7f     ................
+    33b0:	7f 7b 79 7b 80 84 88 8c 92 96 97 94 90 8c 87 80     .{y{............
+    33c0:	77 72 71 6f 6c 6b 6f 73 74 75 76 7a 7b 7a 79 7b     wrqolkostuvz{zy{
+    33d0:	7c 7b 7a 7a 7c 7d 7d 7e 80 81 82 83 84 85 85 85     |{zz|}}~........
+    33e0:	84 83 83 84 83 82 82 86 86 80 7f 84 88 84 80 83     ................
+    33f0:	88 85 80 7e 80 81 80 80 82 87 8a 8b 8c 8f 90 8d     ...~............
+    3400:	88 85 82 7d 76 73 72 70 6e 6f 71 73 74 75 76 78     ...}vsrpnoqstuvx
+    3410:	7a 7b 7b 7d 7f 7f 7e 7f 80 7f 7f 7f 80 81 81 81     z{{}..~.........
+    3420:	82 83 83 83 82 83 84 85 84 83 82 87 88 82 7f 85     ................
+    3430:	8a 86 81 84 89 86 80 7e 80 80 7f 7d 80 84 88 89     .......~...}....
+    3440:	89 8c 8e 8d 89 84 81 7e 7b 76 72 72 73 73 71 71     .......~{vrrssqq
+    3450:	74 76 76 76 78 7a 7b 7c 7c 7e 7f 7f 7f 80 80 81     tvvvxz{||~......
+    3460:	81 82 84 84 84 84 84 84 83 82 83 84 83 81 83 87     ................
+    3470:	84 7f 80 86 88 82 80 86 88 84 80 80 82 81 80 80     ................
+    3480:	82 86 88 88 88 8a 8a 88 84 80 7d 7b 77 74 72 73     ..........}{wtrs
+    3490:	74 74 73 75 77 77 77 78 79 7a 7c 7c 7d 7e 80 7f     ttsuwwwxyz||}~..
+    34a0:	7f 80 81 81 80 81 83 83 82 82 83 84 83 82 84 85     ................
+    34b0:	85 82 82 86 86 81 7f 83 87 85 81 83 86 85 81 80     ................
+    34c0:	80 81 80 80 80 83 87 88 88 88 8a 8a 85 80 7e 7e     ..............~~
+    34d0:	7b 75 72 75 76 74 73 74 77 78 78 77 79 7c 7d 7b     {uruvtstwxxwy|}{
+    34e0:	7c 7e 7f 7f 7f 80 81 82 82 82 84 85 84 83 83 84     |~..............
+    34f0:	84 83 83 84 84 84 82 84 85 83 80 80 85 86 83 82     ................
+    3500:	85 86 84 80 80 81 81 80 80 82 85 87 86 87 87 88     ................
+    3510:	85 80 7d 7c 7b 77 74 74 76 76 75 74 76 78 79 78     ..}|{wttvvutvxyx
+    3520:	78 7a 7c 7c 7b 7d 7f 7f 7f 80 81 82 82 82 83 83     xz||{}..........
+    3530:	83 83 82 83 83 83 83 83 83 84 85 83 83 85 86 83     ................
+    3540:	80 83 85 85 82 83 85 85 83 80 80 80 80 80 80 81     ................
+    3550:	84 85 85 85 86 86 82 7f 7e 7d 7a 77 76 77 77 77     ........~}zwvwww
+    3560:	76 77 78 79 79 79 7a 7b 7d 7d 7e 7f 80 80 80 80     vwxyyyz{}}~.....
+    3570:	81 82 81 81 82 82 82 82 82 82 83 82 82 83 83 83     ................
+    3580:	84 84 85 85 86 85 83 83 84 84 83 84 85 84 83 82     ................
+    3590:	80 80 7f 7e 7d 7e 7f 80 82 83 82 82 83 81 80 7d     ...~}~.........}
+    35a0:	7c 7b 79 77 76 76 77 78 78 79 7a 7b 7b 7b 7c 7d     |{ywvvwxxyz{{{|}
+    35b0:	7e 7e 7e 7f 80 80 80 81 81 81 82 82 82 82 83 83     ~~~.............
+    35c0:	82 81 82 83 82 82 83 85 85 85 85 87 86 84 83 85     ................
+    35d0:	85 84 83 84 85 84 81 80 7f 7f 7e 7d 7c 7d 7e 7f     ..........~}|}~.
+    35e0:	80 80 80 80 80 7f 7e 7c 7b 7a 7b 7b 7b 7d 7d 7c     ......~|{z{{{}}|
+    35f0:	7c 7c 7c 7c 7a 7b 7d 7d 7d 7e 7f 80 7f 80 81 80     ||||z{}}}~......
+    3600:	80 81 82 83 82 83 84 85 85 85 85 86 87 87 87 87     ................
+    3610:	87 87 86 84 84 84 83 81 80 80 80 80 7f 7d 7e 7e     .............}~~
+    3620:	7d 7c 7c 7d 7e 7d 7d 7d 7e 7e 7c 7c 7e 7e 7d 7d     }||}~}}}~~||~~}}
+    3630:	7e 7e 7d 7d 7e 7d 7d 7d 7d 7e 7f 7f 80 80 81 81     ~~}}~}}}}~......
+    3640:	81 81 81 81 81 81 81 81 81 82 82 82 83 82 82 82     ................
+    3650:	83 83 82 84 84 84 84 84 83 83 82 82 81 81 80 80     ................
+    3660:	7f 7f 7f 7e 7d 7d 7c 7c 7c 7d 7e 7e 7e 7f 80 80     ...~}}|||}~~~...
+    3670:	7f 7f 80 80 80 80 80 80 80 80 80 7f 7f 7f 7e 7e     ..............~~
+    3680:	7e 7f 7f 7f 7f 80 81 80 80 81 82 82 83 83 82 82     ~...............
+    3690:	83 82 82 81 81 81 81 80 80 80 81 80 80 81 80 80     ................
+    36a0:	80 80 80 80 80 80 80 80 80 80 7f 7f 7f 7e 7f 7e     .............~.~
+    36b0:	7d 7f 7f 7e 7f 80 80 7f 7f 80 7f 7f 80 7f 7f 80     }..~............
+    36c0:	80 80 80 80 80 7f 7f 80 7f 7f 80 80 80 80 80 81     ................
+    36d0:	81 81 81 82 82 82 81 82 82 81 80 80 80 80 80 80     ................
+    36e0:	80 80 80 80 80 80 80 80 81 80 80 80 81 80 80 81     ................
+    36f0:	81 80 80 80 80 80 7f 7f 7f 7f 7f 80 80 7f 7f 80     ................
+    3700:	80 7f 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3710:	7f 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3720:	81 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3730:	80 80 80 80 80 80 80 80 81 80 80 80 80 80 80 80     ................
+    3740:	80 80 7f 7f 80 80 7f 7f 7f 80 80 80 80 80 80 80     ................
+    3750:	80 81 80 80 81 81 80 80 80 80 80 80 80 7f 7f 80     ................
+    3760:	80 80 80 7f 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3770:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3780:	80 80 80 80 80 80 80 80 81 81 81 80 80 80 80 80     ................
+    3790:	80 80 80 80 80 7f 80 80 80 80 80 80 80 80 80 80     ................
+    37a0:	80 81 81 80 80 81 80 80 80 80 80 80 80 80 80 80     ................
+    37b0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    37c0:	80 80 81 80 80 80 7f 80 80 80 7f 7f 80 80 7f 80     ................
+    37d0:	80 80 80 80 80 80 80 80 80 80 80 80 80 81 80 80     ................
+    37e0:	80 80 80 80 80 7f 7f 7f 7f 80 80 80 80 80 80 80     ................
+    37f0:	80 80 80 81 81 81 81 81 81 80 80 80 80 80 80 80     ................
+    3800:	80 7f 7f 80 80 80 80 80 80 80 80 80 80 80 81 81     ................
+    3810:	81 81 80 80 81 81 80 80 80 80 80 80 7f 7f 7f 80     ................
+    3820:	80 7f 7f 80 80 80 80 80 80 80 80 80 80 80 80 81     ................
+    3830:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3840:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3850:	80 80 80 7f 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3860:	80 80 80 80 80 80 80 80 80 80 80 7f 80 80 7f 7f     ................
+    3870:	80 80 7f 80 80 80 80 80 80 80 80 81 81 80 80 80     ................
+    3880:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3890:	80 80 80 80 80 80 80 80 81 80 80 80 80 80 80 80     ................
+    38a0:	7f 7f 80 80 80 80 80 80 80 81 80 80 80 80 80 80     ................
+    38b0:	80 80 80 80 80 80 80 7f 7f 80 80 80 7f 80 80 80     ................
+    38c0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    38d0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    38e0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    38f0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3900:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3910:	80 81 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3920:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3930:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3940:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3950:	80 80 80 80 80 80 80 80 80 80 7f 80 80 80 80 80     ................
+    3960:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3970:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3980:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3990:	80 80 80 80 80 80 80 80 80 80 81 81 81 81 80 80     ................
+    39a0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    39b0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    39c0:	80 80 7f 80 80 7f 7f 80 80 80 80 80 80 80 80 80     ................
+    39d0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    39e0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    39f0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3a00:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3a10:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3a20:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3a30:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3a40:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3a50:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3a60:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3a70:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3a80:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3a90:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3aa0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3ab0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3ac0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3ad0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3ae0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3af0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3b00:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3b10:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3b20:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3b30:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3b40:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3b50:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3b60:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3b70:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3b80:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3b90:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3ba0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3bb0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3bc0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3bd0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3be0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3bf0:	80 80 80 80 80 80 80 80 80 80 7f 80 80 7f 80 80     ................
+    3c00:	80 80 80 80 80 80 80 80 80 80 80 80 7f 80 80 7f     ................
+    3c10:	7f 80 7f 7f 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3c20:	80 80 80 80 80 80 80 80 80 80 80 80 80 81 80 80     ................
+    3c30:	81 81 80 80 81 80 80 80 81 80 80 81 80 80 81 80     ................
+    3c40:	80 81 80 81 81 81 81 81 81 81 81 81 81 81 81 80     ................
+    3c50:	81 80 80 80 81 80 80 81 81 80 81 81 80 80 81 80     ................
+    3c60:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3c70:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3c80:	80 80 80 80 80 80 80 80 80 80 7f 80 80 80 7f 80     ................
+    3c90:	80 80 80 80 80 80 80 80 7f 80 7f 7f 80 80 7f 80     ................
+    3ca0:	80 7f 80 80 7f 7f 80 7f 7f 80 80 7f 80 80 7f 80     ................
+    3cb0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3cc0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3cd0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3ce0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3cf0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3d00:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3d10:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3d20:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3d30:	80 80 80 80 80 80 80 80 80 80 80 81 80 80 81 80     ................
+    3d40:	80 81 81 80 80 81 80 80 80 81 81 80 80 81 80 80     ................
+    3d50:	81 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3d60:	80 80 80 80 80 80 80 80 80 80 80 81 80 80 80 80     ................
+    3d70:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3d80:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3d90:	80 80 80 80 80 80 80 80 7f 80 80 80 80 80 80 80     ................
+    3da0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3db0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3dc0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3dd0:	80 80 80 80 80 80 80 80 80 80 80 80 81 80 80 80     ................
+    3de0:	80 80 80 80 80 80 80 80 80 80 80 80 7f 80 80 80     ................
+    3df0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3e00:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3e10:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3e20:	80 80 7f 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3e30:	80 80 80 80 7f 80 80 80 80 80 81 80 80 80 80 80     ................
+    3e40:	80 80 80 80 80 80 80 80 80 80 80 81 80 80 80 80     ................
+    3e50:	80 7f 80 80 80 80 80 80 80 81 80 80 80 80 80 80     ................
+    3e60:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3e70:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 7f     ................
+    3e80:	80 80 80 80 80 80 80 80 80 80 80 80 80 7f 80 80     ................
+    3e90:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3ea0:	7f 80 80 80 80 81 80 80 80 80 80 80 80 80 80 80     ................
+    3eb0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3ec0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3ed0:	80 80 80 81 80 80 80 80 80 80 80 7f 7f 80 80 80     ................
+    3ee0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3ef0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3f00:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3f10:	80 80 80 80 80 80 7f 80 80 80 80 81 80 80 80 80     ................
+    3f20:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3f30:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3f40:	80 80 7f 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3f50:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 7f     ................
+    3f60:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3f70:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3f80:	80 80 80 80 81 81 81 80 80 80 80 80 80 80 80 80     ................
+    3f90:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3fa0:	80 80 80 80 80 80 80 80 80 80 7f 7f 7f 80 80 80     ................
+    3fb0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    3fc0:	80 80 80 80 80 7f 7f 7f 80 7f 7f 80 80 80 80 80     ................
+    3fd0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 7f     ................
+    3fe0:	7f 7f 7f 80 80 80 80 80 80 80 80 80 80 80 80 81     ................
+    3ff0:	80 80 80 80 80 80 80 80 80 80 80 80 7f 80 7f 7f     ................
+    4000:	7f 80 80 80 80 80 81 80 81 81 81 80 80 80 80 80     ................
+    4010:	80 80 80 80 80 7f 7f 7f 7f 7e 7f 7f 7f 80 80 80     .........~......
+    4020:	80 80 80 81 81 81 81 81 80 80 80 80 80 80 80 7f     ................
+    4030:	80 80 7f 7f 7f 7f 7f 80 80 80 80 80 80 80 81 81     ................
+    4040:	81 82 81 81 81 81 80 80 80 80 80 80 7f 7f 7f 80     ................
+    4050:	80 7f 80 80 80 80 81 81 81 82 82 82 82 82 81 81     ................
+    4060:	81 80 80 80 80 80 80 7f 7f 7f 80 7f 80 80 80 80     ................
+    4070:	80 80 81 81 81 81 82 81 82 82 81 80 80 80 80 80     ................
+    4080:	7f 7e 7f 7e 7e 7f 7f 7f 7f 7f 80 80 81 80 81 81     .~.~~...........
+    4090:	81 81 81 81 81 80 80 80 80 80 80 7f 7e 7e 7e 7e     ............~~~~
+    40a0:	7e 7f 7f 7f 80 80 80 80 80 80 81 81 81 81 81 80     ~...............
+    40b0:	80 80 80 7f 7f 7f 7f 7e 7e 7f 7f 7e 7f 7f 7f 80     .......~~..~....
+    40c0:	80 81 81 81 82 81 81 81 81 80 80 80 80 80 80 7f     ................
+    40d0:	7f 7f 7f 7e 7e 7e 7e 7f 80 80 80 80 81 81 81 82     ...~~~~.........
+    40e0:	82 82 82 81 80 80 80 80 80 7f 7f 7f 7f 7f 7f 7f     ................
+    40f0:	7f 80 80 80 80 80 81 81 81 81 81 81 81 81 80 80     ................
+    4100:	80 80 80 7f 7f 7f 7f 7f 7f 7f 80 80 80 80 80 81     ................
+    4110:	82 81 81 82 82 81 81 81 80 80 80 80 80 80 7f 7f     ................
+    4120:	7f 7f 7f 7f 80 80 80 80 80 81 81 81 81 81 81 81     ................
+    4130:	81 80 80 80 80 80 7f 7f 7f 7f 7f 7f 7f 7f 7f 80     ................
+    4140:	80 80 80 80 81 82 82 81 81 81 80 80 80 80 80 80     ................
+    4150:	7f 7f 7f 7f 7e 7f 7e 7f 7f 80 80 80 80 80 80 80     ....~.~.........
+    4160:	81 81 81 81 80 80 80 80 80 80 7f 7f 7f 80 7f 7f     ................
+    4170:	80 80 80 80 80 81 81 81 82 81 81 81 81 81 80 80     ................
+    4180:	80 80 80 80 7f 7f 7f 7f 7f 7f 80 80 80 80 80 81     ................
+    4190:	81 81 81 81 81 81 81 81 80 80 80 80 80 7f 7f 7f     ................
+    41a0:	7f 80 80 80 80 80 80 80 80 81 81 81 80 80 81 80     ................
+    41b0:	80 80 80 80 7f 7f 80 7f 7f 80 80 80 80 80 80 80     ................
+    41c0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    41d0:	80 80 80 80 80 80 80 80 7f 7f 80 80 7f 7f 80 80     ................
+    41e0:	80 80 80 80 80 80 80 81 81 80 80 80 80 80 80 80     ................
+    41f0:	7f 7f 7f 7f 7f 7e 7f 7f 80 80 80 81 82 82 82 82     .....~..........
+    4200:	82 81 81 81 81 80 80 80 80 80 7f 7f 7f 7f 7f 7f     ................
+    4210:	80 80 80 80 81 81 81 81 82 81 81 81 81 80 80 80     ................
+    4220:	80 80 7f 7f 7f 7f 7f 7f 80 80 80 80 81 81 81 81     ................
+    4230:	81 81 81 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4240:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4250:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 7f 7f     ................
+    4260:	7f 7f 7f 7f 80 80 80 80 80 80 81 81 81 81 81 80     ................
+    4270:	81 80 80 80 80 80 7f 7e 7e 7e 7e 7f 7f 80 80 80     .......~~~~.....
+    4280:	80 81 81 82 82 82 82 81 81 81 80 80 80 80 7f 7f     ................
+    4290:	7f 7f 7f 80 80 80 80 80 80 81 81 81 82 81 81 81     ................
+    42a0:	81 80 80 80 80 80 80 7f 7f 7f 80 80 80 80 80 80     ................
+    42b0:	80 80 81 81 80 81 81 80 80 80 80 80 80 80 80 80     ................
+    42c0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    42d0:	7f 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    42e0:	80 80 80 80 80 7f 7f 7f 80 80 80 80 80 80 80 80     ................
+    42f0:	81 80 80 81 81 81 80 80 80 80 80 7f 7f 7f 7f 7f     ................
+    4300:	7f 80 80 80 80 80 80 80 80 80 81 80 80 80 80 80     ................
+    4310:	80 80 80 80 80 80 80 80 80 80 80 80 81 80 80 81     ................
+    4320:	81 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4330:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4340:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4350:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4360:	80 80 80 80 80 80 80 80 80 80 7f 7f 80 80 80 80     ................
+    4370:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4380:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4390:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    43a0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    43b0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    43c0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    43d0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    43e0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    43f0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4400:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4410:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4420:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4430:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4440:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4450:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4460:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4470:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4480:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4490:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    44a0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    44b0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    44c0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    44d0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    44e0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    44f0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4500:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4510:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4520:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4530:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4540:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4550:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4560:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4570:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4580:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4590:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    45a0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    45b0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    45c0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    45d0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    45e0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    45f0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4600:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4610:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4620:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4630:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4640:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4650:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4660:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4670:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4680:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4690:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    46a0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    46b0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    46c0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    46d0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    46e0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    46f0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4700:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4710:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4720:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4730:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4740:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4750:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4760:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4770:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4780:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4790:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    47a0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    47b0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    47c0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    47d0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    47e0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    47f0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4800:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4810:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4820:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4830:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4840:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4850:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4860:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4870:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4880:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4890:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    48a0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    48b0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    48c0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    48d0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    48e0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    48f0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4900:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4910:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4920:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4930:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4940:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4950:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4960:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4970:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4980:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4990:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    49a0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    49b0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    49c0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    49d0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    49e0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    49f0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4a00:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4a10:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4a20:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4a30:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4a40:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4a50:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4a60:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4a70:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4a80:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4a90:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4aa0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4ab0:	80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80     ................
+    4ac0:	80 80 80 80 80 80 80 80 80 00                       ..........
+
+00004aca <__ctors_end>:
+    4aca:	11 24       	eor	r1, r1
+    4acc:	1f be       	out	0x3f, r1	; 63
+    4ace:	cf ef       	ldi	r28, 0xFF	; 255
+    4ad0:	d0 e1       	ldi	r29, 0x10	; 16
+    4ad2:	de bf       	out	0x3e, r29	; 62
+    4ad4:	cd bf       	out	0x3d, r28	; 61
+
+00004ad6 <__do_copy_data>:
+    4ad6:	11 e0       	ldi	r17, 0x01	; 1
+    4ad8:	a0 e0       	ldi	r26, 0x00	; 0
+    4ada:	b1 e0       	ldi	r27, 0x01	; 1
+    4adc:	e0 ec       	ldi	r30, 0xC0	; 192
+    4ade:	f0 e5       	ldi	r31, 0x50	; 80
+    4ae0:	00 e0       	ldi	r16, 0x00	; 0
+    4ae2:	0b bf       	out	0x3b, r16	; 59
+    4ae4:	02 c0       	rjmp	.+4      	; 0x4aea <__do_copy_data+0x14>
+    4ae6:	07 90       	elpm	r0, Z+
+    4ae8:	0d 92       	st	X+, r0
+    4aea:	a0 30       	cpi	r26, 0x00	; 0
+    4aec:	b1 07       	cpc	r27, r17
+    4aee:	d9 f7       	brne	.-10     	; 0x4ae6 <__do_copy_data+0x10>
+
+00004af0 <__do_clear_bss>:
+    4af0:	22 e0       	ldi	r18, 0x02	; 2
+    4af2:	a0 e0       	ldi	r26, 0x00	; 0
+    4af4:	b1 e0       	ldi	r27, 0x01	; 1
+    4af6:	01 c0       	rjmp	.+2      	; 0x4afa <.do_clear_bss_start>
+
+00004af8 <.do_clear_bss_loop>:
+    4af8:	1d 92       	st	X+, r1
+
+00004afa <.do_clear_bss_start>:
+    4afa:	ae 38       	cpi	r26, 0x8E	; 142
+    4afc:	b2 07       	cpc	r27, r18
+    4afe:	e1 f7       	brne	.-8      	; 0x4af8 <.do_clear_bss_loop>
+    4b00:	65 d1       	rcall	.+714    	; 0x4dcc <main>
+    4b02:	dc c2       	rjmp	.+1464   	; 0x50bc <_exit>
+
+00004b04 <__bad_interrupt>:
+    4b04:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00004b08 <PCM_off>:
+	return buff_;
+}
+
+void PCM_off()
+{
+	sample=0;
+    4b08:	10 92 8d 02 	sts	0x028D, r1	; 0x80028d <sample+0x1>
+    4b0c:	10 92 8c 02 	sts	0x028C, r1	; 0x80028c <sample>
+	//TIMSK&=~(1<<TOIE0);
+	
+	//다른 tick들 때문에 함부로 끌수가 없다
+	//TIMSK&=~(1<<OCIE0);
+	pcm_turn_on_flag=0;
+    4b10:	10 92 6b 01 	sts	0x016B, r1	; 0x80016b <pcm_turn_on_flag+0x1>
+    4b14:	10 92 6a 01 	sts	0x016A, r1	; 0x80016a <pcm_turn_on_flag>
+	
+	OCR1A = 0x80;
+    4b18:	80 e8       	ldi	r24, 0x80	; 128
+    4b1a:	90 e0       	ldi	r25, 0x00	; 0
+    4b1c:	9b bd       	out	0x2b, r25	; 43
+    4b1e:	8a bd       	out	0x2a, r24	; 42
+	OCR1B = 0x80;
+    4b20:	99 bd       	out	0x29, r25	; 41
+    4b22:	88 bd       	out	0x28, r24	; 40
+    4b24:	08 95       	ret
+
+00004b26 <__vector_15>:
+	else if(buffer=='x') play_flag=0;
+	//else eeprom_update_byte((uint8_t*)0,buffer);
+	
+}
+ISR(TIMER0_COMP_vect)//TIMER0_OVF_vect 
+{
+    4b26:	1f 92       	push	r1
+    4b28:	0f 92       	push	r0
+    4b2a:	0f b6       	in	r0, 0x3f	; 63
+    4b2c:	0f 92       	push	r0
+    4b2e:	11 24       	eor	r1, r1
+    4b30:	0b b6       	in	r0, 0x3b	; 59
+    4b32:	0f 92       	push	r0
+    4b34:	2f 93       	push	r18
+    4b36:	3f 93       	push	r19
+    4b38:	4f 93       	push	r20
+    4b3a:	5f 93       	push	r21
+    4b3c:	6f 93       	push	r22
+    4b3e:	7f 93       	push	r23
+    4b40:	8f 93       	push	r24
+    4b42:	9f 93       	push	r25
+    4b44:	af 93       	push	r26
+    4b46:	bf 93       	push	r27
+    4b48:	ef 93       	push	r30
+    4b4a:	ff 93       	push	r31
+	//count_pause(PAUSE);
+	static unsigned char buff;
+	//static char toggle=0;
+	PORTC ^= 0x0f;
+    4b4c:	95 b3       	in	r25, 0x15	; 21
+    4b4e:	8f e0       	ldi	r24, 0x0F	; 15
+    4b50:	89 27       	eor	r24, r25
+    4b52:	85 bb       	out	0x15, r24	; 21
+ 	else  OCR0=61;
+	*/
+	
+	//cli();
+	
+	TICK.ticks++;
+    4b54:	e3 e8       	ldi	r30, 0x83	; 131
+    4b56:	f2 e0       	ldi	r31, 0x02	; 2
+    4b58:	85 81       	ldd	r24, Z+5	; 0x05
+    4b5a:	96 81       	ldd	r25, Z+6	; 0x06
+    4b5c:	a7 81       	ldd	r26, Z+7	; 0x07
+    4b5e:	b0 85       	ldd	r27, Z+8	; 0x08
+    4b60:	01 96       	adiw	r24, 0x01	; 1
+    4b62:	a1 1d       	adc	r26, r1
+    4b64:	b1 1d       	adc	r27, r1
+    4b66:	85 83       	std	Z+5, r24	; 0x05
+    4b68:	96 83       	std	Z+6, r25	; 0x06
+    4b6a:	a7 83       	std	Z+7, r26	; 0x07
+    4b6c:	b0 87       	std	Z+8, r27	; 0x08
+	
+    //TCNT0=256-16;
+	if(pcm_turn_on_flag){
+    4b6e:	80 91 6a 01 	lds	r24, 0x016A	; 0x80016a <pcm_turn_on_flag>
+    4b72:	90 91 6b 01 	lds	r25, 0x016B	; 0x80016b <pcm_turn_on_flag+0x1>
+    4b76:	89 2b       	or	r24, r25
+    4b78:	09 f4       	brne	.+2      	; 0x4b7c <__vector_15+0x56>
+    4b7a:	7b c0       	rjmp	.+246    	; 0x4c72 <__vector_15+0x14c>
+		sample_count--;
+    4b7c:	80 91 80 02 	lds	r24, 0x0280	; 0x800280 <sample_count>
+    4b80:	90 91 81 02 	lds	r25, 0x0281	; 0x800281 <sample_count+0x1>
+    4b84:	01 97       	sbiw	r24, 0x01	; 1
+    4b86:	90 93 81 02 	sts	0x0281, r25	; 0x800281 <sample_count+0x1>
+    4b8a:	80 93 80 02 	sts	0x0280, r24	; 0x800280 <sample_count>
+		if (sample_count == 0)
+    4b8e:	80 91 80 02 	lds	r24, 0x0280	; 0x800280 <sample_count>
+    4b92:	90 91 81 02 	lds	r25, 0x0281	; 0x800281 <sample_count+0x1>
+    4b96:	89 2b       	or	r24, r25
+    4b98:	09 f0       	breq	.+2      	; 0x4b9c <__vector_15+0x76>
+    4b9a:	6b c0       	rjmp	.+214    	; 0x4c72 <__vector_15+0x14c>
+		{
+			sample_count = 2;
+    4b9c:	82 e0       	ldi	r24, 0x02	; 2
+    4b9e:	90 e0       	ldi	r25, 0x00	; 0
+    4ba0:	90 93 81 02 	sts	0x0281, r25	; 0x800281 <sample_count+0x1>
+    4ba4:	80 93 80 02 	sts	0x0280, r24	; 0x800280 <sample_count>
+			switch(status){
+    4ba8:	80 91 6c 01 	lds	r24, 0x016C	; 0x80016c <status>
+    4bac:	90 91 6d 01 	lds	r25, 0x016D	; 0x80016d <status+0x1>
+    4bb0:	86 30       	cpi	r24, 0x06	; 6
+    4bb2:	91 05       	cpc	r25, r1
+    4bb4:	29 f1       	breq	.+74     	; 0x4c00 <__vector_15+0xda>
+    4bb6:	87 30       	cpi	r24, 0x07	; 7
+    4bb8:	91 05       	cpc	r25, r1
+    4bba:	21 f0       	breq	.+8      	; 0x4bc4 <__vector_15+0x9e>
+    4bbc:	89 2b       	or	r24, r25
+    4bbe:	09 f0       	breq	.+2      	; 0x4bc2 <__vector_15+0x9c>
+    4bc0:	58 c0       	rjmp	.+176    	; 0x4c72 <__vector_15+0x14c>
+    4bc2:	3b c0       	rjmp	.+118    	; 0x4c3a <__vector_15+0x114>
+				case PCM_NOTE_B:
+					buff=pgm_read_byte(&pcm_samples[sample++]);     
+    4bc4:	e0 91 8c 02 	lds	r30, 0x028C	; 0x80028c <sample>
+    4bc8:	f0 91 8d 02 	lds	r31, 0x028D	; 0x80028d <sample+0x1>
+    4bcc:	cf 01       	movw	r24, r30
+    4bce:	01 96       	adiw	r24, 0x01	; 1
+    4bd0:	90 93 8d 02 	sts	0x028D, r25	; 0x80028d <sample+0x1>
+    4bd4:	80 93 8c 02 	sts	0x028C, r24	; 0x80028c <sample>
+    4bd8:	e4 57       	subi	r30, 0x74	; 116
+    4bda:	ff 4f       	sbci	r31, 0xFF	; 255
+    4bdc:	e4 91       	lpm	r30, Z
+					OCR1A =buff;
+    4bde:	f0 e0       	ldi	r31, 0x00	; 0
+    4be0:	fb bd       	out	0x2b, r31	; 43
+    4be2:	ea bd       	out	0x2a, r30	; 42
+					//OCR1B = buff;
+					if(sample>pcm_b_length)PCM_off();
+    4be4:	80 91 8c 02 	lds	r24, 0x028C	; 0x80028c <sample>
+    4be8:	90 91 8d 02 	lds	r25, 0x028D	; 0x80028d <sample+0x1>
+    4bec:	a0 e0       	ldi	r26, 0x00	; 0
+    4bee:	b0 e0       	ldi	r27, 0x00	; 0
+    4bf0:	85 3f       	cpi	r24, 0xF5	; 245
+    4bf2:	9a 40       	sbci	r25, 0x0A	; 10
+    4bf4:	a1 05       	cpc	r26, r1
+    4bf6:	b1 05       	cpc	r27, r1
+    4bf8:	0c f4       	brge	.+2      	; 0x4bfc <__vector_15+0xd6>
+    4bfa:	3b c0       	rjmp	.+118    	; 0x4c72 <__vector_15+0x14c>
+    4bfc:	85 df       	rcall	.-246    	; 0x4b08 <PCM_off>
+    4bfe:	39 c0       	rjmp	.+114    	; 0x4c72 <__vector_15+0x14c>
+				
+				break;
+				case PCM_NOTE_A:
+					buff=pgm_read_byte(&PCM_A[sample++]);
+    4c00:	e0 91 8c 02 	lds	r30, 0x028C	; 0x80028c <sample>
+    4c04:	f0 91 8d 02 	lds	r31, 0x028D	; 0x80028d <sample+0x1>
+    4c08:	cf 01       	movw	r24, r30
+    4c0a:	01 96       	adiw	r24, 0x01	; 1
+    4c0c:	90 93 8d 02 	sts	0x028D, r25	; 0x80028d <sample+0x1>
+    4c10:	80 93 8c 02 	sts	0x028C, r24	; 0x80028c <sample>
+    4c14:	e0 58       	subi	r30, 0x80	; 128
+    4c16:	f4 4f       	sbci	r31, 0xF4	; 244
+    4c18:	e4 91       	lpm	r30, Z
+					OCR1A =buff;
+    4c1a:	f0 e0       	ldi	r31, 0x00	; 0
+    4c1c:	fb bd       	out	0x2b, r31	; 43
+    4c1e:	ea bd       	out	0x2a, r30	; 42
+					//OCR1B = buff;
+					if(sample>pcm_a_length) PCM_off();
+    4c20:	80 91 8c 02 	lds	r24, 0x028C	; 0x80028c <sample>
+    4c24:	90 91 8d 02 	lds	r25, 0x028D	; 0x80028d <sample+0x1>
+    4c28:	a0 e0       	ldi	r26, 0x00	; 0
+    4c2a:	b0 e0       	ldi	r27, 0x00	; 0
+    4c2c:	81 30       	cpi	r24, 0x01	; 1
+    4c2e:	9b 40       	sbci	r25, 0x0B	; 11
+    4c30:	a1 05       	cpc	r26, r1
+    4c32:	b1 05       	cpc	r27, r1
+    4c34:	f4 f0       	brlt	.+60     	; 0x4c72 <__vector_15+0x14c>
+    4c36:	68 df       	rcall	.-304    	; 0x4b08 <PCM_off>
+    4c38:	1c c0       	rjmp	.+56     	; 0x4c72 <__vector_15+0x14c>
+				break;
+				case PCM_NOTE_TEST:
+				buff=pgm_read_byte(&recordTEST[sample++]);
+    4c3a:	e0 91 8c 02 	lds	r30, 0x028C	; 0x80028c <sample>
+    4c3e:	f0 91 8d 02 	lds	r31, 0x028D	; 0x80028d <sample+0x1>
+    4c42:	cf 01       	movw	r24, r30
+    4c44:	01 96       	adiw	r24, 0x01	; 1
+    4c46:	90 93 8d 02 	sts	0x028D, r25	; 0x80028d <sample+0x1>
+    4c4a:	80 93 8c 02 	sts	0x028C, r24	; 0x80028c <sample>
+    4c4e:	e0 58       	subi	r30, 0x80	; 128
+    4c50:	f9 4e       	sbci	r31, 0xE9	; 233
+    4c52:	e4 91       	lpm	r30, Z
+				OCR1A =buff;
+    4c54:	f0 e0       	ldi	r31, 0x00	; 0
+    4c56:	fb bd       	out	0x2b, r31	; 43
+    4c58:	ea bd       	out	0x2a, r30	; 42
+				//OCR1B = buff;
+				if(sample>pcm_test_length) PCM_off();
+    4c5a:	80 91 8c 02 	lds	r24, 0x028C	; 0x80028c <sample>
+    4c5e:	90 91 8d 02 	lds	r25, 0x028D	; 0x80028d <sample+0x1>
+    4c62:	a0 e0       	ldi	r26, 0x00	; 0
+    4c64:	b0 e0       	ldi	r27, 0x00	; 0
+    4c66:	8a 34       	cpi	r24, 0x4A	; 74
+    4c68:	94 43       	sbci	r25, 0x34	; 52
+    4c6a:	a1 05       	cpc	r26, r1
+    4c6c:	b1 05       	cpc	r27, r1
+    4c6e:	0c f0       	brlt	.+2      	; 0x4c72 <__vector_15+0x14c>
+    4c70:	4b df       	rcall	.-362    	; 0x4b08 <PCM_off>
+		//PORTC ^= 0xff;
+		 //타이머 초기화는 반드시 아래쪽에 놔야 영향을 덜 받는다? > 아닌것같음
+	}//if(pcm_turn_on_flag) end
+	
+	
+}
+    4c72:	ff 91       	pop	r31
+    4c74:	ef 91       	pop	r30
+    4c76:	bf 91       	pop	r27
+    4c78:	af 91       	pop	r26
+    4c7a:	9f 91       	pop	r25
+    4c7c:	8f 91       	pop	r24
+    4c7e:	7f 91       	pop	r23
+    4c80:	6f 91       	pop	r22
+    4c82:	5f 91       	pop	r21
+    4c84:	4f 91       	pop	r20
+    4c86:	3f 91       	pop	r19
+    4c88:	2f 91       	pop	r18
+    4c8a:	0f 90       	pop	r0
+    4c8c:	0b be       	out	0x3b, r0	; 59
+    4c8e:	0f 90       	pop	r0
+    4c90:	0f be       	out	0x3f, r0	; 63
+    4c92:	0f 90       	pop	r0
+    4c94:	1f 90       	pop	r1
+    4c96:	18 95       	reti
+
+00004c98 <PCM_on>:
+	//TCCR1A&=~(1<<WGM10);
+}
+void PCM_on(int note)
+{
+	
+	status=note;
+    4c98:	90 93 6d 01 	sts	0x016D, r25	; 0x80016d <status+0x1>
+    4c9c:	80 93 6c 01 	sts	0x016C, r24	; 0x80016c <status>
+	sample=0;
+    4ca0:	10 92 8d 02 	sts	0x028D, r1	; 0x80028d <sample+0x1>
+    4ca4:	10 92 8c 02 	sts	0x028C, r1	; 0x80028c <sample>
+	pcm_turn_on_flag=1;
+    4ca8:	81 e0       	ldi	r24, 0x01	; 1
+    4caa:	90 e0       	ldi	r25, 0x00	; 0
+    4cac:	90 93 6b 01 	sts	0x016B, r25	; 0x80016b <pcm_turn_on_flag+0x1>
+    4cb0:	80 93 6a 01 	sts	0x016A, r24	; 0x80016a <pcm_turn_on_flag>
+	OCR1A = 0x80;
+    4cb4:	80 e8       	ldi	r24, 0x80	; 128
+    4cb6:	90 e0       	ldi	r25, 0x00	; 0
+    4cb8:	9b bd       	out	0x2b, r25	; 43
+    4cba:	8a bd       	out	0x2a, r24	; 42
+	OCR1B = 0x80;
+    4cbc:	99 bd       	out	0x29, r25	; 41
+    4cbe:	88 bd       	out	0x28, r24	; 40
+	
+	//TIMSK|=(1<<TOIE0);
+	TCNT0=0;
+    4cc0:	12 be       	out	0x32, r1	; 50
+	TIMSK|=(1<<OCIE0);
+    4cc2:	87 b7       	in	r24, 0x37	; 55
+    4cc4:	82 60       	ori	r24, 0x02	; 2
+    4cc6:	87 bf       	out	0x37, r24	; 55
+	TCCR1A|=(1<<WGM10);
+    4cc8:	8f b5       	in	r24, 0x2f	; 47
+    4cca:	81 60       	ori	r24, 0x01	; 1
+    4ccc:	8f bd       	out	0x2f, r24	; 47
+    4cce:	08 95       	ret
+
+00004cd0 <__vector_1>:
+	volatile uint32_t ticks;
+}TICK;
+//실제 녹음 버튼
+
+
+ISR(INT0_vect){
+    4cd0:	1f 92       	push	r1
+    4cd2:	0f 92       	push	r0
+    4cd4:	0f b6       	in	r0, 0x3f	; 63
+    4cd6:	0f 92       	push	r0
+    4cd8:	11 24       	eor	r1, r1
+    4cda:	0b b6       	in	r0, 0x3b	; 59
+    4cdc:	0f 92       	push	r0
+    4cde:	2f 93       	push	r18
+    4ce0:	3f 93       	push	r19
+    4ce2:	4f 93       	push	r20
+    4ce4:	5f 93       	push	r21
+    4ce6:	6f 93       	push	r22
+    4ce8:	7f 93       	push	r23
+    4cea:	8f 93       	push	r24
+    4cec:	9f 93       	push	r25
+    4cee:	af 93       	push	r26
+    4cf0:	bf 93       	push	r27
+    4cf2:	cf 93       	push	r28
+    4cf4:	ef 93       	push	r30
+    4cf6:	ff 93       	push	r31
+	record_flag=1; 
+    4cf8:	c1 e0       	ldi	r28, 0x01	; 1
+    4cfa:	c0 93 69 01 	sts	0x0169, r28	; 0x800169 <record_flag>
+	TICK.tick_10ms=0; 
+    4cfe:	10 92 87 02 	sts	0x0287, r1	; 0x800287 <TICK+0x4>
+    4d02:	10 92 86 02 	sts	0x0286, r1	; 0x800286 <TICK+0x3>
+	PCM_on(PCM_NOTE_TEST);
+    4d06:	80 e0       	ldi	r24, 0x00	; 0
+    4d08:	90 e0       	ldi	r25, 0x00	; 0
+    4d0a:	c6 df       	rcall	.-116    	; 0x4c98 <PCM_on>
+	mem_set_flag=1;
+    4d0c:	c0 93 68 01 	sts	0x0168, r28	; 0x800168 <mem_set_flag>
+	 
+}
+    4d10:	ff 91       	pop	r31
+    4d12:	ef 91       	pop	r30
+    4d14:	cf 91       	pop	r28
+    4d16:	bf 91       	pop	r27
+    4d18:	af 91       	pop	r26
+    4d1a:	9f 91       	pop	r25
+    4d1c:	8f 91       	pop	r24
+    4d1e:	7f 91       	pop	r23
+    4d20:	6f 91       	pop	r22
+    4d22:	5f 91       	pop	r21
+    4d24:	4f 91       	pop	r20
+    4d26:	3f 91       	pop	r19
+    4d28:	2f 91       	pop	r18
+    4d2a:	0f 90       	pop	r0
+    4d2c:	0b be       	out	0x3b, r0	; 59
+    4d2e:	0f 90       	pop	r0
+    4d30:	0f be       	out	0x3f, r0	; 63
+    4d32:	0f 90       	pop	r0
+    4d34:	1f 90       	pop	r1
+    4d36:	18 95       	reti
+
+00004d38 <__vector_18>:
+
+
+ISR(USART0_RX_vect)
+{
+    4d38:	1f 92       	push	r1
+    4d3a:	0f 92       	push	r0
+    4d3c:	0f b6       	in	r0, 0x3f	; 63
+    4d3e:	0f 92       	push	r0
+    4d40:	11 24       	eor	r1, r1
+    4d42:	0b b6       	in	r0, 0x3b	; 59
+    4d44:	0f 92       	push	r0
+    4d46:	2f 93       	push	r18
+    4d48:	3f 93       	push	r19
+    4d4a:	4f 93       	push	r20
+    4d4c:	5f 93       	push	r21
+    4d4e:	6f 93       	push	r22
+    4d50:	7f 93       	push	r23
+    4d52:	8f 93       	push	r24
+    4d54:	9f 93       	push	r25
+    4d56:	af 93       	push	r26
+    4d58:	bf 93       	push	r27
+    4d5a:	cf 93       	push	r28
+    4d5c:	ef 93       	push	r30
+    4d5e:	ff 93       	push	r31
+	while(!(UCSR0A & (1<<UDRE0)));
+    4d60:	5d 9b       	sbis	0x0b, 5	; 11
+    4d62:	fe cf       	rjmp	.-4      	; 0x4d60 <__vector_18+0x28>
+	buffer=UDR0;
+    4d64:	8c b1       	in	r24, 0x0c	; 12
+    4d66:	80 93 82 02 	sts	0x0282, r24	; 0x800282 <buffer>
+	
+	
+	//재생시, memset이 끝나면 LED를 켜서 녹음 시작임을 알리자.
+	if(buffer=='r') {record_flag=1; PCM_on(0);TICK.record_tick_100ms=0;mem_set_flag=1;}//
+    4d6a:	80 91 82 02 	lds	r24, 0x0282	; 0x800282 <buffer>
+    4d6e:	82 37       	cpi	r24, 0x72	; 114
+    4d70:	59 f4       	brne	.+22     	; 0x4d88 <__vector_18+0x50>
+    4d72:	c1 e0       	ldi	r28, 0x01	; 1
+    4d74:	c0 93 69 01 	sts	0x0169, r28	; 0x800169 <record_flag>
+    4d78:	80 e0       	ldi	r24, 0x00	; 0
+    4d7a:	90 e0       	ldi	r25, 0x00	; 0
+    4d7c:	8d df       	rcall	.-230    	; 0x4c98 <PCM_on>
+    4d7e:	10 92 83 02 	sts	0x0283, r1	; 0x800283 <TICK>
+    4d82:	c0 93 68 01 	sts	0x0168, r28	; 0x800168 <mem_set_flag>
+    4d86:	0e c0       	rjmp	.+28     	; 0x4da4 <__vector_18+0x6c>
+	else if(buffer=='p') play_flag=1;
+    4d88:	80 91 82 02 	lds	r24, 0x0282	; 0x800282 <buffer>
+    4d8c:	80 37       	cpi	r24, 0x70	; 112
+    4d8e:	21 f4       	brne	.+8      	; 0x4d98 <__vector_18+0x60>
+    4d90:	81 e0       	ldi	r24, 0x01	; 1
+    4d92:	80 93 66 01 	sts	0x0166, r24	; 0x800166 <play_flag>
+    4d96:	06 c0       	rjmp	.+12     	; 0x4da4 <__vector_18+0x6c>
+	else if(buffer=='x') play_flag=0;
+    4d98:	80 91 82 02 	lds	r24, 0x0282	; 0x800282 <buffer>
+    4d9c:	88 37       	cpi	r24, 0x78	; 120
+    4d9e:	11 f4       	brne	.+4      	; 0x4da4 <__vector_18+0x6c>
+    4da0:	10 92 66 01 	sts	0x0166, r1	; 0x800166 <play_flag>
+	//else eeprom_update_byte((uint8_t*)0,buffer);
+	
+}
+    4da4:	ff 91       	pop	r31
+    4da6:	ef 91       	pop	r30
+    4da8:	cf 91       	pop	r28
+    4daa:	bf 91       	pop	r27
+    4dac:	af 91       	pop	r26
+    4dae:	9f 91       	pop	r25
+    4db0:	8f 91       	pop	r24
+    4db2:	7f 91       	pop	r23
+    4db4:	6f 91       	pop	r22
+    4db6:	5f 91       	pop	r21
+    4db8:	4f 91       	pop	r20
+    4dba:	3f 91       	pop	r19
+    4dbc:	2f 91       	pop	r18
+    4dbe:	0f 90       	pop	r0
+    4dc0:	0b be       	out	0x3b, r0	; 59
+    4dc2:	0f 90       	pop	r0
+    4dc4:	0f be       	out	0x3f, r0	; 63
+    4dc6:	0f 90       	pop	r0
+    4dc8:	1f 90       	pop	r1
+    4dca:	18 95       	reti
+
+00004dcc <main>:
+
+int main(void)
+{
+//unsigned char input;
+	//A port : 건반용 채널
+	DDRA=0x00; 
+    4dcc:	1a ba       	out	0x1a, r1	; 26
+	PORTA=0xff; //내부 풀업 이용 PUD->0
+    4dce:	8f ef       	ldi	r24, 0xFF	; 255
+    4dd0:	8b bb       	out	0x1b, r24	; 27
+	PORTD|=0x01; //인터럽트 핀 내부 풀업모드
+    4dd2:	90 9a       	sbi	0x12, 0	; 18
+	
+	DDRC=0x0f;
+    4dd4:	9f e0       	ldi	r25, 0x0F	; 15
+    4dd6:	94 bb       	out	0x14, r25	; 20
+	PORTC=0xFF;
+    4dd8:	85 bb       	out	0x15, r24	; 21
+	
+	EIMSK=0x01; 	//0b 0000 0001 INT0
+    4dda:	81 e0       	ldi	r24, 0x01	; 1
+    4ddc:	89 bf       	out	0x39, r24	; 57
+	EICRA=0x02; 	//0b 0000 0010 falling edge triggered
+    4dde:	c2 e0       	ldi	r28, 0x02	; 2
+    4de0:	c0 93 6a 00 	sts	0x006A, r28	; 0x80006a <__TEXT_REGION_LENGTH__+0x7e006a>
+
+	
+	uart_init(0,9600);
+    4de4:	60 e8       	ldi	r22, 0x80	; 128
+    4de6:	75 e2       	ldi	r23, 0x25	; 37
+    4de8:	80 e0       	ldi	r24, 0x00	; 0
+    4dea:	90 e0       	ldi	r25, 0x00	; 0
+    4dec:	d8 d0       	rcall	.+432    	; 0x4f9e <uart_init>
+	
+	//eeprom TEST
+	/* use OC1A pin as output */
+    DDRB |= ((1<<DDRB5)|(1<<DDRB6));
+    4dee:	87 b3       	in	r24, 0x17	; 23
+    4df0:	80 66       	ori	r24, 0x60	; 96
+    4df2:	87 bb       	out	0x17, r24	; 23
+    /*
+    * clear OC1A on compare match
+    * set OC1A at BOTTOM, 비반전 모드
+    * Fast PWM, 8bit
+    */
+    TCCR1A = (1<<COM1A1) | (1<<WGM10|(1<<COM1B1)|((1<<COM1B0)));
+    4df4:	81 eb       	ldi	r24, 0xB1	; 177
+    4df6:	8f bd       	out	0x2f, r24	; 47
+    /*
+    * Fast PWM, 8bit
+    * 분주비 : clk/1 = 8MHz
+    * PWM 주파수 = 8MHz / (255 + 1) = 31.25kHz == 2MHz / 
+    */
+    TCCR1B = (1<<WGM12) | (1<<CS10);
+    4df8:	89 e0       	ldi	r24, 0x09	; 9
+    4dfa:	8e bd       	out	0x2e, r24	; 46
+   
+    /* 초기 듀티비 50% */
+    OCR1A = 0x80;
+    4dfc:	80 e8       	ldi	r24, 0x80	; 128
+    4dfe:	90 e0       	ldi	r25, 0x00	; 0
+    4e00:	9b bd       	out	0x2b, r25	; 43
+    4e02:	8a bd       	out	0x2a, r24	; 42
+	OCR1B = 0x80;
+    4e04:	99 bd       	out	0x29, r25	; 41
+    4e06:	88 bd       	out	0x28, r24	; 40
+   
+    /* 타이머 카운터0 SETUP */
+ 
+    TCCR0=((1<<CS01)|(0<<CS00)|(1<<WGM01)|(0<<WGM00)); //16/8MHz > 2MHz (256/4)  ///0.5MHz  > 32kHz
+    4e08:	8a e0       	ldi	r24, 0x0A	; 10
+    4e0a:	83 bf       	out	0x33, r24	; 51
+    //TCNT0=196;
+    //TCNT0=256-15;
+	OCR0=(125-1);
+    4e0c:	8c e7       	ldi	r24, 0x7C	; 124
+    4e0e:	81 bf       	out	0x31, r24	; 49
+	
+	//OCR0=128;
+	//TIMSK|=(1<<TOIE0);
+    TIMSK=(1<<OCIE0);
+    4e10:	c7 bf       	out	0x37, r28	; 55
+    sample_count = 4;
+    4e12:	84 e0       	ldi	r24, 0x04	; 4
+    4e14:	90 e0       	ldi	r25, 0x00	; 0
+    4e16:	90 93 81 02 	sts	0x0281, r25	; 0x800281 <sample_count+0x1>
+    4e1a:	80 93 80 02 	sts	0x0280, r24	; 0x800280 <sample_count>
+	sei(); //인터럽트 허용
+    4e1e:	78 94       	sei
+		   //2. 녹음이 모두 끝났을 때
+		   //3. 버퍼 값들을 플래쉬메모리에 저장 eeprom_update_byte((uint8_t*)record_tick_100ms,PCM_NOTE_B);
+		   
+		   //설마 녹음하는 과정에서 재생함수가 영향을 주나 ?>NO
+		   
+		   if(TICK.ticks%160==0){ // 10ms마다 
+    4e20:	0f 2e       	mov	r0, r31
+    4e22:	f3 e8       	ldi	r31, 0x83	; 131
+    4e24:	ef 2e       	mov	r14, r31
+    4e26:	f2 e0       	ldi	r31, 0x02	; 2
+    4e28:	ff 2e       	mov	r15, r31
+    4e2a:	f0 2d       	mov	r31, r0
+    4e2c:	0f 2e       	mov	r0, r31
+    4e2e:	f0 ea       	ldi	r31, 0xA0	; 160
+    4e30:	8f 2e       	mov	r8, r31
+    4e32:	91 2c       	mov	r9, r1
+    4e34:	a1 2c       	mov	r10, r1
+    4e36:	b1 2c       	mov	r11, r1
+    4e38:	f0 2d       	mov	r31, r0
+					   edge_detect=1;
+					   //uart0_tx_string("det\n");
+					   PCM_on(PCM_NOTE_B);
+					   //여기에 녹음한거 버퍼 저장
+					   //record_buff[record_tick_100ms];
+					   if(record_flag) record_buff[(int)TICK.record_tick_100ms]=PCM_NOTE_B;
+    4e3a:	0f 2e       	mov	r0, r31
+    4e3c:	f7 e0       	ldi	r31, 0x07	; 7
+    4e3e:	3f 2e       	mov	r3, r31
+    4e40:	f0 2d       	mov	r31, r0
+			   }else TICK.record_tick_100ms=0;
+			   
+			   
+			   //녹음본 재생 시 관련 tick 활성화
+			   if(play_flag==1) {
+				   if(TICK.tick_10ms%10==0){
+    4e42:	0f 2e       	mov	r0, r31
+    4e44:	fa e0       	ldi	r31, 0x0A	; 10
+    4e46:	4f 2e       	mov	r4, r31
+    4e48:	51 2c       	mov	r5, r1
+    4e4a:	f0 2d       	mov	r31, r0
+			   
+			   
+			   if(scan_gpio_input_data()){
+				   if(edge_detect==0){
+					   //엣지 검출 구문
+					   edge_detect=1;
+    4e4c:	dd 24       	eor	r13, r13
+    4e4e:	d3 94       	inc	r13
+		   
+		   
+		  // uart0_tx_string(IntToString(record_tick_100ms));
+		   
+		   if(mem_set_flag){
+			   memset(record_buff,0,sizeof(record_buff));
+    4e50:	0f 2e       	mov	r0, r31
+    4e52:	f1 e0       	ldi	r31, 0x01	; 1
+    4e54:	6f 2e       	mov	r6, r31
+    4e56:	f1 e0       	ldi	r31, 0x01	; 1
+    4e58:	7f 2e       	mov	r7, r31
+    4e5a:	f0 2d       	mov	r31, r0
+    4e5c:	0f 2e       	mov	r0, r31
+    4e5e:	f5 e6       	ldi	r31, 0x65	; 101
+    4e60:	cf 2e       	mov	r12, r31
+    4e62:	f0 2d       	mov	r31, r0
+		   //2. 녹음이 모두 끝났을 때
+		   //3. 버퍼 값들을 플래쉬메모리에 저장 eeprom_update_byte((uint8_t*)record_tick_100ms,PCM_NOTE_B);
+		   
+		   //설마 녹음하는 과정에서 재생함수가 영향을 주나 ?>NO
+		   
+		   if(TICK.ticks%160==0){ // 10ms마다 
+    4e64:	d7 01       	movw	r26, r14
+    4e66:	15 96       	adiw	r26, 0x05	; 5
+    4e68:	6d 91       	ld	r22, X+
+    4e6a:	7d 91       	ld	r23, X+
+    4e6c:	8d 91       	ld	r24, X+
+    4e6e:	9c 91       	ld	r25, X
+    4e70:	18 97       	sbiw	r26, 0x08	; 8
+    4e72:	a5 01       	movw	r20, r10
+    4e74:	94 01       	movw	r18, r8
+    4e76:	d3 d0       	rcall	.+422    	; 0x501e <__udivmodsi4>
+    4e78:	67 2b       	or	r22, r23
+    4e7a:	68 2b       	or	r22, r24
+    4e7c:	69 2b       	or	r22, r25
+    4e7e:	09 f0       	breq	.+2      	; 0x4e82 <main+0xb6>
+    4e80:	89 c0       	rjmp	.+274    	; 0x4f94 <main+0x1c8>
+// 			   TICK.play_tick_10ms++;
+// 			   TICK.record_tick_10ms++;
+				TICK.tick_10ms++;			   
+    4e82:	f7 01       	movw	r30, r14
+    4e84:	83 81       	ldd	r24, Z+3	; 0x03
+    4e86:	94 81       	ldd	r25, Z+4	; 0x04
+    4e88:	01 96       	adiw	r24, 0x01	; 1
+    4e8a:	94 83       	std	Z+4, r25	; 0x04
+    4e8c:	83 83       	std	Z+3, r24	; 0x03
+			    //녹음시 녹음 관련 tick 활성화
+			   if(record_flag==1) {
+    4e8e:	20 91 69 01 	lds	r18, 0x0169	; 0x800169 <record_flag>
+    4e92:	21 30       	cpi	r18, 0x01	; 1
+				       if((TICK.tick_10ms%10==0)){//100ms마다 저장
+    4e94:	89 f4       	brne	.+34     	; 0x4eb8 <main+0xec>
+    4e96:	b2 01       	movw	r22, r4
+    4e98:	af d0       	rcall	.+350    	; 0x4ff8 <__divmodhi4>
+    4e9a:	89 2b       	or	r24, r25
+    4e9c:	09 f0       	breq	.+2      	; 0x4ea0 <main+0xd4>
+    4e9e:	6e c0       	rjmp	.+220    	; 0x4f7c <main+0x1b0>
+							TICK.record_tick_100ms++; 
+    4ea0:	80 81       	ld	r24, Z
+    4ea2:	8f 5f       	subi	r24, 0xFF	; 255
+    4ea4:	80 83       	st	Z, r24
+					      
+					       if(TICK.record_tick_100ms>=100) {record_flag=0; record_finish_flag=1;}
+    4ea6:	80 81       	ld	r24, Z
+    4ea8:	84 36       	cpi	r24, 0x64	; 100
+    4eaa:	08 f4       	brcc	.+2      	; 0x4eae <main+0xe2>
+    4eac:	6d c0       	rjmp	.+218    	; 0x4f88 <main+0x1bc>
+    4eae:	10 92 69 01 	sts	0x0169, r1	; 0x800169 <record_flag>
+    4eb2:	d0 92 67 01 	sts	0x0167, r13	; 0x800167 <record_finish_flag>
+    4eb6:	68 c0       	rjmp	.+208    	; 0x4f88 <main+0x1bc>
+				       }
+			   }else TICK.record_tick_100ms=0;
+    4eb8:	10 82       	st	Z, r1
+			   
+			   
+			   //녹음본 재생 시 관련 tick 활성화
+			   if(play_flag==1) {
+    4eba:	20 91 66 01 	lds	r18, 0x0166	; 0x800166 <play_flag>
+    4ebe:	21 30       	cpi	r18, 0x01	; 1
+				   if(TICK.tick_10ms%10==0){
+    4ec0:	e1 f4       	brne	.+56     	; 0x4efa <main+0x12e>
+    4ec2:	b2 01       	movw	r22, r4
+    4ec4:	99 d0       	rcall	.+306    	; 0x4ff8 <__divmodhi4>
+    4ec6:	89 2b       	or	r24, r25
+    4ec8:	d9 f4       	brne	.+54     	; 0x4f00 <main+0x134>
+					    TICK.play_tick_100ms++;
+    4eca:	f7 01       	movw	r30, r14
+    4ecc:	81 81       	ldd	r24, Z+1	; 0x01
+    4ece:	92 81       	ldd	r25, Z+2	; 0x02
+    4ed0:	01 96       	adiw	r24, 0x01	; 1
+    4ed2:	92 83       	std	Z+2, r25	; 0x02
+					   static uint8_t eeprom_buff;
+					  
+					   //10초가 넘었을 때 ! 다시 알아서 녹음 기능을 비활성화 시킨다
+					    eeprom_buff=eeprom_read_byte((const uint8_t*)TICK.play_tick_100ms);//play_tick_100ms
+    4ed4:	81 83       	std	Z+1, r24	; 0x01
+    4ed6:	81 81       	ldd	r24, Z+1	; 0x01
+    4ed8:	92 81       	ldd	r25, Z+2	; 0x02
+					    if(eeprom_buff) PCM_on(eeprom_buff);
+    4eda:	d7 d0       	rcall	.+430    	; 0x508a <eeprom_read_byte>
+    4edc:	88 23       	and	r24, r24
+    4ede:	11 f0       	breq	.+4      	; 0x4ee4 <main+0x118>
+    4ee0:	90 e0       	ldi	r25, 0x00	; 0
+    4ee2:	da de       	rcall	.-588    	; 0x4c98 <PCM_on>
+					   if(TICK.play_tick_100ms>=100) play_flag=0;
+    4ee4:	d7 01       	movw	r26, r14
+    4ee6:	11 96       	adiw	r26, 0x01	; 1
+    4ee8:	8d 91       	ld	r24, X+
+    4eea:	9c 91       	ld	r25, X
+    4eec:	12 97       	sbiw	r26, 0x02	; 2
+    4eee:	84 36       	cpi	r24, 0x64	; 100
+    4ef0:	91 05       	cpc	r25, r1
+    4ef2:	34 f0       	brlt	.+12     	; 0x4f00 <main+0x134>
+    4ef4:	10 92 66 01 	sts	0x0166, r1	; 0x800166 <play_flag>
+    4ef8:	03 c0       	rjmp	.+6      	; 0x4f00 <main+0x134>
+						   
+						   
+				   }
+			   }
+			   else TICK.play_tick_100ms=0; 
+    4efa:	f7 01       	movw	r30, r14
+    4efc:	12 82       	std	Z+2, r1	; 0x02
+    4efe:	11 82       	std	Z+1, r1	; 0x01
+   }
+
+}
+
+unsigned char scan_gpio_input_data(){
+	unsigned char buff_=PINA;
+    4f00:	89 b3       	in	r24, 0x19	; 25
+				   }
+			   }
+			   else TICK.play_tick_100ms=0; 
+			   
+			   
+			   if(scan_gpio_input_data()){
+    4f02:	8f 3f       	cpi	r24, 0xFF	; 255
+    4f04:	a1 f0       	breq	.+40     	; 0x4f2e <main+0x162>
+				   if(edge_detect==0){
+    4f06:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+    4f0a:	81 11       	cpse	r24, r1
+					   //엣지 검출 구문
+					   edge_detect=1;
+    4f0c:	12 c0       	rjmp	.+36     	; 0x4f32 <main+0x166>
+    4f0e:	d0 92 00 01 	sts	0x0100, r13	; 0x800100 <__DATA_REGION_ORIGIN__>
+					   //uart0_tx_string("det\n");
+					   PCM_on(PCM_NOTE_B);
+    4f12:	87 e0       	ldi	r24, 0x07	; 7
+    4f14:	90 e0       	ldi	r25, 0x00	; 0
+    4f16:	c0 de       	rcall	.-640    	; 0x4c98 <PCM_on>
+					   //여기에 녹음한거 버퍼 저장
+					   //record_buff[record_tick_100ms];
+					   if(record_flag) record_buff[(int)TICK.record_tick_100ms]=PCM_NOTE_B;
+    4f18:	80 91 69 01 	lds	r24, 0x0169	; 0x800169 <record_flag>
+    4f1c:	88 23       	and	r24, r24
+    4f1e:	49 f0       	breq	.+18     	; 0x4f32 <main+0x166>
+    4f20:	d7 01       	movw	r26, r14
+    4f22:	ec 91       	ld	r30, X
+    4f24:	f0 e0       	ldi	r31, 0x00	; 0
+    4f26:	ef 5f       	subi	r30, 0xFF	; 255
+    4f28:	fe 4f       	sbci	r31, 0xFE	; 254
+    4f2a:	30 82       	st	Z, r3
+    4f2c:	02 c0       	rjmp	.+4      	; 0x4f32 <main+0x166>
+				   }
+			   }
+			   else edge_detect=0;
+    4f2e:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__DATA_REGION_ORIGIN__>
+			      
+		   }//if(TICK.ticks%160==0) end
+		   
+		   
+		   //녹음이 종료되면 들어가는 구문
+		   if(record_finish_flag)
+    4f32:	80 91 67 01 	lds	r24, 0x0167	; 0x800167 <record_finish_flag>
+    4f36:	88 23       	and	r24, r24
+    4f38:	a1 f0       	breq	.+40     	; 0x4f62 <main+0x196>
+    4f3a:	01 e0       	ldi	r16, 0x01	; 1
+	
+}
+
+
+int main(void)
+{
+    4f3c:	11 e0       	ldi	r17, 0x01	; 1
+    4f3e:	c0 e0       	ldi	r28, 0x00	; 0
+		   
+		   //녹음이 종료되면 들어가는 구문
+		   if(record_finish_flag)
+		   {
+			   
+			   for(int i=0; i<RECORD_SIZE;i++) eeprom_update_byte((uint8_t*)i,record_buff[i]);   
+    4f40:	d0 e0       	ldi	r29, 0x00	; 0
+    4f42:	f8 01       	movw	r30, r16
+    4f44:	61 91       	ld	r22, Z+
+    4f46:	8f 01       	movw	r16, r30
+    4f48:	ce 01       	movw	r24, r28
+    4f4a:	a7 d0       	rcall	.+334    	; 0x509a <eeprom_update_byte>
+    4f4c:	21 96       	adiw	r28, 0x01	; 1
+    4f4e:	c5 36       	cpi	r28, 0x65	; 101
+    4f50:	d1 05       	cpc	r29, r1
+			   
+			   //이 딜레이는 아무 이유없이 넣은것이므로, 빼도 상관 없음.
+			   PCM_on(0);
+    4f52:	b9 f7       	brne	.-18     	; 0x4f42 <main+0x176>
+    4f54:	80 e0       	ldi	r24, 0x00	; 0
+    4f56:	90 e0       	ldi	r25, 0x00	; 0
+    4f58:	9f de       	rcall	.-706    	; 0x4c98 <PCM_on>
+			   record_finish_flag=0;
+    4f5a:	10 92 67 01 	sts	0x0167, r1	; 0x800167 <record_finish_flag>
+			   //이건 노파심에 넣은거임. 있던 없던 동작에 영향을 주지 않을수 있음.
+			   record_flag=0;
+    4f5e:	10 92 69 01 	sts	0x0169, r1	; 0x800169 <record_flag>
+		   }
+		   
+		   
+		  // uart0_tx_string(IntToString(record_tick_100ms));
+		   
+		   if(mem_set_flag){
+    4f62:	80 91 68 01 	lds	r24, 0x0168	; 0x800168 <mem_set_flag>
+    4f66:	88 23       	and	r24, r24
+    4f68:	09 f4       	brne	.+2      	; 0x4f6c <main+0x1a0>
+    4f6a:	7c cf       	rjmp	.-264    	; 0x4e64 <main+0x98>
+			   memset(record_buff,0,sizeof(record_buff));
+    4f6c:	d3 01       	movw	r26, r6
+    4f6e:	ec 2d       	mov	r30, r12
+    4f70:	1d 92       	st	X+, r1
+    4f72:	ea 95       	dec	r30
+    4f74:	e9 f7       	brne	.-6      	; 0x4f70 <main+0x1a4>
+			   mem_set_flag=0;
+    4f76:	10 92 68 01 	sts	0x0168, r1	; 0x800168 <mem_set_flag>
+    4f7a:	74 cf       	rjmp	.-280    	; 0x4e64 <main+0x98>
+				       }
+			   }else TICK.record_tick_100ms=0;
+			   
+			   
+			   //녹음본 재생 시 관련 tick 활성화
+			   if(play_flag==1) {
+    4f7c:	80 91 66 01 	lds	r24, 0x0166	; 0x800166 <play_flag>
+    4f80:	81 30       	cpi	r24, 0x01	; 1
+    4f82:	09 f0       	breq	.+2      	; 0x4f86 <main+0x1ba>
+    4f84:	ba cf       	rjmp	.-140    	; 0x4efa <main+0x12e>
+    4f86:	bc cf       	rjmp	.-136    	; 0x4f00 <main+0x134>
+    4f88:	80 91 66 01 	lds	r24, 0x0166	; 0x800166 <play_flag>
+    4f8c:	81 30       	cpi	r24, 0x01	; 1
+    4f8e:	09 f0       	breq	.+2      	; 0x4f92 <main+0x1c6>
+    4f90:	b4 cf       	rjmp	.-152    	; 0x4efa <main+0x12e>
+    4f92:	9b cf       	rjmp	.-202    	; 0x4eca <main+0xfe>
+			      
+		   }//if(TICK.ticks%160==0) end
+		   
+		   
+		   //녹음이 종료되면 들어가는 구문
+		   if(record_finish_flag)
+    4f94:	80 91 67 01 	lds	r24, 0x0167	; 0x800167 <record_finish_flag>
+    4f98:	81 11       	cpse	r24, r1
+    4f9a:	cf cf       	rjmp	.-98     	; 0x4f3a <main+0x16e>
+    4f9c:	e2 cf       	rjmp	.-60     	; 0x4f62 <main+0x196>
+
+00004f9e <uart_init>:
+	else UDR0 = uart0.tx0Buf[uart0.tx0Cnt++]; // 0은 이미 보냈고 1이 보내지고 2로 증가, 2보내지고 3으로 증가되고 다음 루틴에서 인터럽트 비활성화
+}
+
+
+void uart_init(int select_ch,unsigned int ubrr)
+{
+    4f9e:	cf 93       	push	r28
+    4fa0:	df 93       	push	r29
+    4fa2:	ec 01       	movw	r28, r24
+	unsigned int buff_baud= MYUBRR(ubrr);
+    4fa4:	9b 01       	movw	r18, r22
+    4fa6:	40 e0       	ldi	r20, 0x00	; 0
+    4fa8:	50 e0       	ldi	r21, 0x00	; 0
+    4faa:	60 e4       	ldi	r22, 0x40	; 64
+    4fac:	72 e4       	ldi	r23, 0x42	; 66
+    4fae:	8f e0       	ldi	r24, 0x0F	; 15
+    4fb0:	90 e0       	ldi	r25, 0x00	; 0
+    4fb2:	35 d0       	rcall	.+106    	; 0x501e <__udivmodsi4>
+    4fb4:	21 50       	subi	r18, 0x01	; 1
+    4fb6:	31 09       	sbc	r19, r1
+	if(select_ch==0){
+    4fb8:	20 97       	sbiw	r28, 0x00	; 0
+    4fba:	59 f4       	brne	.+22     	; 0x4fd2 <uart_init+0x34>
+		DDRE &= ~(0x01);
+    4fbc:	10 98       	cbi	0x02, 0	; 2
+		//set Baud Rate
+		UBRR0H= (unsigned char )(buff_baud>>8);
+    4fbe:	30 93 90 00 	sts	0x0090, r19	; 0x800090 <__TEXT_REGION_LENGTH__+0x7e0090>
+		UBRR0L= (unsigned char )(buff_baud&0xff);
+    4fc2:	29 b9       	out	0x09, r18	; 9
+	
+		// Tx, Rx Enabled
+		UCSR0B = ((1<<TXEN0)|(1<<RXEN0));// | (1<<RXEN0)
+    4fc4:	88 e1       	ldi	r24, 0x18	; 24
+    4fc6:	8a b9       	out	0x0a, r24	; 10
+		UCSR0B |= ((1<<RXCIE0)); //수신 완료 인터럽트 허용
+    4fc8:	57 9a       	sbi	0x0a, 7	; 10
+	
+		// Set Frame format: data 8 bit, 1 stop bit
+		UCSR0C = (0<<USBS0) |(1<<UCSZ01)| (1<<UCSZ00 );
+    4fca:	86 e0       	ldi	r24, 0x06	; 6
+    4fcc:	80 93 95 00 	sts	0x0095, r24	; 0x800095 <__TEXT_REGION_LENGTH__+0x7e0095>
+    4fd0:	10 c0       	rjmp	.+32     	; 0x4ff2 <uart_init+0x54>
+	}else if(select_ch==1){
+    4fd2:	21 97       	sbiw	r28, 0x01	; 1
+    4fd4:	71 f4       	brne	.+28     	; 0x4ff2 <uart_init+0x54>
+		//set Baud Rate
+		UBRR1H= (unsigned char )(buff_baud>>8);
+    4fd6:	30 93 98 00 	sts	0x0098, r19	; 0x800098 <__TEXT_REGION_LENGTH__+0x7e0098>
+		UBRR1L= (unsigned char )(buff_baud&0xff);
+    4fda:	20 93 99 00 	sts	0x0099, r18	; 0x800099 <__TEXT_REGION_LENGTH__+0x7e0099>
+		
+		// Tx, Rx Enabled
+		UCSR1B = ((1<<TXEN1)|(1<<RXEN1));// | (1<<RXEN0)
+    4fde:	ea e9       	ldi	r30, 0x9A	; 154
+    4fe0:	f0 e0       	ldi	r31, 0x00	; 0
+    4fe2:	88 e1       	ldi	r24, 0x18	; 24
+    4fe4:	80 83       	st	Z, r24
+		UCSR1B |= ((1<<RXCIE1)); //수신 완료 인터럽트 허용
+    4fe6:	80 81       	ld	r24, Z
+    4fe8:	80 68       	ori	r24, 0x80	; 128
+    4fea:	80 83       	st	Z, r24
+		
+		// Set Frame format: data 8 bit, 1 stop bit, noParity.
+		UCSR1C = (0<<USBS1) |(1<<UCSZ11)| (1<<UCSZ10 );
+    4fec:	86 e0       	ldi	r24, 0x06	; 6
+    4fee:	80 93 9d 00 	sts	0x009D, r24	; 0x80009d <__TEXT_REGION_LENGTH__+0x7e009d>
+	}
+}
+    4ff2:	df 91       	pop	r29
+    4ff4:	cf 91       	pop	r28
+    4ff6:	08 95       	ret
+
+00004ff8 <__divmodhi4>:
+    4ff8:	97 fb       	bst	r25, 7
+    4ffa:	07 2e       	mov	r0, r23
+    4ffc:	16 f4       	brtc	.+4      	; 0x5002 <__divmodhi4+0xa>
+    4ffe:	00 94       	com	r0
+    5000:	06 d0       	rcall	.+12     	; 0x500e <__divmodhi4_neg1>
+    5002:	77 fd       	sbrc	r23, 7
+    5004:	08 d0       	rcall	.+16     	; 0x5016 <__divmodhi4_neg2>
+    5006:	2d d0       	rcall	.+90     	; 0x5062 <__udivmodhi4>
+    5008:	07 fc       	sbrc	r0, 7
+    500a:	05 d0       	rcall	.+10     	; 0x5016 <__divmodhi4_neg2>
+    500c:	3e f4       	brtc	.+14     	; 0x501c <__divmodhi4_exit>
+
+0000500e <__divmodhi4_neg1>:
+    500e:	90 95       	com	r25
+    5010:	81 95       	neg	r24
+    5012:	9f 4f       	sbci	r25, 0xFF	; 255
+    5014:	08 95       	ret
+
+00005016 <__divmodhi4_neg2>:
+    5016:	70 95       	com	r23
+    5018:	61 95       	neg	r22
+    501a:	7f 4f       	sbci	r23, 0xFF	; 255
+
+0000501c <__divmodhi4_exit>:
+    501c:	08 95       	ret
+
+0000501e <__udivmodsi4>:
+    501e:	a1 e2       	ldi	r26, 0x21	; 33
+    5020:	1a 2e       	mov	r1, r26
+    5022:	aa 1b       	sub	r26, r26
+    5024:	bb 1b       	sub	r27, r27
+    5026:	fd 01       	movw	r30, r26
+    5028:	0d c0       	rjmp	.+26     	; 0x5044 <__udivmodsi4_ep>
+
+0000502a <__udivmodsi4_loop>:
+    502a:	aa 1f       	adc	r26, r26
+    502c:	bb 1f       	adc	r27, r27
+    502e:	ee 1f       	adc	r30, r30
+    5030:	ff 1f       	adc	r31, r31
+    5032:	a2 17       	cp	r26, r18
+    5034:	b3 07       	cpc	r27, r19
+    5036:	e4 07       	cpc	r30, r20
+    5038:	f5 07       	cpc	r31, r21
+    503a:	20 f0       	brcs	.+8      	; 0x5044 <__udivmodsi4_ep>
+    503c:	a2 1b       	sub	r26, r18
+    503e:	b3 0b       	sbc	r27, r19
+    5040:	e4 0b       	sbc	r30, r20
+    5042:	f5 0b       	sbc	r31, r21
+
+00005044 <__udivmodsi4_ep>:
+    5044:	66 1f       	adc	r22, r22
+    5046:	77 1f       	adc	r23, r23
+    5048:	88 1f       	adc	r24, r24
+    504a:	99 1f       	adc	r25, r25
+    504c:	1a 94       	dec	r1
+    504e:	69 f7       	brne	.-38     	; 0x502a <__udivmodsi4_loop>
+    5050:	60 95       	com	r22
+    5052:	70 95       	com	r23
+    5054:	80 95       	com	r24
+    5056:	90 95       	com	r25
+    5058:	9b 01       	movw	r18, r22
+    505a:	ac 01       	movw	r20, r24
+    505c:	bd 01       	movw	r22, r26
+    505e:	cf 01       	movw	r24, r30
+    5060:	08 95       	ret
+
+00005062 <__udivmodhi4>:
+    5062:	aa 1b       	sub	r26, r26
+    5064:	bb 1b       	sub	r27, r27
+    5066:	51 e1       	ldi	r21, 0x11	; 17
+    5068:	07 c0       	rjmp	.+14     	; 0x5078 <__udivmodhi4_ep>
+
+0000506a <__udivmodhi4_loop>:
+    506a:	aa 1f       	adc	r26, r26
+    506c:	bb 1f       	adc	r27, r27
+    506e:	a6 17       	cp	r26, r22
+    5070:	b7 07       	cpc	r27, r23
+    5072:	10 f0       	brcs	.+4      	; 0x5078 <__udivmodhi4_ep>
+    5074:	a6 1b       	sub	r26, r22
+    5076:	b7 0b       	sbc	r27, r23
+
+00005078 <__udivmodhi4_ep>:
+    5078:	88 1f       	adc	r24, r24
+    507a:	99 1f       	adc	r25, r25
+    507c:	5a 95       	dec	r21
+    507e:	a9 f7       	brne	.-22     	; 0x506a <__udivmodhi4_loop>
+    5080:	80 95       	com	r24
+    5082:	90 95       	com	r25
+    5084:	bc 01       	movw	r22, r24
+    5086:	cd 01       	movw	r24, r26
+    5088:	08 95       	ret
+
+0000508a <eeprom_read_byte>:
+    508a:	e1 99       	sbic	0x1c, 1	; 28
+    508c:	fe cf       	rjmp	.-4      	; 0x508a <eeprom_read_byte>
+    508e:	9f bb       	out	0x1f, r25	; 31
+    5090:	8e bb       	out	0x1e, r24	; 30
+    5092:	e0 9a       	sbi	0x1c, 0	; 28
+    5094:	99 27       	eor	r25, r25
+    5096:	8d b3       	in	r24, 0x1d	; 29
+    5098:	08 95       	ret
+
+0000509a <eeprom_update_byte>:
+    509a:	26 2f       	mov	r18, r22
+
+0000509c <eeprom_update_r18>:
+    509c:	e1 99       	sbic	0x1c, 1	; 28
+    509e:	fe cf       	rjmp	.-4      	; 0x509c <eeprom_update_r18>
+    50a0:	9f bb       	out	0x1f, r25	; 31
+    50a2:	8e bb       	out	0x1e, r24	; 30
+    50a4:	e0 9a       	sbi	0x1c, 0	; 28
+    50a6:	01 97       	sbiw	r24, 0x01	; 1
+    50a8:	0d b2       	in	r0, 0x1d	; 29
+    50aa:	02 16       	cp	r0, r18
+    50ac:	31 f0       	breq	.+12     	; 0x50ba <eeprom_update_r18+0x1e>
+    50ae:	2d bb       	out	0x1d, r18	; 29
+    50b0:	0f b6       	in	r0, 0x3f	; 63
+    50b2:	f8 94       	cli
+    50b4:	e2 9a       	sbi	0x1c, 2	; 28
+    50b6:	e1 9a       	sbi	0x1c, 1	; 28
+    50b8:	0f be       	out	0x3f, r0	; 63
+    50ba:	08 95       	ret
+
+000050bc <_exit>:
+    50bc:	f8 94       	cli
+
+000050be <__stop_program>:
+    50be:	ff cf       	rjmp	.-2      	; 0x50be <__stop_program>
