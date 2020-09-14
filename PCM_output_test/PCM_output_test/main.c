@@ -26,6 +26,8 @@ volatile int pcm_turn_on_flag=0;
 void PCM_off();
 void PCM_on();
 unsigned char scan_gpio_input_data();
+unsigned char gpio_buffer;
+
 volatile uint8_t buffer;
 volatile char record_flag=0; 
 volatile char mem_set_flag=0;
@@ -60,8 +62,6 @@ ISR(USART0_RX_vect)
 {
 	while(!(UCSR0A & (1<<UDRE0)));
 	buffer=UDR0;
-	
-	
 }
 ISR(TIMER0_COMP_vect)//TIMER0_OVF_vect 
 {
@@ -70,15 +70,11 @@ ISR(TIMER0_COMP_vect)//TIMER0_OVF_vect
 	//static char toggle=0;
 	PORTC ^= 0x0f;
 	
-	
-	/*32khz 속도를 만들기 위해
+	/*좀 더 정확한 32khz 속도를 만들기 위해 (OCR0값이 62.5로 나왔을 경우..!)
 	toggle^=0x01;
  	if(toggle) OCR0=62;
  	else  OCR0=61;
 	*/
-	
-	//cli();
-	
 	TICK.ticks++;
 	
     //TCNT0=256-16;
@@ -115,8 +111,6 @@ ISR(TIMER0_COMP_vect)//TIMER0_OVF_vect
 		
 		
 		}
-		//PORTC ^= 0xff;
-		 //타이머 초기화는 반드시 아래쪽에 놔야 영향을 덜 받는다? > 아닌것같음
 	}//if(pcm_turn_on_flag) end
 	
 	
@@ -162,7 +156,11 @@ int main(void)
     OCR1A = 0x80;
 	OCR1B = 0x80;
    
-    /* 타이머 카운터0 SETUP */
+    /* 타이머 카운터0 SETUP 
+	
+	* CTC Mode 
+	* 
+	*/
  
     TCCR0=((1<<CS01)|(0<<CS00)|(1<<WGM01)|(0<<WGM00)); //16/8MHz > 2MHz (256/4)  ///0.5MHz  > 32kHz
     //TCNT0=196;
@@ -172,7 +170,7 @@ int main(void)
 	//OCR0=128;
 	//TIMSK|=(1<<TOIE0);
     TIMSK=(1<<OCIE0);
-    sample_count = 4;
+    sample_count = 2;
 	sei(); //인터럽트 허용
 	//16MHz >> 255  
 	//cli();
@@ -180,7 +178,6 @@ int main(void)
    while(1)
    {
 	   
-	   static unsigned char edge_detect=0;
 	   
 			
 		   //1. 임시 버퍼에 저장해둔 뒤,
@@ -219,24 +216,37 @@ int main(void)
 			   }
 			   else TICK.play_tick_100ms=0; 
 			   
+			   static unsigned char edge_detect=0;
 			   
-			   if(scan_gpio_input_data()){
+			   //키 입력 이벤트 처리
+			   gpio_buffer=scan_gpio_input_data();
+			   if(gpio_buffer){
 				   if(edge_detect==0){
 					   //엣지 검출 구문
 					   edge_detect=1;
 					   //uart0_tx_string("det\n");
-					   static gpio_buffer;
-					   gpio_buffer=PORTA;
-					   
-						switch(gpio_buffer){
-							case PCM_NOTE_A: break;
-							case PCM_NOTE_B: break;
-						}
-							
+					   	
 					   PCM_on(PCM_NOTE_B);
 					   //여기에 녹음한거 버퍼 저장
 					   //record_buff[record_tick_100ms];
-					   if(record_flag) record_buff[(int)TICK.record_tick_100ms]=PCM_NOTE_B;
+					   
+					   gpio_buffer=scan_gpio_input_data();
+					   //현재 이곳에 들어가는 버퍼의 경우, 단 하나 입력만 인정함. 동시 입력은 무시됨.
+					   //즉, 순간적인 상황에서 조금이라도 먼저 입력된 버튼에 대해서 인식이 되고
+					   //만일의 경우 두개가 아주 짧은 시간에 동시에 눌린 후에 스캔이 된다면, 이땐 아예 인식이 안됨.
+					   switch(gpio_buffer){
+						   
+						   if(record_flag){
+							   //버퍼에 note 기록
+							   case PCM_NOTE_A: record_buff[(int)TICK.record_tick_100ms]=PCM_NOTE_A;break;
+							   case PCM_NOTE_B: record_buff[(int)TICK.record_tick_100ms]=PCM_NOTE_B;break;
+							   //PCM 음성 리스트 추가할 것
+							}
+					   }
+					   
+					   if(record_flag) {
+						   
+						}
 				   }
 			   }
 			   else edge_detect=0;
