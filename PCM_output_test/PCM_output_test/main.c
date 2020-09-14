@@ -10,9 +10,15 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
-#define PCM_NOTE_A (1<<6) 
-#define PCM_NOTE_B (1<<7)
+//
+#define A_PORT_CHK 0x10
+#define C_PORT_CHK 0x20
+#define F_PORT_CHK 0x40
+
+#define PCM_NOTE_A (A_PORT_CHK|6)
+#define PCM_NOTE_B (A_PORT_CHK|7)
 #define PCM_NOTE_TEST 0
+
 
 #define RECORD_SIZE 101
 
@@ -25,15 +31,17 @@ volatile int status=0;
 volatile int pcm_turn_on_flag=0;
 void PCM_off();
 void PCM_on();
-unsigned char scan_gpio_input_data();
-unsigned char gpio_buffer;
-
+uint8_t scan_gpio_input_data(uint8_t* gpio_ch_flg);
+uint8_t gpio_buffer;
+uint8_t gpio_ch_scan;
+uint8_t gpio_to_int_and_gpio_scan;
 volatile uint8_t buffer;
 volatile char record_flag=0; 
 volatile char mem_set_flag=0;
 volatile char record_finish_flag=0;
 volatile char play_flag=0;
 
+uint8_t gpio_to_integer(uint8_t gpio_buff);
 uint8_t record_buff[RECORD_SIZE] = { 0, };
 
 struct {
@@ -56,6 +64,7 @@ ISR(INT0_vect){
 // 재생버튼
 ISR(INT1_vect){
 	play_flag=1;
+	
 }
 
 ISR(USART0_RX_vect)
@@ -123,13 +132,16 @@ int main(void)
 	//A port : 건반용 채널
 	DDRA=0x00; 
 	PORTA=0xff; //내부 풀업 이용 PUD->0
-	PORTD|=0x01; //인터럽트 핀 내부 풀업모드
+	DDRC=0x00;
+	PORTC=0xff; //내부 풀업 이용 PUD->0
+	DDRF=0x00;
+	PORTF=0xff; //내부 풀업 이용 PUD->0
 	
-	DDRC=0x0f;
-	PORTC=0xFF;
+	PORTD|=0x03; //인터럽트 핀 내부 풀업모드
 	
-	EIMSK=0x01; 	//0b 0000 0001 INT0
-	EICRA=0x02; 	//0b 0000 0010 falling edge triggered
+	
+	EIMSK=0x03; 	//0b 0000 0011 INT0, INT1
+	EICRA=0x0A; 	//0b 0000 1010 falling edge triggered
 
 	
 	uart_init(0,9600);
@@ -187,6 +199,7 @@ int main(void)
 		   //설마 녹음하는 과정에서 재생함수가 영향을 주나 ?>NO
 		   
 		   if(TICK.ticks%160==0){ // 10ms마다 
+			   
 // 			   TICK.play_tick_10ms++;
 // 			   TICK.record_tick_10ms++;
 				TICK.tick_10ms++;			   
@@ -208,6 +221,7 @@ int main(void)
 					  
 					   //10초가 넘었을 때 ! 다시 알아서 녹음 기능을 비활성화 시킨다
 					    eeprom_buff=eeprom_read_byte((const uint8_t*)TICK.play_tick_100ms);//play_tick_100ms
+						//uart0_tx_string(IntToString(eeprom_buff));
 					    if(eeprom_buff) PCM_on(eeprom_buff);
 					   if(TICK.play_tick_100ms>=100) play_flag=0;
 						   
@@ -219,34 +233,32 @@ int main(void)
 			   static unsigned char edge_detect=0;
 			   
 			   //키 입력 이벤트 처리
-			   gpio_buffer=scan_gpio_input_data();
+			   gpio_buffer=scan_gpio_input_data(&gpio_ch_scan);
 			   if(gpio_buffer){
 				   if(edge_detect==0){
 					   //엣지 검출 구문
 					   edge_detect=1;
 					   //uart0_tx_string("det\n");
-					   	
-					   PCM_on(PCM_NOTE_B);
+					   	gpio_to_int_and_gpio_scan=gpio_to_integer(gpio_buffer)|gpio_ch_scan;
+					   PCM_on(gpio_to_int_and_gpio_scan);
 					   //여기에 녹음한거 버퍼 저장
 					   //record_buff[record_tick_100ms];
 					   
-					   gpio_buffer=scan_gpio_input_data();
+					   //gpio_buffer=scan_gpio_input_data();
 					   //현재 이곳에 들어가는 버퍼의 경우, 단 하나 입력만 인정함. 동시 입력은 무시됨.
 					   //즉, 순간적인 상황에서 조금이라도 먼저 입력된 버튼에 대해서 인식이 되고
 					   //만일의 경우 두개가 아주 짧은 시간에 동시에 눌린 후에 스캔이 된다면, 이땐 아예 인식이 안됨.
-					   switch(gpio_buffer){
+					   switch(gpio_to_int_and_gpio_scan){
 						   
 						   if(record_flag){
 							   //버퍼에 note 기록
 							   case PCM_NOTE_A: record_buff[(int)TICK.record_tick_100ms]=PCM_NOTE_A;break;
-							   case PCM_NOTE_B: record_buff[(int)TICK.record_tick_100ms]=PCM_NOTE_B;break;
+							   case PCM_NOTE_B: record_buff[(int)TICK.record_tick_100ms]=PCM_NOTE_A;break;
 							   //PCM 음성 리스트 추가할 것
 							}
 					   }
 					   
-					   if(record_flag) {
-						   
-						}
+					   
 				   }
 			   }
 			   else edge_detect=0;
@@ -325,10 +337,43 @@ int main(void)
 
 }
 
-unsigned char scan_gpio_input_data(){
-	unsigned char buff_=PINA;
-	buff_=~(buff_); //모든비트 반전
-	return buff_;
+uint8_t scan_gpio_input_data(uint8_t* gpio_ch_flg){
+	unsigned char buff_1=PINA;
+	unsigned char buff_2=PINC;
+	unsigned char buff_3=PINF;
+	buff_1=~(buff_1); //모든비트 반전
+	
+	buff_2=~(buff_2); //모든비트 반전
+	
+	buff_3=~(buff_3); //모든비트 반전
+	
+	
+	if(buff_1){
+		*gpio_ch_flg=A_PORT_CHK;
+		return buff_1;
+		
+	}else if(buff_2){		
+		*gpio_ch_flg=C_PORT_CHK;
+		return buff_2;
+	}else if(buff_3){
+		*gpio_ch_flg=F_PORT_CHK;
+		return buff_3;
+	}else return 0;
+	
+}
+uint8_t gpio_to_integer(uint8_t gpio_buff){
+	//GPIO에서 받아온 데이터에 대해 단순 1~7데이터로 변환해줘야함
+	// 한 키에 동시에 입력 받는 상황은 무시되도록 코드가 작성되어야 함 
+	//0b 0 0 0 0 / 0 0 0 0 
+	uint8_t buffer;
+	for(int i=0; i<8;i++)
+	{
+		if((gpio_buff>>i)&0x01) {
+			buffer=i+1;
+			return buffer;
+		}
+	}
+	return 0;
 }
 
 void PCM_off()
