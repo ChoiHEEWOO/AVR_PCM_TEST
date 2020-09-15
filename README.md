@@ -1,11 +1,14 @@
 # 품평회 멘토링
-> ATMEGA128 PCM TEST
  
+# AVR을 이용한 PCM 오르골
+> PCM Orgel Using AVR
 
-
-## AVR을 이용한 PCM 오르골
-
-
+## 목차
+ 1. TICK타이머 구현
+ 2. GPIO 입력부 구현
+ 3. 외부 인터럽트 이용한 입력부 구현
+ 4. PCM 데이터를 통해 스피커 출력부 구현
+ 5. eeprom을 이용하여 녹음기능 구현
 
 ### TICK타이머 구현
 
