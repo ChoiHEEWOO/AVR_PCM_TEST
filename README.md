@@ -21,11 +21,11 @@
  
  - > while(1){
  
- //ticks가 계속 증가되면서 1000ms == 1초가 되면 do_action()이라는 함수가 호출된다.
+   > //ticks가 계속 증가되면서 1000ms == 1초가 되면 do_action()이라는 함수가 호출된다.
  
- if(ticks%1000=0) do_action();
+   > if(ticks%1000=0) do_action();
  
- }
+   > }
  
  - 
 
